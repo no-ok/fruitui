@@ -1,0 +1,182 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+    
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
+    background-color: #fff;
+    min-width: 320px;
+}
+
+body.fixed {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    outline: none;
+}
+
+a:hover {
+    outline: none;
+}
+
+.index-page .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.index-page .main-nav a {
+  font-weight: normal;
+  min-width: 230px;
+  font-size: 48px; 
+}
+
+.index-page .main-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.main-nav a {
+    min-width: 150px;
+    font-size: 26px;
+    text-align: center; 
+}
+
+.main-nav a:hover span {
+    animation: nav-animation 7s infinite;
+}
+
+
+@keyframes nav-animation {
+    2%,76%{font-weight:100;font-style:italic;text-decoration:none;text-transform:capitalize}
+
+    4%{font-weight:500;font-style:normal;text-decoration:line-through;text-transform:capitalize}
+
+    6%,74%{font-weight:300;font-style:normal;text-decoration:none;text-transform:lowercase}
+
+    8%,86%{font-weight:400;font-style:normal;text-decoration:line-through;text-transform:none}
+
+    12%{font-weight:200;font-style:italic;text-decoration:none;text-transform:none}
+
+    14%{font-weight:300;font-style:normal;text-decoration:none;text-transform:uppercase}
+
+    16%{font-weight:100;font-style:normal;text-decoration:line-through;text-transform:capitalize}
+
+    18%,24%,26%{font-weight:700;font-style:normal;text-decoration:none;text-transform:none}
+
+    20%,60%{font-weight:200;font-style:normal;text-decoration:none;text-transform:uppercase}
+
+    22%{font-weight:300;font-style:italic;text-decoration:underline;text-transform:lowercase}
+
+    28%,34%{font-weight:600;font-style:normal;text-decoration:none;text-transform:none}
+
+    30%,96%{font-weight:200;font-style:normal;text-decoration:none;text-transform:none}
+
+    32%{font-weight:200;font-style:italic;text-decoration:line-through;text-transform:none}
+
+    36%{font-weight:500;font-style:italic;text-decoration:none;text-transform:none}
+
+    38%{font-weight:300;font-style:italic;text-decoration:none;text-transform:none}
+
+    40%{font-weight:300;font-style:normal;text-decoration:underline;text-transform:none}
+
+    42%{font-weight:400;font-style:normal;text-decoration:line-through;text-transform:capitalize}
+
+    46%{font-weight:600;font-style:normal;text-decoration:none;text-transform:lowercase}
+
+    48%{font-weight:400;font-style:normal;text-decoration:none;text-transform:lowercase}
+
+    52%{font-weight:100;font-style:normal;text-decoration:none;text-transform:lowercase}
+
+    56%{font-weight:100;font-style:italic;text-decoration:line-through;text-transform:lowercase}
+
+    58%{font-weight:400;font-style:italic;text-decoration:none;text-transform:lowercase}
+
+    62%{font-weight:400;font-style:normal;text-decoration:none;text-transform:none}
+
+    68%{font-weight:600;font-style:normal;text-decoration:line-through;text-transform:none}
+
+    70%{font-weight:300;font-style:normal;text-decoration:none;text-transform:capitalize}
+
+    72%{font-weight:100;font-style:normal;text-decoration:underline;text-transform:none}
+
+    88%{font-weight:600;font-style:italic;text-decoration:none;text-transform:none}
+
+    94%{font-weight:700;font-style:italic;text-decoration:none;text-transform:uppercase}
+
+    98%{font-weight:300;font-style:normal;text-decoration:none;text-transform:none}
+}
+
+.project-descr {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+    width: 100%;
+    font-size: 20px;
+}
+
+.index-footer {
+    color: #666;
+    text-align: center;
+}
+
+.index-footer {
+    margin: 10px 0;
+}
+
+@media(max-width: 992px) {
+    .index-page .main-nav a {
+        min-width: 160px;
+        font-size: 32px;
+    }
+
+    .project-descr {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+
+@media(max-width: 767px) {
+    .index-page .main-nav a {
+        min-width: 140px;
+        font-size: 24px;
+    }
+
+    .project-descr {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+

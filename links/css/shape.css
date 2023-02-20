@@ -1,0 +1,2773 @@
+/* === prune === */
+.prune-link {
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  width: 160px;
+  height: 48px;
+}
+
+.prune-link .link-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 48px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+.prune-link .link-front,
+.prune-link .link-back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.prune-link .link-front {
+  background-color: #fff;
+  color: #111;
+  pointer-events: none;
+  transform: rotateY(0) translateZ(24px);
+}
+
+.prune-link .link-back {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  transform: rotateX(90deg) translateZ(24px);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.prune-link .link-back:after {
+  content: '';
+  position: absolute;
+  top: -32%;
+  left: -10%;
+  width: 120%;
+  height: 50%;
+  background: #fff;
+  transform: rotate(8deg);
+  transition: all 0.5s ease;
+  transition-delay: 0.15s;
+}
+
+.prune-link:hover .link-content {
+  transform: translateZ(-24px) rotateX(-90deg);
+}
+
+.prune-link:hover .link-front {
+  background: #fff;
+  transition: all 0.8s ease;
+}
+
+.prune-link:hover .link-back {
+  color: #fff;
+  transition: color 0.4s linear;
+  background-color: #111;
+  opacity: 1;
+}
+
+.prune-link:hover .link-back:after {
+  transform: rotate(6deg) translate(100px, -18px);
+}
+
+
+/* === musk melon === */
+.musk-melon {
+  font-size: 24px;
+  position: relative;
+  transition: color 0.4s;
+}
+
+.musk-melon:before,
+.musk-melon:after {
+  content: "";
+  position: absolute;
+  height: 33.33%;
+  width: 0;
+  background-color: #111;
+  z-index: 0;
+  transition: all 0.3s;
+}
+
+.musk-melon:before {
+  left: 0;
+  top: 0;
+}
+
+.musk-melon:after {
+  left: 0;
+  bottom: 0;
+}
+
+.musk-melon span {
+  position: relative;
+  padding: 10px 20px;
+  display: block;
+  z-index: 5;
+}
+
+.musk-melon span:before {
+  position: absolute;
+  content: "";
+  height: 33.33%;
+  width: 0;
+  background-color: #111;
+  bottom: 33.33%;
+  right: 0;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.musk-melon:hover {
+  color: #fff;
+}
+
+.musk-melon:hover:before,
+.musk-melon:hover:after {
+  width: 100%;
+}
+
+.musk-melon:hover span:before {
+  width: 100%;
+}
+
+
+/* === canarium nut === */
+.canarium-nut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 10px 20px;
+  background: repeating-linear-gradient(#111 0 8px, transparent 0 16px) left/0 100% no-repeat, repeating-linear-gradient(transparent 0 8px, #111 0 16px) right/0 100% no-repeat;
+  transition: 0.5s;
+}
+
+.canarium-nut-link:hover {
+  color: #fff;
+  background-size: 100% 100%, 100% 100%;
+}
+
+
+/* === nance === */
+.nance-link {
+  font-size: 24px;
+  color: #111;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+
+.nance-link:before,
+.nance-link:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  transition: all .2s ease-out;
+  position: absolute;
+  left: 0;
+  background-color: #111;
+  z-index: -1;
+}
+
+.nance-link:before {
+  top: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.nance-link:after {
+  bottom: 0;
+  transform: translate3d(0, 50%, 0);
+}
+
+.nance-link:hover {
+  color: #fff;
+}
+
+.nance-link:hover:before,
+.nance-link:hover:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-duration: .3s;
+}
+
+
+/* === orange === */
+.orange-link {
+  font-size: 24px;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.orange-link span {
+  position: relative;
+  z-index: 2;
+}
+
+.orange-link:before,
+.orange-link:after {
+  content: "";
+  width: 51%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background-color: #111;
+  transition: all .2s ease-out;
+}
+
+.orange-link:before {
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.orange-link:after {
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.orange-link:hover {
+  color: #fff;
+}
+
+.orange-link:hover:before,
+.orange-link:hover:after {
+  opacity: 1;
+  transition-duration: .2s;
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* === tangerine === */
+.tangerine-link {
+  font-size: 24px;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 20px;
+  transition: all 0.35s;
+}
+
+.tangerine-link span {
+  position: relative;
+  z-index: 2;
+}
+
+.tangerine-link:before,
+.tangerine-link:after {
+  content: "";
+  position: absolute;
+  width: 51%;
+  height: 150%;
+  opacity: 0;
+  transition: all 0.45s;
+  top: -25%;
+  background-color: #111;
+}
+
+.tangerine-link:before {
+  transform: translate3d(-100%, 0, 0) rotate(-45deg);
+  left: 0;
+}
+
+.tangerine-link:after {
+  transform: translate3d(100%, 0, 0) rotate(-45deg);
+  right: 0;
+}
+
+.tangerine-link:hover {
+  color: #fff;
+}
+
+.tangerine-link:hover:before,
+.tangerine-link:hover:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(0);
+}
+
+
+/* === anacardium === */
+.anacardium-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #111 50%, transparent 0) right/250% 100% no-repeat, linear-gradient(45deg, transparent 50%, #111 0) left/250% 100% no-repeat;
+  transition: 0.5s;
+}
+
+.anacardium-link:hover {
+  background-position: center;
+  color: #fff;
+}
+
+
+/* === kipella === */
+.kipella-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  transition: .4s;
+}
+
+.kipella-link:hover {
+  color: transparent;
+}
+
+.kipella-link:hover:before,
+.kipella-link:hover:after {
+  transform: translateX(0) rotateY(0deg);
+}
+
+.kipella-link:before,
+.kipella-link:after {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: translateX(-70%) rotateY(-90deg);
+  clip-path: inset(0 50% 0 0);
+  backface-visibility: hidden;
+  background: #111;
+  color: #fff;
+  transition: .4s;
+}
+
+.kipella-link:after {
+  transform: translateX(70%) rotateY(90deg);
+  clip-path: inset(0 0 0 49%);
+}
+
+
+/* === rubus ellipticus === */
+.rubus-ellipticus-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 20px;
+  background: conic-gradient(from 135deg, #111 90deg, transparent 0) top, conic-gradient(from 45deg, #111 90deg, transparent 0) left, conic-gradient(from -45deg, #111 90deg, transparent 0) bottom, conic-gradient(from -135deg, #111 90deg, transparent 0) right;
+  background-size: 100% 200%, 200% 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.rubus-ellipticus-link:hover {
+  color: #fff;
+  background-position: center;
+}
+
+
+/* === rubus odoratus === */
+.rubus-odoratus-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 30px;
+  background: radial-gradient(farthest-side at top left, #111 97%, transparent) top -15px left -15px, radial-gradient(farthest-side at top right, #111 97%, transparent) top -15px right -15px, radial-gradient(farthest-side at bottom left, #111 97%, transparent) bottom -15px left -15px, radial-gradient(farthest-side at bottom right, #111 97%, transparent) bottom -15px right -15px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  transition: 0.3s linear, background-position 0.3s 0.4s;
+}
+
+.rubus-odoratus-link:hover {
+  color: #fff;
+  background-size: 140px 140px;
+  background-position: top left, top right, bottom left, bottom right;
+  transition: 0.3s, background-size 0.4s 0.4s, color 0.4s 0.4s;
+}
+
+
+/* === watermelon === */
+.watermelon-link {
+  font-size: 24px;
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  z-index: 0;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: color .3s ease-out;
+}
+
+.watermelon-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.watermelon-link:hover {
+  color: #fff;
+}
+
+.watermelon-link:hover:before {
+  transform: translateY(0);
+}
+
+
+/* === miracle fruit === */
+.miracle-fruit-link {
+  display: inline-block;
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
+}
+
+.miracle-fruit-link:after {
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  background-color: #111;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
+.miracle-fruit-link:hover {
+  color: #fff;
+}
+
+.miracle-fruit-link:hover:after {
+  right: 0;
+  left: 0;
+  height: 100%;
+}
+
+
+/* === mulberry === */
+.mulberry-link {
+  display: inline-block;
+  padding: 10px 20px;
+  box-shadow: inset 0 0 0 0 #222;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.mulberry-link:hover {
+  box-shadow: inset 150px 0 0 0 #222;
+  color: #fff;
+}
+
+
+/* === pineapple === */
+.pineapple-link {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+  color: #111;
+  padding: 8px 20px;
+}
+
+.pineapple-link:after {
+  content: "";
+  background-color: #111;
+  position: absolute;
+  left: 20px;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.25, 0.1, 0, 2.05);
+  pointer-events: none;
+}
+
+.pineapple-link:hover {
+  color: #fff;
+}
+
+.pineapple-link:hover:after {
+  opacity: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* === blood orange === */
+.blood-orange-link {
+  font-size: 24px;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.blood-orange-link span {
+  position: relative;
+  z-index: 2;
+}
+
+.blood-orange-link:before,
+.blood-orange-link:after {
+  content: "";
+  width: 51%;
+  height: 100%;
+  opacity: 0;
+  transform: rotate(360deg);
+  transition: all .2s ease-out;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: #111;
+}
+
+.blood-orange-link:before {
+  left: 0;
+}
+
+.blood-orange-link:after {
+  right: 0;
+}
+
+.blood-orange-link:hover {
+  color: #fff;
+}
+
+.blood-orange-link:hover:before,
+.blood-orange-link:hover:after {
+  opacity: 1;
+  transform: rotate(0);
+  transition: all .3s ease-out;
+}
+
+
+/* === chinare === */
+.chinare-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  transition: .4s;
+}
+
+.chinare-link:before,
+.chinare-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 50% 0 0;
+  background: #111;
+  transform: rotate(450deg) scale(0);
+  transition: .4s;
+}
+
+.chinare-link:after {
+  inset: 0 0 0 50%;
+  transform: rotate(-450deg) scale(0);
+}
+
+.chinare-link:hover {
+  color: #fff;
+}
+
+.chinare-link:hover:before,
+.chinare-link:hover:after {
+  transform: rotate(0deg) scale(1);
+}
+
+
+/* === pomegranate === */
+.pomegranate-link {
+  position: relative;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #111;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+  border: 0;
+  background-color: transparent;
+}
+
+.pomegranate-link:before,
+.pomegranate-link:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.pomegranate-link:before,
+.pomegranate-link:after {
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.pomegranate-link:before {
+  bottom: 0;
+  border: 1px solid #111;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.pomegranate-link:after {
+  top: 0;
+  height: 0;
+}
+
+.pomegranate-link:hover {
+  color: #fff;
+  transition-delay: .5s;
+}
+
+.pomegranate-link:hover:before {
+  transition-delay: 0s;
+  height: 100%;
+}
+
+.pomegranate-link:hover:after {
+  background: #111;
+  height: 100%;
+  transition-delay: .35s;
+}
+
+
+/* === pomelo === */
+.pomelo-link {
+  position: relative;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #111;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.pomelo-link:before,
+.pomelo-link:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.pomelo-link:before {
+  right: 0;
+  border: 1px solid #111;
+  border-left: 0;
+  border-right: 0;
+}
+
+.pomelo-link:after {
+  left: 0;
+}
+
+.pomelo-link:hover {
+  color: #fff;
+  transition-delay: .5s;
+}
+
+.pomelo-link:hover:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+
+.pomelo-link:hover:after {
+  width: 100%;
+  background-color: #111;
+  transition-delay: .35s;
+}
+
+
+/* === raspberry === */
+.raspberry-link {
+  position: relative;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #111;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.raspberry-link:before,
+.raspberry-link:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.raspberry-link:before {
+  left: 0;
+  border: 1px solid #111;
+  border-left: 0;
+  border-right: 0;
+}
+
+.raspberry-link:after {
+  right: 0;
+}
+
+.raspberry-link:hover {
+  color: #fff;
+  transition-delay: .5s;
+}
+
+.raspberry-link:hover:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+
+.raspberry-link:hover:after {
+  width: 100%;
+  background-color: #111;
+  transition-delay: .35s;
+}
+
+
+/* === salmonberry === */
+.salmonberry-link {
+  position: relative;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #111;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.salmonberry-link:before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 1px solid #111;
+  border-left: 0;
+  border-right: 0;
+}
+
+.salmonberry-link:after {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #111;
+}
+
+.salmonberry-link:before,
+.salmonberry-link:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.salmonberry-link:hover {
+  color: #fff;
+  transition-delay: .5s;
+}
+
+.salmonberry-link:hover:before {
+  left: 0;
+  width: 100%;
+  transition-delay: 0s;
+}
+
+.salmonberry-link:hover:hover:after {
+  background: #111;
+  transition-delay: .35s;
+  top: 0;
+  height: 100%;
+}
+
+
+/* === rambutan === */
+.rambutan-link {
+  position: relative;
+  width: 200px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #111;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.rambutan-link:before,
+.rambutan-link:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.rambutan-link:hover {
+  color: #fff;
+  transition-delay: .5s;
+}
+
+.rambutan-link:hover:before {
+  height: 100%;
+  transition-delay: 0s;
+}
+
+.rambutan-link:hover:after {
+  height: 100%;
+  background-color: #111;
+  transition-delay: .35s;
+}
+
+.rambutan-link:before {
+  top: 0;
+  border: 1px solid #111;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.rambutan-link:after {
+  bottom: 0;
+  height: 0;
+}
+
+
+/* === julianettii === */
+.julianettii-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 20px;
+  background: linear-gradient(#111 0 0) 50% calc(-1px - 100%)/0 200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.julianettii-link:hover {
+  background-size: 100% 200%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+
+
+/* === elaocarpus === */
+.elaocarpus-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 20px;
+  background: linear-gradient(#111 0 0) 0% calc(-1px - 100%)/0 200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.elaocarpus-link:hover {
+  background-size: 100% 200%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+
+
+/* === bancroftii === */
+.bancroftii-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 20px;
+  background: linear-gradient(#111 0 0) left/100% 0 no-repeat;
+  transition: all 0.5s ease;
+}
+
+.bancroftii-link:hover {
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+
+/* === cashew nut === */
+.cashew-nut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 20px;
+  background: radial-gradient(farthest-side at bottom, black 98%, transparent) bottom/20px 0 no-repeat, linear-gradient(black 0 0) bottom/30px 2px no-repeat;
+  transition: 0.5s;
+}
+
+.cashew-nut-link:hover {
+  background-size: calc(2 * 150%) 150%, 20px 3px;
+  color: #fff;
+}
+
+
+/* === baru nut === */
+.baru-nut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 20px;
+  background: radial-gradient(circle at bottom right, black 50%, transparent) bottom right/0 0 no-repeat, radial-gradient(circle at bottom left, black 50%, transparent) bottom left/0 0 no-repeat, linear-gradient(#111 0 0) bottom/15px 2px no-repeat, linear-gradient(#111 0 0) bottom/15px 2px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+}
+
+.baru-nut-link:hover {
+  transition: 0.3s, background-size 0.5s 0.3s, color 0.3s 0.3s;
+  background-position: bottom right, bottom left;
+  background-size: 150px 150px, 150px 150px, 15px 3px, 15px 3px;
+  color: #fff;
+}
+
+
+/* === areca catechu === */
+.areca-catechu-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 20px;
+  background: radial-gradient(circle, #111 50%, transparent) center/0 0 no-repeat, linear-gradient(#111 0 0) bottom -13px left 50%/15px 15px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+}
+
+.areca-catechu-link:hover {
+  transition: 0.3s, background-size 0.4s 0.3s, color 0.3s 0.3s;
+  background-position: center;
+  background-size: 180% 180%, 15px 15px;
+  color: #fff;
+}
+
+
+/* === harveyi === */
+.harveyi-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 10px 30px;
+  background: radial-gradient(farthest-side, transparent calc(100% - 150px), #111 0) center/600px 600px no-repeat;
+  transition: all 0.5s ease;
+}
+
+.harveyi-link:hover {
+  background-size: 300px 300px;
+  color: #fff;
+}
+
+
+/* === bigeloviana === */
+.bigeloviana-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  position: relative;
+  border-radius: 15px 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+  padding: 10px 30px;
+}
+
+.bigeloviana-link:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #111;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.5s ease 0s;
+}
+
+.bigeloviana-link:hover:after {
+  transform: translate(-50%, -50%) scale(5);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* === chilean hazel === */
+.chilean-hazel-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 10px 20px;
+  background: conic-gradient(from -45deg, #111 90deg, transparent 91deg) bottom/20px 250% repeat-x, conic-gradient(from -45deg, transparent 90deg, #111 91deg) top/20px 250% repeat-x;
+  transition: 0.5s;
+}
+
+.chilean-hazel-link:hover {
+  background-position: center;
+  color: #fff;
+}
+
+
+/* ===  gevuina === */
+.gevuina-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 8px 30px;
+  background: conic-gradient(from 135deg at 50% -10px, #111 90deg, transparent 91deg) 50% calc(-2px - 50%)/100% 300% no-repeat;
+  transition: all 0.5s ease;
+}
+
+.gevuina-link:hover {
+  background-position: bottom;
+  color: #fff;
+}
+
+
+/* === borneo tallow === */
+.borneo-tallow-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 9px 25px;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.borneo-tallow-link .link-text {
+  position: relative;
+  z-index: 1;
+}
+
+.borneo-tallow-link .hover-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 8px 50%, 0 100%, 50% calc(100% - 8px), 100% 100%, calc(100% - 8px) 50%, 100% 0, 50% 8px);
+  z-index: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.borneo-tallow-link:hover {
+  color: #fff;
+}
+
+.borneo-tallow-link:hover .hover-shape {
+  transform: scale(1);
+  background-color: #111;
+}
+
+
+/* ===  pili nuts === */
+.pili-nuts-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 10px 30px;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.pili-nuts-link .link-text {
+  position: relative;
+  z-index: 1;
+}
+
+.pili-nuts-link .hover-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  clip-path: polygon(0 0, calc(50% - 10px) 0, 50% 10px, calc(50% + 10px) 0, 100% 0, 100% calc(50% - 10px), calc(100% - 10px) 50%, 100% calc(50% + 10px), 100% 100%, calc(50% + 10px) 100%, 50% calc(100% - 10px), calc(50% - 10px) 100%, 0 100%, 0 calc(50% + 10px), 10px 50%, 0 calc(50% - 10px));
+}
+
+.pili-nuts-link:hover {
+  color: #fff;
+}
+
+.pili-nuts-link:hover .hover-shape {
+  transform: scale(1);
+  background-color: #111;
+}
+
+
+/* === burrawang === */
+.burrawang-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  box-shadow: 0 0 40px 35px transparent;
+  clip-path: polygon(-100px -50px, 50% 0, calc(100% + 100px) -50px, calc(100% + 100px) calc(100% + 50px), 50% 100%, -100px calc(100% + 50px));
+  transition: 0.5s;
+}
+
+.burrawang-link:hover {
+  background-color: rgba(17, 17, 17, 0.95);
+  color: #fff;
+  box-shadow: 0 0 40px 35px #111;
+}
+
+
+/* === parana pine === */
+.parana-pine-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 20px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.parana-pine-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(8px 0, calc(100% + 8px) 0, calc(100% - 8px) 100%, -8px 100%);
+}
+
+
+/* === angustifolia === */
+.angustifolia-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 20px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
+}
+
+.angustifolia-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(-30px -30px, 50% 0, calc(100% + 30px) -30px, 100% 50%, calc(100% + 30px) calc(100% + 30px), 50% 100%, -30px calc(100% + 30px), 0 50%);
+}
+
+
+/* === brazil pine === */
+.brazil-pine-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 20px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+}
+
+.brazil-pine-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(0 -20px, 50% 0, 100% -20px, 100% 100%, 50% calc(100% + 20px), 0 100%);
+}
+
+
+/* === macadamia === */
+.macadamia-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 20px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 50% 0, 50% 10px, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 50% calc(100% - 10px), 50% 100%, 0 100%, 0 50%);
+}
+
+.macadamia-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(-30px -20px, calc(50% - 20px) -20px, 50% 10px, calc(50% + 20px) -20px, calc(100% + 30px) -20px, 100% 50%, calc(100% + 30px) calc(100% + 20px), calc(50% + 20px) calc(100% + 20px), 50% calc(100% - 10px), calc(50% - 20px) calc(100% + 20px), -30px calc(100% + 20px), 0 50%);
+}
+
+
+/* === glycine max === */
+.glycine-max-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 20px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 10px 0, 10px 0, 100% 0, 100% 50%, 100% 100%, 10px 100%, 10px 100%, 0 100%, 0 calc(50% + 10px), 0 calc(50% + 10px), 0 calc(50% + 10px), 0 calc(50% - 10px), 0 calc(50% - 10px), 0 calc(50% - 10px));
+}
+
+.glycine-max-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(0 -20px, 20px -30px, 20px 0, calc(100% - 10px) 0, calc(100% + 20px) 50%, calc(100% - 10px) 100%, 20px 100%, 20px calc(100% + 30px), 0 calc(100% + 20px), 0 calc(50% + 10px), -35px calc(50% + 10px), -40px calc(50% + 15px), -40px calc(50% - 15px), -35px calc(50% - 10px), 0 calc(50% - 10px));
+}
+
+
+/* === koraiensis === */
+.koraiensis-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 0 0, 40% 0, 45% 0, 55% 0, 60% 0, 100% 0, 100% 0, 100% 50%, 100% 100%, 100% 100%, 60% 100%, 55% 100%, 45% 100%, 40% 100%, 0 100%, 0 100%, 0 50%);
+}
+
+.koraiensis-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(0 -62px, 0 10%, 30% 0, 40% -20px, 60% -20px, 70% 0, 100% 10%, 100% -62px, calc(100% + 15px) 50%, 100% calc(100% + 62px), 100% 90%, 70% 100%, 60% calc(100% + 20px), 40% calc(100% + 20px), 30% 100%, 0 90%, 0 calc(100% + 62px), -20px 50%);
+}
+
+
+/* === arachis === */
+.arachis-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, box-shadow 0.3s 0.3s, background 0.3s 0.3s, color 0.3s 0.3s;
+  clip-path: polygon(0 0, 20% 0, 30% 0, calc(50% - 10px) 0, calc(50% - 10px) 0, 50% 0, 50% 0, calc(50% + 10px) 0, calc(50% + 10px) 0, 70% 0, 80% 0, 100% 0, 100% 90%, 100% 100%, 60% 100%, 50% 100%, 40% 100%, 0 100%, 0 90%);
+}
+
+.arachis-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(-80px -40px, 20% -30px, 30% 0, calc(50% - 15px) 0, calc(50% - 10px) -20px, calc(50% - 8px) -15px, calc(50% + 8px) -15px, calc(50% + 10px) -20px, calc(50% + 15px) 0, 70% 0, 80% -30px, calc(100% + 80px) -40px, 100% 80%, calc(100% + 20px) calc(100% + 20px), 60% 100%, 50% calc(100% + 40px), 40% 100%, -20px calc(100% + 20px), 0 80%);
+}
+
+
+/* === rubus nivalis === */
+.rubus-nivalis-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, clip-path 0s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.rubus-nivalis-link:hover {
+  background: #111;
+  box-shadow: 0 0 0px 80px #111;
+  color: #fff;
+  transition: 0.3s, clip-path cubic-bezier(0.5, 150, 0.5, -150) 0.4s 0.3s;
+  clip-path: polygon(0.5px 0, calc(100% + 0.5px) 0, calc(100% - 0.5px) 100%, -0.5px 100%);
+}
+
+
+/* === bernieri === */
+.bernieri-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s 0.3s, clip-path 0.3s;
+  clip-path: polygon(0 0, 20% 0, 30% 0, 40% 0, 50% 0, 60% 0, 70% 0, 80% 0, 100% 0, 100% 25%, 100% 50%, 100% 75%, 100% 100%, 80% 100%, 70% 100%, 60% 100%, 50% 100%, 40% 100%, 30% 100%, 20% 100%, 0 100%, 0 75%, 0 50%, 0 25%);
+}
+
+.bernieri-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path 0.4s 0.3s;
+  clip-path: polygon(-30px -30px, 20% 0, 20% -20px, 40% 0, 50% -30px, 60% 0, 80% -20px, 80% 0, calc(100% + 30px) -30px, 100% 25%, calc(100% + 25px) 50%, 100% 75%, calc(100% + 30px) calc(100% + 30px), 80% 100%, 80% calc(100% + 20px), 60% 100%, 50% calc(100% + 30px), 40% 100%, 20% calc(100% + 20px), 20% 100%, -30px calc(100% + 30px), 0 75%, -25px 50%, 0 25%);
+}
+
+
+/* === biramulata === */
+.biramulata-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s 0.3s, clip-path 0.3s;
+  clip-path: polygon(0 0, 20% 0, 30% 0, 40% 0, 50% 0, 60% 0, 70% 0, 80% 0, 100% 0, 100% 25%, 100% 50%, 100% 75%, 100% 100%, 80% 100%, 70% 100%, 60% 100%, 50% 100%, 40% 100%, 30% 100%, 20% 100%, 0 100%, 0 75%, 0 50%, 0 25%);
+}
+
+.biramulata-link:hover {
+  box-shadow: 0 0 0px 80px #111;
+  background: #111;
+  color: #fff;
+  transition: 0.3s, clip-path cubic-bezier(1, 150, 0.5, 150) 0.4s 0.3s;
+  clip-path: polygon(-0.5px -0.5px, 20% 0, 29.9% -0.3px, 40% 0, 50% -0.5px, 60% 0, 70.1% -0.3px, 80% 0, calc(100% + 0.5px) -0.5px, 100% 25%, calc(100% + 0.4px) 50%, 100% 75%, calc(100% + 0.5px) calc(100% + 0.5px), 80% 100%, 70.1% calc(100% + 0.3px), 60% 100%, 50% calc(100% + 0.5px), 40% 100%, 29.9% calc(100% + 0.3px), 20% 100%, -0.5px calc(100% + 0.5px), 0 75%, -0.4px 50%, 0 25%);
+}
+
+
+/* === columnaris === */
+.columnaris-link {
+  font-size: 24px;
+  position: relative;
+  width: 146px;
+  height: 44px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnaris-link span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-shadow: 0 0 0px 100px transparent;
+  background: conic-gradient(from 97deg at top left, #fff 22deg, transparent 0) 20% 80%, conic-gradient(from -120deg at top right, #fff 22deg, transparent 0) 80% 80%, transparent;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+  clip-path: polygon(0 0, 30% 0, 45% 0, 55% 0, 70% 0, 100% 0, 100% 100%, 100% 100%, 90% 100%, 60% 100%, 50% 100%, 40% 100%, 10% 100%, 0 100%, 0 100%);
+  transition: 0.3s 0.4s, clip-path 0.4s, padding 0.4s, background-size 0.2s;
+}
+
+.columnaris-link:hover span {
+  box-shadow: 0 0 0px 100px #111;
+  color: #fff;
+  background: conic-gradient(from 97deg at top left, #fff 22deg, transparent 0) 20% 80%, conic-gradient(from -120deg at top right, #fff 22deg, transparent 0) 80% 80%, #111;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  background-size: 40px 16px;
+  clip-path: polygon(5% -70px, 20% 0, 45% -20px, 55% -20px, 80% 0, 95% -70px, 100% 100%, 85% calc(100% + 60px), 90% 100%, 60% calc(100% + 10px), 50% calc(100% + 30px), 40% calc(100% + 10px), 10% 100%, 15% calc(100% + 60px), 0 100%);
+  transition: 0.3s, padding 0.4s 0.3s, clip-path 0.4s 0.3s, background-size 0.15s 0.7s;
+}
+
+
+/* === muelleri === */
+.muelleri-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0 0 0px 80px transparent;
+  background: transparent;
+  transition: 0.3s, clip-path 0s;
+  clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
+}
+
+.muelleri-link:hover {
+  background: #111;
+  box-shadow: 0 0 0px 80px #111;
+  color: #fff;
+  transition: 0.3s, clip-path cubic-bezier(1, 150, 0.5, 150) 0.4s 0.3s;
+  clip-path: polygon(-0.5px -0.5px, 50% 0, calc(100% + 0.5px) -0.5px, 100% 50%, calc(100% + 0.5px) calc(100% + 0.5px), 50% 100%, -0.5px calc(100% + 0.5px), 0 50%);
+}
+
+
+/* === schmidii === */
+.schmidii-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.schmidii-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s .4s;
+  padding: 12px 32px;
+}
+
+.schmidii-link span:before,
+.schmidii-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s .2s;
+  pointer-events: none;
+}
+
+.schmidii-link span:before {
+  transition-delay: 0s;
+  background-color: #ffa600;
+}
+
+.schmidii-link span:after {
+  background-color: #d6345b;
+}
+
+.schmidii-link:hover span {
+  color: #fff;
+  background: #111;
+  transition: .2s;
+}
+
+.schmidii-link:hover span:before,
+.schmidii-link:hover span:after {
+  transform: translate(-10px, 10px);
+  opacity: 1;
+}
+
+.schmidii-link:hover span:before {
+  transform: translate(-20px, 20px);
+  transition-delay: .4s;
+}
+
+
+/* === subulata === */
+.subulata-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.subulata-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s .4s;
+  padding: 12px 32px;
+}
+
+.subulata-link span:before,
+.subulata-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s .2s;
+  pointer-events: none;
+}
+
+.subulata-link span:before {
+  inset: 0 20px;
+  background-color: #ffa600;
+  transition-delay: 0s;
+}
+
+.subulata-link span:after {
+  background-color: #d6345b;
+}
+
+.subulata-link:hover span {
+  color: #fff;
+  background: #111;
+  transition: .2s;
+}
+
+.subulata-link:hover span:before,
+.subulata-link:hover span:after {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+.subulata-link:hover span:before {
+  transform: translateY(20px);
+  transition-delay: .4s;
+}
+
+
+/* === lignitici === */
+.lignitici-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.lignitici-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s .4s;
+  padding: 12px 32px;
+}
+
+.lignitici-link span:before,
+.lignitici-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s .2s;
+  pointer-events: none;
+}
+
+.lignitici-link span:before {
+  background-color: #ffa600;
+  transition-delay: 0s;
+}
+
+.lignitici-link span:after {
+  background-color: #d6345b;
+}
+
+.lignitici-link:hover span {
+  color: #fff;
+  background-color: #111;
+  transition: .2s;
+}
+
+.lignitici-link:hover span:before,
+.lignitici-link:hover span:after {
+  transform: rotate(-8deg);
+  opacity: 1;
+}
+
+.lignitici-link:hover span:before {
+  transform: rotate(-16deg);
+  transition-delay: .4s;
+}
+
+
+/* === marensii === */
+.marensii-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.marensii-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s .4s;
+  padding: 12px 32px;
+}
+
+.marensii-link span:before,
+.marensii-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s .2s;
+  pointer-events: none;
+}
+
+.marensii-link span:before {
+  background-color: #ffa600;
+  transition-delay: 0s;
+}
+
+.marensii-link span:after {
+  background-color: #d6345b;
+}
+
+.marensii-link:hover span {
+  color: #fff;
+  background-color: #111;
+  transition: .2s;
+}
+
+.marensii-link:hover span:before,
+.marensii-link:hover span:after {
+  transform: rotate(-10deg);
+  opacity: 1;
+  transition: .2s .2s;
+}
+
+.marensii-link:hover span:before {
+  transform: rotate(10deg);
+}
+
+
+/* === nihongii === */
+.nihongii-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.nihongii-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s;
+  padding: 12px 32px;
+}
+
+.nihongii-link span:before,
+.nihongii-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0 5px;
+  z-index: -1;
+  opacity: 0;
+  transition: .2s;
+  pointer-events: none;
+}
+
+.nihongii-link span:before {
+  inset: 0 10px;
+  background-color: #ffa600;
+}
+
+.nihongii-link span:after {
+  background-color: #d6345b;
+}
+
+.nihongii-link:hover span {
+  color: #fff;
+  background-color: #111;
+}
+
+.nihongii-link:hover span:before,
+.nihongii-link:hover span:after {
+  transform: translateY(0.1px);
+  opacity: 1;
+  transition: transform 0.5s 0.2s cubic-bezier(0.5, 500, 0.5, -500), opacity 0s 0.2s;
+}
+
+.nihongii-link:hover span:before {
+  transform: translateY(0.2px);
+}
+
+
+/* === taieriensis === */
+.taieriensis-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.taieriensis-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s;
+  padding: 12px 32px;
+}
+
+.taieriensis-link span:before,
+.taieriensis-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transform: translate(100px, -100px);
+  pointer-events: none;
+}
+
+.taieriensis-link span:before {
+  background-color: #d6345b;
+  transform: translate(-100px, 100px);
+}
+
+.taieriensis-link span:after {
+  background-color: #ffa600;
+}
+
+.taieriensis-link:hover span {
+  color: #fff;
+  background-color: #111;
+}
+
+.taieriensis-link:hover span:before,
+.taieriensis-link:hover span:after {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.5s 0.2s cubic-bezier(0, 0.6, 0.8, 1.9), opacity 0.3s 0.2s;
+}
+
+
+/* === brownii === */
+.brownii-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.brownii-link span {
+  position: relative;
+  z-index: 1;
+  transition: .2s;
+  padding: 10px 30px;
+}
+
+.brownii-link span:before,
+.brownii-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.brownii-link span:before {
+  background-color: #ffa600;
+}
+
+.brownii-link span:after {
+  background-color: #d6345b;
+}
+
+.brownii-link:hover span {
+  color: #fff;
+  background-color: #111;
+}
+
+.brownii-link:hover span:before,
+.brownii-link:hover span:after {
+  inset: -0.1px;
+  opacity: 1;
+  transition: inset 0.5s 0.2s cubic-bezier(0.2, 250, 0.8, 250), opacity 0s 0.2s;
+}
+
+.brownii-link:hover span:before {
+  inset: -0.2px;
+  transition-delay: .3s, .2s;
+}
+
+
+/* === mirabilis === */
+.mirabilis-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.mirabilis-link span {
+  position: relative;
+  z-index: 1;
+  transition: .3s .3s;
+  padding: 8px 30px;
+  display: block;
+}
+
+.mirabilis-link span:before,
+.mirabilis-link span:after {
+  content: "";
+  position: absolute;
+  inset: 0 50% 0 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s 0.3s, box-shadow .3s;
+}
+
+.mirabilis-link span:after {
+  transform-origin: right;
+  transform: rotate(180deg);
+}
+
+.mirabilis-link:hover span {
+  color: #fff;
+  transition: .3s;
+  background-color: #111;
+}
+
+.mirabilis-link:hover span:before,
+.mirabilis-link:hover span:after {
+  box-shadow: -10px 10px #d6345b, -20px 20px #ffa600;
+  opacity: 1;
+  transition: 0.3s 0.3s, opacity .3s;
+}
+
+
+/* === acutifolium === */
+.acutifolium-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 20px;
+  position: relative;
+  transition: .3s;
+  z-index: 1;
+}
+
+.acutifolium-link:hover {
+  color: #fff;
+  transition: .3s .3s;
+}
+
+.acutifolium-link:before,
+.acutifolium-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 2px;
+  background-color: transparent;
+  width: 50px;
+  transform: rotate(270deg);
+  transition: .3s .3s, height .3s;
+}
+
+.acutifolium-link:before {
+  inset: auto auto 0 0;
+  transform-origin: left;
+}
+
+.acutifolium-link:after {
+  inset: 0 0 auto auto;
+  transform-origin: right;
+}
+
+.acutifolium-link:hover:before,
+.acutifolium-link:hover:after {
+  background-color: #111;
+  transform: rotate(0);
+  width: 50%;
+  height: 100%;
+  transition: .3s, height .3s .3s;
+}
+
+
+/* === balansae === */
+.balansae-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 30px;
+  z-index: 0;
+  transition: .3s;
+  position: relative;
+}
+
+.balansae-link:before,
+.balansae-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 2px;
+  background-color: transparent;
+  height: 56px;
+  transition: .3s;
+}
+
+.balansae-link:before {
+  inset: -2px auto 0 0;
+  transform: rotate(180deg);
+  transform-origin: left;
+}
+
+.balansae-link:after {
+  inset: -2px 0 0 auto;
+  transform: rotate(-180deg);
+  transform-origin: right;
+}
+
+.balansae-link:hover {
+  color: #fff;
+}
+
+.balansae-link:hover:before,
+.balansae-link:hover:after {
+  width: 51%;
+  background-color: #111;
+  transform: rotate(0);
+}
+
+
+/* === caudatum === */
+.caudatum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  z-index: 0;
+  transition: .4s;
+  position: relative;
+}
+
+.caudatum-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: #111;
+  transform: rotate(450deg) scale(0);
+  transition: .4s;
+}
+
+.caudatum-link:hover {
+  color: #fff;
+}
+
+.caudatum-link:hover:before {
+  transform: rotate(0deg) scale(1);
+}
+
+
+/* === cestracion === */
+.cestracion-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 30px;
+  z-index: 0;
+  transition: .4s;
+  position: relative;
+}
+
+.cestracion-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #111;
+  opacity: 0;
+  transform: translate(-50%, -100%) rotate(-90deg);
+  transition: .4s, transform 0s .4s;
+  pointer-events: none;
+}
+
+.cestracion-link:hover {
+  color: #fff;
+}
+
+.cestracion-link:hover:before {
+  transform: translate(0, 0) rotate(0deg);
+  opacity: 1;
+  transition: .4s;
+}
+
+
+/* === cinereum === */
+.cinereum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  transition: .4s;
+}
+
+.cinereum-link:before,
+.cinereum-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 50% 0 0;
+  background: #111;
+  opacity: 0;
+  transform: translate(-100%, -100%) rotate(-90deg);
+  transition: .4s, transform 0s .4s;
+}
+
+.cinereum-link:after {
+  inset: 0 0 0 50%;
+  transform: translate(100%, -100%) rotate(90deg);
+}
+
+.cinereum-link:hover {
+  color: #fff;
+}
+
+.cinereum-link:hover:before,
+.cinereum-link:hover:after {
+  transform: translate(0, 0) rotate(0deg);
+  opacity: 1;
+  transition: .4s;
+}
+
+
+/* === copaliferum === */
+.copaliferum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  transition: .4s;
+}
+
+.copaliferum-link:before,
+.copaliferum-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #111;
+  opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  transform: translate(-10%, -50%) rotate(-90deg);
+  transform-origin: left;
+  transition: .4s, transform 0s .4s;
+}
+
+.copaliferum-link:after {
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+  transform: translate(10%, 50%) rotate(-90deg);
+  transform-origin: right;
+}
+
+.copaliferum-link:hover {
+  color: #fff;
+}
+
+.copaliferum-link:hover:before,
+.copaliferum-link:hover:after {
+  transform: translate(0, 0) rotate(0deg);
+  opacity: 1;
+  transition: .4s;
+}
+
+
+/* === decumanum === */
+.decumanum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  transition: .4s;
+}
+
+.decumanum-link:before,
+.decumanum-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 50% 0 0;
+  background: #111;
+  opacity: 0;
+  transform: translateY(-300%);
+  transition: .4s, transform 0s .4s;
+  pointer-events: none;
+}
+
+.decumanum-link:after {
+  inset: 0 0 0 50%;
+  transform: translateY(300%);
+}
+
+.decumanum-link:hover {
+  color: #fff;
+}
+
+.decumanum-link:hover:before,
+.decumanum-link:hover:after {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.4s, transform 0.4s cubic-bezier(0, 0.5, 0.5, 1.5);
+}
+
+
+/* === denticulatum === */
+.denticulatum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  transition: .4s;
+}
+
+.denticulatum-link:before,
+.denticulatum-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #111;
+  opacity: 0;
+  transform: rotate(-25deg);
+  transform-origin: left;
+  clip-path: inset(0 0 50% 0);
+  transition: .4s, transform 0s .4s;
+  pointer-events: none;
+}
+
+.denticulatum-link:after {
+  clip-path: inset(50% 0 0 0);
+  transform: rotate(25deg);
+}
+
+.denticulatum-link:hover {
+  color: #fff;
+}
+
+.denticulatum-link:hover:before,
+.denticulatum-link:hover:after {
+  transform: rotate(0deg);
+  opacity: 1;
+  transition: .4s;
+}
+
+
+/* === dichotomum === */
+.dichotomum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  z-index: 0;
+  transition: .4s;
+  position: relative;
+}
+
+.dichotomum-link:before,
+.dichotomum-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 50% 0;
+  background: linear-gradient(90deg, #111 10%, transparent 0 20%, #111 0 80%, transparent 0 90%, #111 0) bottom/100% 60%, linear-gradient(#111 0 0) top/100% 40%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(-150%);
+  transition: .4s, transform 0s .4s;
+}
+
+.dichotomum-link:after {
+  inset: 19% 0 0 0;
+  background: linear-gradient(90deg, transparent 10%, #111 0 20%, transparent 0 80%, #111 0 90%, transparent 0) top/100% 37.5%, linear-gradient(#111 0 0) bottom/100% 62.6%;
+  background-repeat: no-repeat;
+  transform: translateY(60%);
+}
+
+.dichotomum-link:hover {
+  color: #fff;
+}
+
+.dichotomum-link:hover:before,
+.dichotomum-link:hover:after {
+  transform: translateY(0);
+  opacity: 1;
+  transition: .4s;
+}
+
+
+/* === divergens === */
+.divergens-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.divergens-link span {
+  display: block;
+  position: relative;
+  color: transparent;
+  padding: 8px 20px;
+}
+
+.divergens-link span:before,
+.divergens-link span:after {
+  content: attr(data-text);
+  padding: inherit;
+  color: #111;
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 50%);
+  transition: .3s .3s, transform .3s;
+}
+
+.divergens-link span:after {
+  clip-path: inset(50% 0 0);
+}
+
+.divergens-link:hover span:before,
+.divergens-link:hover span:after {
+  color: #fff;
+  background: #111;
+  transition: .3s, transform .3s .3s;
+}
+
+.divergens-link:hover span:before {
+  transform: translate(5px, -5px);
+}
+
+.divergens-link:hover span:after {
+  transform: translate(-5px, 5px);
+}
+
+
+/* === elegans === */
+.elegans-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+.elegans-link span {
+  display: block;
+  position: relative;
+  color: transparent;
+  padding: 10px;
+}
+
+.elegans-link span:before,
+.elegans-link span:after {
+  content: attr(data-text);
+  padding: inherit;
+  color: #111;
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  transition: .3s .3s, transform .3s;
+}
+
+.elegans-link span:after {
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.elegans-link span:hover:before,
+.elegans-link span:hover:after {
+  color: #fff;
+  background: #111;
+  transition: .3s, transform .3s .3s;
+}
+
+.elegans-link span:hover:before {
+  transform: translate(15px);
+}
+
+.elegans-link span:hover:after {
+  transform: translate(-15px);
+}
+
+
+/* === euphyllum === */
+.euphyllum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+.euphyllum-link span {
+  display: block;
+  position: relative;
+  color: transparent;
+  padding: 10px;
+}
+
+.euphyllum-link span:before,
+.euphyllum-link span:after {
+  content: attr(data-text);
+  padding: inherit;
+  color: #111;
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+  transform-origin: bottom;
+  transition: .3s .3s, transform .3s;
+}
+
+.euphyllum-link span:after {
+  clip-path: inset(0 0 0 50%);
+}
+
+.euphyllum-link span:hover:before,
+.euphyllum-link span:hover:after {
+  color: #fff;
+  background: #111;
+  transition: .3s, transform .3s .3s;
+}
+
+.euphyllum-link span:hover:before {
+  transform: rotate(-15deg);
+}
+
+.euphyllum-link span:hover:after {
+  transform: rotate(15deg);
+}
+
+
+
+/* === euryphyllum === */
+.euryphyllum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+.euryphyllum-link span {
+  display: block;
+  position: relative;
+  color: transparent;
+  padding: 10px;
+}
+
+.euryphyllum-link span:before,
+.euryphyllum-link span:after {
+  content: attr(data-text);
+  padding: inherit;
+  color: #111;
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 50% 0);
+  transform-origin: left;
+  transition: .3s, transform 0s;
+}
+
+.euryphyllum-link span:after {
+  clip-path: inset(50% 0 0 0);
+}
+
+.euryphyllum-link span:hover:before,
+.euryphyllum-link span:hover:after {
+  color: #fff;
+  background: #111;
+  transition: 0.3s, transform 0.3s 0.3s cubic-bezier(0.2, 100, 0.8, 100);
+}
+
+.euryphyllum-link span:hover:before {
+  transform: rotate(-0.05deg);
+}
+
+.euryphyllum-link span:hover:after {
+  transform: rotate(0.05deg);
+}
+
+
+/* === indicum === */
+.indicum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 30px;
+  color: transparent;
+  position: relative;
+}
+
+.indicum-link:before,
+.indicum-link:after {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  color: #111;
+  inset: 0;
+  transition: .4s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.indicum-link:after {
+  transform: scale(2);
+  opacity: 0;
+  background: #111;
+  color: #fff;
+}
+
+.indicum-link:hover:before {
+  transform: scale(0.3);
+  opacity: 0;
+}
+
+.indicum-link:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* === kaniense === */
+.kaniense-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  transition: .4s;
+}
+
+.kaniense-link:before {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: translateY(-100%) rotateX(90deg);
+  transform-origin: bottom;
+  backface-visibility: hidden;
+  background: #111;
+  color: #fff;
+  transition: .4s;
+}
+
+.kaniense-link:hover {
+  color: transparent;
+}
+
+.kaniense-link:hover:before {
+  transform: translateY(0) rotateX(0deg);
+}
+
+
+/* === karoense === */
+.karoense-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  transition: .4s;
+  position: relative;
+}
+
+.karoense-link:hover {
+  color: transparent;
+}
+
+.karoense-link:hover:before {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.karoense-link:before {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: translateY(100%) rotateX(-90deg);
+  transform-origin: top;
+  backface-visibility: hidden;
+  background: #111;
+  color: #fff;
+  transition: .4s;
+}
+
+
+/* === kostermansii === */
+.kostermansii-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  transition: .4s;
+}
+
+.kostermansii-link:hover {
+  color: transparent;
+}
+
+.kostermansii-link:hover:before,
+.kostermansii-link:hover:after {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.kostermansii-link:before,
+.kostermansii-link:after {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: translateY(-70%) rotateX(90deg);
+  clip-path: inset(0 0 50% 0);
+  backface-visibility: hidden;
+  background: #111;
+  color: #fff;
+  transition: .4s;
+}
+
+.kostermansii-link:after {
+  transform: translateY(70%) rotateX(-90deg);
+  clip-path: inset(50% 0 0 0);
+}
+
+
+/* === liguliferum === */
+.liguliferum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  transition: .4s;
+  position: relative;
+}
+
+.liguliferum-link:hover {
+  color: transparent;
+}
+
+.liguliferum-link:hover:before,
+.liguliferum-link:hover:after {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.liguliferum-link:before,
+.liguliferum-link:after {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: rotate(90deg);
+  transform-origin: top;
+  clip-path: inset(0 49.5% 0 0);
+  background: #111;
+  color: #fff;
+  opacity: 0;
+  transition: .4s;
+}
+
+.liguliferum-link:after {
+  transform: rotate(-90deg);
+  clip-path: inset(0 0 0 50%);
+}
+
+
+/* === littorale === */
+.littorale-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  transition: .4s;
+}
+
+.littorale-link:hover {
+  color: transparent;
+}
+
+.littorale-link:hover:before {
+  transform: translate(0) translateZ(0) rotateY(0deg);
+  opacity: 1;
+}
+
+.littorale-link:before {
+  content: attr(data-text);
+  position: absolute;
+  padding: inherit;
+  inset: 0;
+  transform: translate(80%, -200%) translateZ(20px) rotateY(450deg);
+  opacity: 0;
+  background: #111;
+  color: #fff;
+  transition: .4s linear;
+  pointer-events: none;
+}
+
+
+/* === luzonicum === */
+.luzonicum-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.luzonicum-link span {
+  padding: 10px 30px;
+  position: relative;
+  color: #000;
+  display: block;
+}
+
+.luzonicum-link span:before {
+  content: "";
+  position: absolute;
+  inset: 10% 5%;
+  background: #fff;
+  transform: rotate(450deg) scale(0);
+  transition: .4s;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.luzonicum-link span:hover:before {
+  transform: rotate(18deg) scale(1);
+}
+
+
+/* === macadamii === */
+.macadamii-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.macadamii-link span {
+  color: #000;
+  position: relative;
+  padding: 10px 30px;
+  display: block;
+}
+
+.macadamii-link span:before,
+.macadamii-link span:after {
+  content: "";
+  position: absolute;
+  inset: -10% 35%;
+  transform-origin: top;
+  background: #fff;
+  transition: .4s;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.macadamii-link span:hover:before {
+  transform: skew(45deg);
+}
+
+.macadamii-link span:hover:after {
+  transform: skew(-45deg);
+}
+
+
+/* === maluense === */
+.maluense-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.maluense-link span {
+  padding: 10px 30px;
+  display: block;
+  color: #000;
+  position: relative;
+}
+
+.maluense-link span:before,
+.maluense-link span:after {
+  content: "";
+  position: absolute;
+  inset: 10% 0;
+  background: #fff;
+  opacity: 0;
+  clip-path: inset(0 40% 0 0);
+  transform-origin: left;
+  transform: rotate(60deg);
+  transition: .4s;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.maluense-link span:after {
+  clip-path: inset(0 0 0 40%);
+  transform-origin: right;
+}
+
+.maluense-link span:hover:before,
+.maluense-link span:hover:after {
+  transform: rotate(5deg);
+  opacity: 1;
+}
+
+
+/* === oleiferum === */
+.oleiferum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  mix-blend-mode: darken;
+  transition: .2s;
+}
+
+.oleiferum-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -15px -5px;
+  padding: 6px;
+  opacity: 0;
+  background: repeating-linear-gradient(90deg, #111 0 20px, transparent 0 40px), repeating-linear-gradient(90deg, transparent 0 20px, #111 0 40px), #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  background-origin: content-box, content-box, padding-box;
+  background-clip: content-box, content-box, padding-box;
+  filter: blur(6px) contrast(30);
+  transition: .2s, opacity .3s;
+}
+
+.oleiferum-link:hover {
+  color: #fff;
+}
+
+.oleiferum-link:hover:before {
+  background-position: top, bottom;
+  opacity: 1;
+  transition: .4s, opacity .2s;
+}
+
+
+/* === paniculatum === */
+.paniculatum-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 0;
+  mix-blend-mode: darken;
+  transition: .2s;
+}
+
+.paniculatum-link:hover {
+  color: #fff;
+}
+
+.paniculatum-link:hover:before {
+  background-size: 50% 100%, 50% 100%, 85% 50%;
+  background-position: left, right, center;
+  opacity: 1;
+  transition: .4s, opacity .2s;
+}
+
+.paniculatum-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -15px -30px;
+  padding: 6px;
+  background: repeating-conic-gradient(#111 0 30deg, transparent 0 50deg), repeating-conic-gradient(#111 0 30deg, transparent 0 50deg), linear-gradient(#111 0 0), #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  background-size: 40% 40%, 40% 40%, 80% 80%;
+  background-origin: content-box, content-box, content-box, padding-box;
+  background-clip: content-box, content-box, content-box, padding-box;
+  filter: blur(6px) contrast(30);
+  transition: .2s, opacity .3s;
+}

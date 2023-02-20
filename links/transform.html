@@ -1,0 +1,1864 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+    <title>UI lib</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/transform.css">
+  </head>
+
+  <body class="links-page">
+    <div id="wrapper" style="background: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);">
+      <header class="main-header" id="navbar">
+        <div class="container">
+          <nav class="main-nav">
+            <a href="../index.html"><span>Index</span></a>
+
+            <a href="#" class="active"><span>Links</span></a>
+
+            <a href="../buttons/overlay.html"><span>Buttons</span></a>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="page-content">
+        <div class="container">
+          <div class="content-header">
+            <div class="page-navigation">
+              <a href="border.html">Underline/border</a>
+
+              <a href="transform.html" class="active">Text transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="elements.html">Elements</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color</a>
+
+              <a href="glitch.html">Glitch/neon</a>
+            </div>
+          </div>
+
+          <div class="links-grid">
+            <!-- raisin fruit -->
+            <div class="link-holder">
+              <a href="#" class="raisin-link" data-text="raisin fruit" data-hystmodal="#myModal"><span>raisin fruit</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="raisin-link" data-text="raisin fruit"&gt;
+                        &lt;span&gt;raisin fruit&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .raisin-link {
+                        overflow: hidden;
+                        position: relative;
+                        display: inline-block;
+                        margin: 15px 25px;
+                        font-size: 24px;
+                        white-space: nowrap;
+                        color: #111;
+                      }
+
+                      .raisin-link:before,
+                      .raisin-link:after {
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background: #111;
+                        top: 100%;
+                        left: 0;
+                        pointer-events: none;
+                      }
+
+                      .raisin-link:before {
+                        height: 2px;
+                        top: calc(100% - 5px);
+                        transform-origin: 100% 50%;
+                        transform: scale3d(0, 1, 1);
+                        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+                      }
+
+                      .raisin-link:after {
+                        content: attr(data-text);
+                        height: 100%;
+                        top: 0;
+                        background: none;
+                        transform-origin: 100% 50%;
+                        transform: translate3d(150%, 0, 0);
+                        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+                      }
+
+                      .raisin-link span {
+                        display: inline-block;
+                        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+                      }
+
+                      .raisin-link:hover:before {
+                        transform-origin: 0% 50%;
+                        transform: scale3d(1, 1, 1);
+                      }
+
+                      .raisin-link:hover:after {
+                        transform: translate3d(0, 0, 0);
+                      }
+
+                      .raisin-link:hover span {
+                        transform: translate3d(-150%, 0, 0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- hala fruit -->
+            <div class="link-holder">
+              <a class="hala-link" data-hystmodal="#myModal">
+                <span data-hover="hala fruit">hala fruit</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a class="hala-link"&gt;
+                        &lt;span data-hover="hala fruit"&gt;hala fruit&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .hala-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        cursor: pointer;
+                        overflow: hidden;
+                      }
+
+                      .hala-link span {
+                        position: relative;
+                        display: block;
+                        transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                      }
+
+                      .hala-link span:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        white-space: nowrap;
+                        bottom: 0;
+                        right: 100%;
+                        text-align: center;
+                        transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                      }
+
+                      .hala-link:hover span {
+                        transform: translateX(100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- phalsa berry -->
+            <div class="link-holder">
+              <a class="phalsa-link" data-hystmodal="#myModal">
+                <span data-hover="phalsa berry">phalsa berry</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a class="phalsa-link"&gt;
+                        &lt;span data-hover="phalsa berry"&gt;phalsa berry&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .phalsa-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        cursor: pointer;
+                        overflow: hidden;
+                      }
+
+                      .phalsa-link span {
+                        position: relative;
+                        display: inline-block;
+                        transition: transform 0.3s;
+                      }
+
+                      .phalsa-link span:before {
+                        position: absolute;
+                        white-space: nowrap;
+                        top: 100%;
+                        content: attr(data-hover);
+                        font-weight: 500;
+                      }
+
+                      .phalsa-link:hover span {
+                        transform: translateY(-100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- guava fruit -->
+            <div class="link-holder">
+              <a class="guava-link" data-hystmodal="#myModal">
+                <span data-hover="guava fruit">guava fruit</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a class="guava-link"&gt;
+                        &lt;span data-hover="guava fruit"&gt;guava fruit&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .guava-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        cursor: pointer;
+                        overflow: hidden;
+                      }
+
+                      .guava-link span {
+                        position: relative;
+                        display: block;
+                        transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                      }
+
+                      .guava-link span:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        white-space: nowrap;
+                        bottom: 100%;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                      }
+
+                      .guava-link:hover span {
+                        transform: translateY(100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- calleryana -->
+            <div class="link-holder">
+              <a href="#" class="calleryana-link" data-hystmodal="#myModal">
+                <span>calleryana</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="calleryana-link"&gt;
+                        &lt;span&gt;calleryana&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .calleryana-link {
+                        display: inline-block;
+                        position: relative;
+                        overflow: hidden;
+                        height: 48px;
+                        padding: 10px 0;
+                        transition: color 0.3s;
+                        font-size: 24px;
+                      }
+
+                      .calleryana-link:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        opacity: 0;
+                        background: #111;
+                        transform: translate3d(0, -48px, 0);
+                        transition: transform 0s 0.3s, opacity 0.2s;
+                      }
+
+                      .calleryana-link:hover:before {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                        transition: transform 0.3s, opacity 0.1s;
+                        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                      }
+
+                      .calleryana-link span {
+                        display: block;
+                        pointer-events: none;
+                      }
+
+                      .calleryana-link:hover span {
+                        animation: calleryana-move 0.3s forwards;
+                      }
+
+                      @keyframes calleryana-move {
+                        50% {
+                          opacity: 0; transform: translate3d(0, 100%, 0);}
+
+                        51% {opacity: 0; transform: translate3d(0, -100%, 0);}
+
+                        100% {opacity: 1; transform: translate3d(0, 0, 0);}
+                      }    
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- kansuensis -->
+            <div class="link-holder">
+              <a href="#" class="kansuensis-link" data-hystmodal="#myModal">
+                <span>kansuensis</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="kansuensis-link"&gt;
+                        &lt;span&gt;kansuensis&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .kansuensis-link {
+                        font-size: 24px;
+                        position: relative;
+                        transition: color 0.3s;
+                      }
+
+                      .kansuensis-link:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 4px;
+                        opacity: 0;
+                        background-color: #111;
+                        transform: scale3d(0, 1, 1);
+                        transform-origin: 100% 50%;
+                        border-radius: 4px;
+                        transition: transform 0s 0.3s, opacity 0.3s;
+                      }
+
+                      .kansuensis-link span {
+                        display: block;
+                        pointer-events: none;
+                      }
+
+                      .kansuensis-link:hover:before {
+                        opacity: 1;
+                        transform: scale3d(1, 1, 1);
+                        transition: transform 0.2s, opacity 0.1s;
+                        transition-delay: 0.45s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                      }
+
+                      .kansuensis-link:hover span {
+                        animation: kansuensis-move 0.5s forwards;
+                      }
+
+                      @keyframes kansuensis-move {
+                        50% {opacity: 0; transform: translate3d(100%, 0, 0);}
+
+                        51% {opacity: 0; transform: translate3d(-100%, 0, 0);}
+
+                        75% {opacity: 1; transform: translate3d(5px, 0, 0);}
+
+                        100% {opacity: 1; transform: translate3d(0, 0, 0);}
+                      }   
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- jostaberry -->
+            <div class="link-holder">
+              <a href="#" class="jostaberry-link" data-hystmodal="#myModal">
+                <span class="top" data-hover="jostaberry">jostaberry</span>
+                <span class="bottom" data-hover="jostaberry">jostaberry</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="jostaberry-link"&gt;
+                        &lt;span class="top" data-hover="jostaberry"&gt;jostaberry&lt;/span&gt;
+                        &lt;span class="bottom" data-hover="jostaberry"&gt;jostaberry&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jostaberry-link {
+                        color: rgba(0, 0, 0, 0.8);
+                        font-size: 24px;
+                        font-weight: 400;
+                        padding: 15px 25px;
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        transform: rotate(-5deg);
+                      }
+
+                      .jostaberry-link .top,
+                      .jostaberry-link .bottom {
+                        text-align: center;
+                        font-size: 24px;
+                        line-height: 100px;
+                        overflow: hidden;
+                        color: rgba(0, 0, 0, 0.8);
+                      }
+
+                      .jostaberry-link .top:before,
+                      .jostaberry-link .bottom:before {
+                        content: attr(data-hover);
+                        transform: rotate(5deg);
+                      }
+
+                      .jostaberry-link .top {
+                        position: absolute;
+                        top: 0;
+                        left: -5px;
+                        right: 0;
+                        bottom: 50%;
+                        transition: 0.35s;
+                      }
+
+                      .jostaberry-link .top:before {
+                        position: absolute;
+                        bottom: -50px;
+                        left: 0;
+                        right: 0;
+                      }
+
+                      .jostaberry-link .bottom {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 5px;
+                        bottom: 0;
+                      }
+
+                      .jostaberry-link .bottom:before {
+                        position: absolute;
+                        top: -50px;
+                        left: 0;
+                        right: 0;
+                      }
+
+                      .jostaberry-link:hover .top {
+                        left: 3px;
+                        transition: 0.35s;
+                      }
+
+                      .jostaberry-link:hover .bottom:before {
+                        transition: 0.3s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- clementine -->
+            <div class="link-holder">
+              <a href="#" class="clementine-link" data-hystmodal="#myModal">clementine</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="clementine-link"&gt;clementine&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .clementine-link {
+                        font-size: 24px;
+                        color: #111;
+                        display: inline-block;
+                        transition: all 0.3s cubic-bezier(0, 0.25, 0.5, 1);
+                      }
+
+                      .clementine-link:hover {
+                        transform: skew(-30deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mandarine -->
+            <div class="link-holder">
+              <a href="#" class="mandarine-link" data-hystmodal="#myModal"><span>mandarine</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mandarine-link"&gt;
+                        &lt;span&gt;mandarine&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mandarine-link {
+                        font-size: 24px;
+                        color: #111;
+                        display: inline-block;
+                      }
+
+                      .mandarine-link span {
+                        display: block;
+                        transition: all 0.3s cubic-bezier(0, 0.25, 0.5, 1);
+                      }
+
+                      .mandarine-link:hover span {
+                        transform: scale(0.85) rotateY(180deg) skewX(30deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- nectarine -->
+            <div class="link-holder">
+              <a href="#" class="nectarine-link" data-hystmodal="#myModal"><span>nectarine</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="nectarine-link"&gt;
+                        &lt;span&gt;nectarine&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .nectarine-link {
+                        font-size: 24px;
+                        color: #111;
+                      }
+
+                      .nectarine-link span {
+                        display: inline-block;
+                        transform: rotateY(0);
+                        transform-origin: left center;
+                      }
+
+                      .nectarine-link:hover span {
+                        transform: rotateY(360deg);
+                        transition: transform .4s ease-out, color .4s ease-out;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- illecebrosus -->
+            <div class="link-holder">
+              <a href="#" class="illecebrosus-link" data-hystmodal="#myModal">illecebrosus</a> 
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="illecebrosus-link"&gt;illecebrosus&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .illecebrosus-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        overflow: visible;
+                        transform: translateZ(0);
+                        backface-visibility: hidden;
+                        transition: .4s;
+                      }
+
+                      .illecebrosus-link:hover {
+                        letter-spacing: 1px;
+                        animation: illecebrosus-move .4s linear 3;
+                      }
+
+                      @keyframes illecebrosus-move {
+                        30% {transform: translate3d(0, -7px, 0) rotate(7deg)}
+
+                        50% {transform: translate3d(0, -5px, 0) rotate(-6deg)}
+
+                        80% {transform: translate3d(0, 0, 0) rotate(-5deg)}
+
+                        100% {transform: rotate(0deg)}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- redcurrant -->
+            <div class="link-holder">
+              <a href="#" class="redcurrant-link" data-hystmodal="#myModal"><span>redcurrant</span></a> 
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="redcurrant-link"&gt;
+                        &lt;span>redcurrant&lt;/span&gt;
+                      &lt;/a&gt; 
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .redcurrant-link {
+                        width: 210px;
+                        height: 50px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 24px;
+                        background-color: #fff;
+                        z-index: 1;
+                      }
+
+                      .redcurrant-link:after {
+                        content: '';
+                        background-color: #fff;
+                        position: absolute;
+                        left: 50%;
+                        right: 50%;
+                        z-index: 1;
+                        top: 0;
+                        height: 100%;
+                        width: 0;
+                        margin: 0 auto;
+                      }
+
+                      .redcurrant-link span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        transition: all 0.4s ease;
+                        height: 100%;
+                        transition: all 280ms ease-in-out;
+                        z-index: 5;
+                      }
+
+                      .redcurrant-link span:after,
+                      .redcurrant-link span:before {
+                        content: " ";
+                        backface-visibility: hidden;
+                        background-color: #111;
+                        height: 1px;
+                        display: block;
+                        margin: 0 auto;
+                        position: absolute;
+                        transition: all 280ms ease-in-out;
+                        width: 0;
+                        z-index: 1;
+                      }
+
+                      .redcurrant-link span:before {
+                        top: -2px;
+                      }
+
+                      .redcurrant-link span:after {
+                        bottom: -2px;
+                      }
+
+                      .redcurrant-link:hover {
+                        letter-spacing: 5px;
+                      }
+
+                      .redcurrant-link:hover:after {
+                        left: -1px;
+                        right: -1px;
+                        width: calc(100% + 2px);
+                        transition: width 350ms ease-in-out;
+                      }
+
+                      .redcurrant-link:hover span:after,
+                      .redcurrant-link:hover span:before {
+                        backface-visibility: hidden;
+                        transition: width 350ms ease-in-out;
+                        width: 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- carya ovata -->
+            <div class="link-holder">
+              <a href="#" class="carya-ovata-link" data-hystmodal="#myModal">carya ovata</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="carya-ovata-link"&gt;carya ovata&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .carya-ovata-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                      }
+
+                      .carya-ovata-link:before {
+                        content: "rejected";
+                        font-weight: bold;
+                        color: #ff0000;
+                        position: absolute;
+                        inset: 50% 0 auto;
+                        text-align: center;
+                        transform: translateY(-50%) scale(1.5) rotate(10deg);
+                        opacity: 0;
+                        transition: .4s;
+                        pointer-events: none;
+                      }
+
+                      .carya-ovata-link:hover {
+                        color: rgba(0, 0, 0, 0.2);
+                      }
+
+                      .carya-ovata-link:hover:before {
+                        transform: translateY(-50%) scale(1) rotate(-15deg);
+                        opacity: 1;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pinus edulis -->
+            <div class="link-holder">
+              <a href="#" class="pinus-edulis-link" data-hystmodal="#myModal">pinus edulis</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="pinus-edulis-link"&gt;pinus edulis&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pinus-edulis-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        box-shadow: 0 40px transparent;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+                        transform-origin: bottom left;
+                        transition: 0.2s linear, box-shadow 0s 0.2s;
+                      }
+
+                      .pinus-edulis-link:hover {
+                        box-shadow: 0 40px #111;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 2px) calc(100% + 20.5px), 0 100%);
+                        transform: rotate(-6deg);
+                        transition: 0.2s linear, box-shadow 0s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- butia capitata -->
+            <div class="link-holder">
+              <a href="#" class="butia-capitata-link" data-hystmodal="#myModal">butia capitata</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="butia-capitata-link"&gt;butia capitata&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .butia-capitata-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        box-shadow: 0 40px transparent;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+                        transform-origin: bottom right;
+                        transition: 0.25s linear, box-shadow 0s 0.25s;
+                      }
+
+                      .butia-capitata-link:hover {
+                        box-shadow: 0 40px #111;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 2px calc(100% + 21.5px), 0 100%);
+                        transform: rotate(6deg);
+                        transition: 0.25s linear, box-shadow 0s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- jelly palm -->
+            <div class="link-holder">
+              <a href="#" class="jelly-palm-link" data-hystmodal="#myModal">jelly palm nut</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="jelly-palm-link"&gt;jelly palm nut&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jelly-palm-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        box-shadow: 0 40px #111, 0 -40px #111;
+                        clip-path: polygon(0 1px, 50% 1px, 100% 1px, 100% calc(100% - 1px), 50% calc(100% - 1px), 0 calc(100% - 1px));
+                        transition: 0.5s linear;
+                      }
+
+                      .jelly-palm-link:hover {
+                        clip-path: polygon(0 calc(-38.43px / 2), 50% 1px, 100% 1px, 100% calc(100% + 38.43px / 2), 50% calc(100% - 1px), 0 calc(100% - 1px));
+                        transform: skewY(-10deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mexican pinyon -->
+            <div class="link-holder">
+              <a href="#" class="mexican-pinyon-link" data-hystmodal="#myModal">mexican pinyon</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mexican-pinyon-link"&gt;mexican pinyon&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mexican-pinyon-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        box-shadow: 0 40px #111, 0 -40px #111;
+                        clip-path: polygon(0 1px, 50% 1px, 100% 1px, 100% calc(100% - 1px), 50% calc(100% - 1px), 0 calc(100% - 1px));
+                        transition: 0.5s linear;
+                      }
+
+                      .mexican-pinyon-link:hover {
+                        clip-path: polygon(0 1px, 50% 1px, 100% calc(-38.43px/2), 100% calc(100% - 1px), 50% calc(100% - 1px), 0 calc(100% + 38.43px/2));
+                        transform: skewY(10deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- scopulorum -->
+            <div class="link-holder">
+              <a href="#" class="scopulorum-link" data-hystmodal="#myModal" data-hover="read more">
+                <span>scopulorum</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="scopulorum-link" data-hover="read more"&gt;
+                        &lt;span&gt;scopulorum&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .scopulorum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 200px;
+                      }
+
+                      .scopulorum-link span {
+                        letter-spacing: 0.5px;
+                        transition: 0.5s;
+                      }
+
+                      .scopulorum-link:after {
+                        content: attr(data-hover);
+                        width: calc(100% - 50px);
+                        height: 50px;
+                        background-color: #111;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transition: 0.5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        transform: translateX(120%);
+                        color: #fff;
+                        font-size: 22px;
+                      }
+
+                      .scopulorum-link:hover span {
+                        letter-spacing: -12px;
+                      }
+
+                      .scopulorum-link:hover:after {
+                        transform: translateX(0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- harami -->
+            <div class="link-holder">
+              <a href="#" class="harami-link" data-text="harami" data-hystmodal="#myModal">harami</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="harami-link" data-text="harami"&gt;harami&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .harami-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 8px 30px;
+                        clip-path: inset(-200% -50% 0);
+                        color: transparent;
+                        position: relative;
+                      }
+
+                      .harami-link:before,
+                      .harami-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        padding: inherit;
+                        color: #111;
+                        inset: 0;
+                        transition: .4s;
+                        transform-origin: bottom;
+                        pointer-events: none;
+                      }
+
+                      .harami-link:before {
+                        color: #111;
+                      }
+
+                      .harami-link:after {
+                        transform: rotate(180deg);
+                        background-color: #111;
+                        color: #fff;
+                        opacity: 0;
+                      }
+
+                      .harami-link:hover {
+                        color: transparent;
+                      }
+
+                      .harami-link:hover:before {
+                        transform: rotate(-180deg);
+                      }
+
+                      .harami-link:hover:after {
+                        transform: rotate(0);
+                        opacity: 1;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- honeyberry -->
+            <div class="link-holder">
+              <a href="#" class="honeyberry-link" data-hover="honeyberry" data-hystmodal="#myModal"><span>honeyberry</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="honeyberry-link" data-hover="honeyberry"&gt;
+                        &lt;span&gt;honeyberry&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .honeyberry-link {
+                        position: relative;
+                        display: inline-block;
+                        font-size: 24px;
+                        overflow: hidden;
+                        z-index: 1;
+                      }
+
+                      .honeyberry-link:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 10px 20px;
+                        width: 100%;
+                        height: 100%;
+                        background: #111;
+                        color: #fff;
+                        content: attr(data-hover);
+                        transition: transform 0.3s;
+                        transform: translateX(-101%);
+                      }
+
+                      .honeyberry-link span {
+                        display: block;
+                        padding: 10px 20px;
+                        transition: transform 0.3s;
+                      }
+
+                      .honeyberry-link:hover:before {
+                        transform: translateX(0);
+                      }
+
+                      .honeyberry-link:hover span {
+                        transform: translateX(100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- huckleberry -->
+            <div class="link-holder">
+              <a href="#" class="huckleberry-link" data-hystmodal="#myModal"><span data-hover="huckleberry">huckleberry</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="huckleberry-link"&gt;
+                        &lt;span data-hover="huckleberry"&gt;huckleberry&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .huckleberry-link {
+                        perspective: 800px;
+                        font-size: 24px;
+                        position: relative;
+                        display: inline-block;
+                        text-align: center;
+                      }
+
+                      .huckleberry-link span {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        padding: 5px 25px;
+                        background-color: #fff;
+                        color: #111;
+                        transition: transform 0.4s, background 0.4s;
+                        transform-style: preserve-3d;
+                        transform-origin: 50% 50% -100px;
+                        white-space: nowrap;
+                      }
+
+                      .huckleberry-link span:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #111;
+                        color: #fff;
+                        padding: 5px 25px;
+                        transform: rotateY(90deg);
+                        transform-origin: 0 50%;
+                        pointer-events: none;
+                        text-align: center;
+                      }
+
+                      .huckleberry-link:hover span {
+                        background-color: transparent;
+                        transform: rotateY(-90deg);
+                      }
+
+                      .huckleberry-link:hover span:before {
+                        background-color: #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- jabuticaba -->
+            <div class="link-holder">
+              <a href="#" class="jabuticaba-link" data-hystmodal="#myModal">
+                <span data-hover="jabuticaba">jabuticaba</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="jabuticaba-link"&gt;
+                        &lt;span data-hover="jabuticaba berry"&gt;jabuticaba&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jabuticaba-link {
+                        position: relative;
+                        display: inline-block;
+                        margin: 15px 25px;
+                        font-size: 24px;
+                        perspective: 800px;
+                      }
+
+                      .jabuticaba-link span {
+                        position: relative;
+                        display: inline-block;
+                        padding: 5px 25px;
+                        background-color: #fff;
+                        transition: background 0.6s;
+                        transform-origin: 50% 0;
+                        transform-style: preserve-3d;
+                        transform-origin: 0% 50%;
+                      }
+
+                      .jabuticaba-link span:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        border: 1px solid #111;
+                        color: #111;
+                        padding-top: 3px;
+                        text-align: center;
+                        transform: rotateX(270deg);
+                        transition: transform 0.6s;
+                        transform-origin: 0 0;
+                        pointer-events: none;
+                      }
+
+                      .jabuticaba-link:hover span {
+                        background-color: #555;
+                      }
+
+                      .jabuticaba-link:hover span:before {
+                        transform: rotateX(0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- grandifolium -->
+            <div class="link-holder">
+              <a href="#" class="grandifolium-link" data-hystmodal="#myModal">
+                <span data-text="grandifolium">grandifolium</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="grandifolium-link"&gt;
+                        &lt;span data-text="grandifolium"&gt;grandifolium&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .grandifolium-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                      }
+
+                      .grandifolium-link span {
+                        display: block;
+                        position: relative;
+                        color: transparent;
+                        padding: 10px;
+                      }
+
+                      .grandifolium-link span:before,
+                      .grandifolium-link span:after {
+                        content: attr(data-text);
+                        padding: inherit;
+                        color: #111;
+                        background: linear-gradient(#111 0 0) left/0% 4px no-repeat;
+                        position: absolute;
+                        inset: 0;
+                        clip-path: inset(0 0 50%);
+                        transition: .3s .3s, transform .3s;
+                      }
+
+                      .grandifolium-link span:after {
+                        clip-path: inset(50% 0 0);
+                      }
+
+                      .grandifolium-link span:hover:before,
+                      .grandifolium-link span:hover:after {
+                        background-size: 100% 4px;
+                        transition: .3s, transform .3s .3s;
+                      }
+
+                      .grandifolium-link span:hover:before {
+                        transform: translateY(-5px);
+                      }
+
+                      .grandifolium-link span:hover:after {
+                        transform: translateY(5px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- hirsutum -->
+            <div class="link-holder">
+              <a href="#" class="hirsutum-link" data-hystmodal="#myModal">
+                <span data-text="hirsutum">hirsutum</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="hirsutum-link"&gt;
+                        &lt;span data-text="hirsutum"&gt;hirsutum&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .hirsutum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                      }
+
+                      .hirsutum-link span {
+                        display: block;
+                        position: relative;
+                        color: transparent;
+                        padding: 10px;
+                      }
+
+                      .hirsutum-link span:before,
+                      .hirsutum-link span:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: #111;
+                        background: linear-gradient(#111 0 0) left/0% 4px, linear-gradient(#111 0 0) top/4px 0%;
+                        background-repeat: no-repeat;
+                        clip-path: inset(0 50% 50% 0);
+                        transition: .3s .3s, transform .3s;
+                      }
+
+                      .hirsutum-link span:after {
+                        clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+                      }
+
+                      .hirsutum-link span:hover:before,
+                      .hirsutum-link span:hover:after {
+                        background-size: 50% 4px, 4px 50%;
+                        transition: .3s, transform .3s .3s;
+                      }
+
+                      .hirsutum-link span:hover:before {
+                        transform: translate(-10px, -10px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- intermedium -->
+            <div class="link-holder">
+              <a href="#" class="intermedium-link" data-hystmodal="#myModal">
+                <span data-text="intermedium">intermedium</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="intermedium-link"&gt;
+                        &lt;span data-text="intermedium"&gt;intermedium&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .intermedium-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                      }
+
+                      .intermedium-link span {
+                        display: block;
+                        position: relative;
+                        color: transparent;
+                        padding: 10px;
+                        background: linear-gradient(#111 0 0) 0 calc(50% + 1px)/0% 2px no-repeat, linear-gradient(transparent 50%, #111 0);
+                        background-clip: padding-box, text;
+                        -webkit-background-clip: padding-box, text;
+                        transition: .3s .3s;
+                      }
+
+                      .intermedium-link span:hover {
+                        background-size: 100% 2px, auto;
+                        transition: .3s;
+                      }
+
+                      .intermedium-link span:before,
+                      .intermedium-link span:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: #111;
+                        background: linear-gradient(#111 0 0) left/0% 4px, linear-gradient(#111 0 0) top/4px 0%;
+                        background-repeat: no-repeat;
+                        clip-path: inset(0 50% 50% 0);
+                        transition: .3s .3s, transform .3s;
+                      }
+
+                      .intermedium-link span:after {
+                        clip-path: inset(0 0 50% 50%);
+                      }
+
+                      .intermedium-link span:hover:before,
+                      .intermedium-link span:hover:after {
+                        background-size: 100% 4px, 4px 50%;
+                        transition: .3s, transform .3s .3s;
+                      }
+
+                      .intermedium-link span:hover:before {
+                        transform: translate(-10px, -10px);
+                      }
+
+                      .intermedium-link span:hover:after {
+                        transform: translate(10px, -10px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- guaquiea -->
+            <div class="link-holder">
+              <a href="#" class="guaquiea-link" data-hystmodal="#myModal">guaquiea</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="guaquiea-link"&gt;guaquiea&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .guaquiea-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px;
+                        transition: 0.8s;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        background-color: #111;
+                        color: #111;
+                      }
+
+                      .guaquiea-link:hover {
+                        transition: 0.3s;
+                        transform: scale(0.85);
+                        background-color: #1c445e;
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        text-shadow: 0 0 5px #444;
+                        filter: blur(1px);
+                      }    
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-footer">
+            <div class="page-navigation">
+              <a href="border.html">Underline/border</a>
+
+              <a href="transform.html" class="active">Text transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="elements.html">Elements</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color</a>
+
+              <a href="glitch.html">Glitch/neon</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="hystmodal" id="myModal" aria-hidden="true">
+          <div class="hystmodal__wrap">
+              <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <button data-hystclose class="hystmodal__close">
+                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6696 18.5001L1.0752 33.0944L3.9057 35.9249L18.5001 21.3306L33.0944 35.9249L35.9249 33.0944L21.3306 18.5001L35.9249 3.9057L33.0944 1.0752L18.5001 15.6696L3.9057 1.0752L1.0752 3.9057L15.6696 18.5001Z" fill="#212121"/></svg>
+                  </button>  
+                  
+                  <div class="h2">Element markup and styles</div>
+
+                  <div class="modal-body"></div>
+              </div>
+          </div> 
+      </div>
+
+      <script src="../js/jquery-3.2.1.js"></script>
+      <script src="../js/hystmodal.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/custom.js"></script>
+
+    </div>
+  </body>
+</html>

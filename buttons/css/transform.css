@@ -1,0 +1,1885 @@
+/* === brassica === */
+.brassica-btn {
+	letter-spacing: 1px;
+	font-size: 22px;
+	line-height: 54px;
+	width: 220px;
+	height: 54px;
+	position: relative;
+	display: flex;
+	color: #111;
+	border: 1px solid #111;
+	position: relative;
+	transition-duration: 0.4s;
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.brassica-btn:before,
+.brassica-btn span {
+	margin: 0 auto;
+	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+	transition-duration: 0.4s;
+}
+
+.brassica-btn:hover {
+	background-color: #111;
+}
+
+.brassica-btn:hover span {
+	transform: translateY(-400%) scale(-0.1, 20);
+}
+
+.brassica-btn:before {
+	content: attr(data-text);
+	color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translateY(500%) scale(-0.1, 20);
+}
+
+.brassica-btn:hover:before {
+	letter-spacing: 0.05em;
+	transform: translateY(0) scale(1, 1);
+}
+
+
+/* === savoy cabbage === */
+.savoy-cabbage-btn {
+	background-color: #fff;
+	border: 1px solid #111;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	height: 54px;
+	width: 220px;
+	border-radius: 3px;
+}
+
+.savoy-cabbage-btn:before {
+	content: '';
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	background: rgba(0, 0, 0, 0.5);
+	filter: blur(7px);
+	border-radius: 7px;
+	z-index: -1;
+	transform: translate3d(0, 15px, 0);
+	transition: transform 0.45s;
+}
+
+.savoy-cabbage-btn:hover::before {
+	transform: translate3d(0, 0, 0);
+}
+
+.savoy-cabbage-btn span {
+	display: block;
+}
+
+.savoy-cabbage-btn>span {
+	height: 100%;
+	overflow: hidden;
+	line-height: 52px;
+}
+
+.savoy-cabbage-btn:hover>span>span {
+	animation: savoy-cabbage-move 0.15s ease-out forwards 3;
+}
+
+@keyframes savoy-cabbage-move {
+	50% {transform: translate3d(0, 100%, 0);opacity: 0;}
+
+	51% {transform: translate3d(0, -100%, 0);opacity: 0;}
+
+	100% {transform: translate3d(0, 0, 0);opacity: 1;}
+}
+
+
+/* === myrtifolia === */
+.myrtifolia-btn {
+	width: 220px;
+	height: 54px;
+	font-size: 22px;
+	overflow: hidden;
+	text-shadow: 0 0 0 #111, 0 -45px 0 red;
+	border: 1px solid #111;
+	color: rgba(0, 0, 0, 0);
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+.myrtifolia-btn:hover {
+	animation: drop .6s 1 linear;
+}
+
+@keyframes drop {
+	0% {text-shadow: 0 0 0 #111, 0 -45px 0 red;}
+
+	20% {text-shadow: 0 0 0 #111, 0 -15px 0 red;}
+
+	30% {text-shadow: 0 15px 0 #111, 0 0px 0 red;}
+
+	40% {text-shadow: 0 45px 0 #111, 0 0px 0 red;}
+
+	41% {text-shadow: 0 45px 0 #111, 0 0px 0 red, 0 -45px 0 #111;}
+
+	70% {text-shadow: 0 45px 0 #111, 0 15px 0 red, 0 0px 0 #111;}
+
+	80% {text-shadow: 0 45px 0 #111, 0 45px 0 red, 0 0px 0 #111;}
+
+	100% {text-shadow: 0 45px 0 #111, 0 45px 0 red, 0 0px 0 #111;}
+}
+
+
+/* === mung beans === */
+.mung-beans-btn {
+	font-size: 24px;
+	width: 220px;
+	height: 54px;
+	white-space: nowrap;
+	transition: color .3s;
+	background: #fff;
+	border-radius: 3px;
+	color: #111;
+	border: 1px solid #111;
+}
+
+.mung-beans-btn:hover {
+	background: #ffde7d;
+	border-color: #af8508;
+}
+
+.mung-beans-btn:hover .mung-beans-marquee span {
+	animation: mung-beans-marquee 1.2s linear infinite;
+}
+
+.mung-beans-marquee {
+	display: block;
+	overflow: hidden;
+}
+
+.mung-beans-marquee span {
+	position: relative;
+	display: inline-block;
+	padding:0 22px;
+	
+}
+
+.mung-beans-marquee span:after {
+	content: attr(data-text);
+	position: absolute;
+	left: 100%;
+	padding: 0 23px;
+}
+
+@keyframes mung-beans-marquee {
+	0% {transform: translate3d(0,0,0);}
+
+	100% {transform: translate3d(-100%,0,0);}
+}
+
+
+/* === tracheophytes === */
+.tracheophytes-btn {
+	font-size: 22px;
+	width: 220px;
+	height: 54px;
+	white-space: nowrap;
+	transition: color .3s;
+	background: #fff;
+	border-radius: 3px;
+	color: #111;
+	border: 1px solid #111;
+}
+
+.tracheophytes-btn:hover {
+	background-color: #ffde7d;
+	border-color: #af8508;
+}
+
+.tracheophytes-btn:hover .tracheophytes-marquee span {
+	animation: tracheophytes-marquee 1.2s linear infinite;
+}
+
+.tracheophytes-marquee {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	overflow: hidden;
+}
+
+.tracheophytes-marquee span {
+	position: relative;
+	display: inline-block;
+	padding:0 22px;
+	
+}
+
+.tracheophytes-marquee span:after {
+	content: attr(data-text);
+	position: absolute;
+	left: 100%;
+	padding: 0 23px;
+}
+
+@keyframes tracheophytes-marquee {
+	0% { transform: rotate(-13deg) translate3d(0,0,0);}
+
+	100% {transform: rotate(-13deg) translate3d(-100%,0,0);}
+}
+
+/* === parsley === */
+.parsley-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	background-color: #fff;
+	z-index: 1;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.parsley-btn:after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	z-index: 1;
+	top: 0;
+	height: 100%;
+	width: 0;
+	margin: 0 auto;
+}
+
+.parsley-btn span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: all 0.4s ease;
+	height: 100%;
+	transition: all 280ms ease-in-out;
+	z-index: 5;
+}
+
+.parsley-btn span:after,
+.parsley-btn span:before {
+	backface-visibility: hidden;
+	background-color: #111;
+	height: 3px;
+	content: " ";
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	transition: all 280ms ease-in-out;
+	width: 0;
+	z-index: 1;
+}
+
+.parsley-btn span:before {
+	top: -2px;
+}
+
+.parsley-btn span:after {
+	bottom: -2px;
+}
+
+.parsley-btn:hover {
+	letter-spacing: 5px;
+}
+
+.parsley-btn:hover:after {
+	left: -1px;
+	right: -1px;
+	width: calc(100% + 2px);
+	transition: width 350ms ease-in-out;
+}
+
+.parsley-btn:hover span:after,
+.parsley-btn:hover span:before {
+	backface-visibility: hidden;
+	transition: width 350ms ease-in-out;
+	width: 100%;
+}
+
+
+/* === cayenne === */
+.cayenne-btn {
+	z-index: 1;
+	font-size: 22px;
+	border: 1px solid #111;
+	background-color: #fff;
+	position: relative;
+	transition: border-color 0.3s, color 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	color: #111;
+	overflow: hidden;
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+
+.cayenne-btn span {
+	display: inline-block;
+	opacity: 0;
+	padding: 0 0.5px;
+	color: #fff;
+	transform: translate3d(0, -10px, 0);
+	transition: transform 0.3s, opacity 0.3s;
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.cayenne-btn:before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cayenne-btn:hover:hover {
+	background-color: #222;
+}
+
+.cayenne-btn:hover:before {
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+}
+
+.cayenne-btn:hover span {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.cayenne-btn:hover span:nth-child(1) {
+	transition-delay: 0.045s;
+}
+
+.cayenne-btn:hover span:nth-child(2) {
+	transition-delay: 0.09s;
+}
+
+.cayenne-btn:hover span:nth-child(3) {
+	transition-delay: 0.135s;
+}
+
+.cayenne-btn:hover span:nth-child(4) {
+	transition-delay: 0.18s;
+}
+
+.cayenne-btn:hover span:nth-child(5) {
+	transition-delay: 0.225s;
+}
+
+.cayenne-btn:hover span:nth-child(6) {
+	transition-delay: 0.27s;
+}
+
+.cayenne-btn:hover span:nth-child(7) {
+	transition-delay: 0.315s;
+}
+
+.cayenne-btn:hover span:nth-child(8) {
+	transition-delay: 0.36s;
+}
+
+.cayenne-btn:hover span:nth-child(9) {
+	transition-delay: 0.405s;
+}
+
+.cayenne-btn:hover span:nth-child(10) {
+	transition-delay: 0.45s;
+}
+
+
+/* === radicchio === */
+.radicchio-btn {
+	overflow: hidden;
+	transition: background-color 0.3s;
+	background-color: #fff;
+	color: #111;
+	width: 220px;
+	height: 54px;
+	font-size: 22px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.radicchio-btn>span {
+	display: inline-block;
+	margin: 0 -1px;
+}
+
+.radicchio-btn:hover {
+	background-color: #111;
+}
+
+.radicchio-btn:hover span:nth-child(odd) {
+	animation: radicchio-move-1 0.5s forwards;
+}
+
+.radicchio-btn:hover span:nth-child(even) {
+	animation: radicchio-move-2 0.5s forwards;
+}
+
+.radicchio-btn:hover span:nth-child(odd),
+.radicchio-btn:hover span:nth-child(even) {
+	transition-animation-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.radicchio-btn:hover span:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.radicchio-btn:hover span:nth-child(2) {
+	animation-delay: 0.05s;
+}
+
+.radicchio-btn:hover span:nth-child(3) {
+	animation-delay: 0.1s;
+}
+
+.radicchio-btn:hover span:nth-child(4) {
+	animation-delay: 0.15s;
+}
+
+.radicchio-btn:hover span:nth-child(5) {
+	animation-delay: 0.2s;
+}
+
+.radicchio-btn:hover span:nth-child(6) {
+	animation-delay: 0.25s;
+}
+
+.radicchio-btn:hover span:nth-child(7) {
+	animation-delay: 0.3s;
+}
+
+.radicchio-btn:hover span:nth-child(8) {
+	animation-delay: 0.35s;
+}
+
+.radicchio-btn:hover span:nth-child(9) {
+	animation-delay: 0.4s;
+}
+
+.radicchio-btn:hover span:nth-child(10) {
+	animation-delay: 0.45s;
+}
+
+@keyframes radicchio-move-1 {
+	0%,100% { opacity: 1; transform: translate3d(0, 0, 0);}
+
+	49% {opacity: 1; transform: translate3d(0, 100%, 0);}
+
+	50% {opacity: 0; transform: translate3d(0, 100%, 0); color: inherit;}
+
+	51% {opacity: 0; transform: translate3d(0, -100%, 0); color: #fff;}
+
+	100% {color: #fff;}
+}
+
+@keyframes radicchio-move-2 {
+	0%, 100% {opacity: 1; transform: translate3d(0, 0, 0);}
+
+	49% {opacity: 1; transform: translate3d(0, -100%, 0);}
+
+	50% {opacity: 0; transform: translate3d(0, -100%, 0); color: inherit;}
+
+	51% {opacity: 0; transform: translate3d(0, 100%, 0);color: #fff;}
+
+	100% {color: #fff;}
+}
+
+/* === cymbopogon === */
+.cymbopogon-btn {
+	position: relative;
+	height: 54px;
+	width: 220px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #111;
+	color: #111;
+	font-size: 22px;
+	z-index: 0;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	color: #111;
+	border-radius: 3px;
+}
+
+.cymbopogon-btn:hover {
+	animation: cymbopogon-rotate 0.7s ease-in-out both;
+}
+
+.cymbopogon-btn:hover span {
+	animation: cymbopogon-storm 0.7s ease-in-out both;
+	animation-delay: 0.06s;
+}
+
+.cymbopogon-btn:before,
+.cymbopogon-btn:after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #1d89ff;
+	content: '';
+	opacity: 0;
+	transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+	z-index: -1;
+	transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.cymbopogon-btn:hover {
+	border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+.cymbopogon-btn:hover:before,
+.cymbopogon-btn:hover:after {
+	opacity: 0.15;
+	transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.cymbopogon-btn:hover:before {
+	transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.cymbopogon-btn:hover:after {
+	transform: translate(50%, 0) scale(1.1);
+}
+
+@keyframes cymbopogon-rotate {
+	0% {transform: rotate(0deg) translate3d(0, 0, 0);}
+
+	25% {transform: rotate(3deg) translate3d(0, 0, 0);}
+
+	50% {transform: rotate(-3deg) translate3d(0, 0, 0);}
+
+	75% {transform: rotate(1deg) translate3d(0, 0, 0);}
+
+	100% {transform: rotate(0deg) translate3d(0, 0, 0);}
+}
+
+@keyframes cymbopogon-storm {
+	0% {transform: translate3d(0, 0, 0) translateZ(0);}
+
+	25% {transform: translate3d(4px, 0, 0) translateZ(0);}
+
+	50% {transform: translate3d(-3px, 0, 0) translateZ(0);}
+
+	75% {transform: translate3d(2px, 0, 0) translateZ(0);}
+
+	100% {transform: translate3d(0, 0, 0) translateZ(0);}
+}
+
+
+/* === marjoram === */
+.marjoram-btn {
+	position: relative;
+	margin: 0;
+	height: 54px;
+	width: 220px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #111;
+	color: #111;
+	font-size: 22px;
+	z-index: 0;
+	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	border: 1px solid;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.marjoram-btn span {
+	z-index: 20;
+}
+
+.marjoram-btn:after {
+	background-color: #111;
+	content: "";
+	height: 155px;
+	left: -75px;
+	opacity: .4;
+	position: absolute;
+	top: -50px;
+	transform: rotate(35deg);
+	transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+	width: 50px;
+	z-index: -10;
+}
+
+.marjoram-btn:hover {
+	border: 1px solid rgba(22, 76, 167, 0.6);
+	animation: marjoram-rotate 0.7s ease-in-out both;
+}
+
+.marjoram-btn:hover:after {
+	left: 120%;
+	transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.marjoram-btn:hover span {
+	animation: marjoram-storm 0.7s ease-in-out both;
+	animation-delay: 0.06s;
+}
+
+@keyframes marjoram-rotate {
+	0% {transform: rotate(0deg) translate3d(0, 0, 0);}
+
+	25% {transform: rotate(3deg) translate3d(0, 0, 0);}
+
+	50% {transform: rotate(-3deg) translate3d(0, 0, 0);}
+
+	75% {transform: rotate(1deg) translate3d(0, 0, 0);}
+
+	100% {transform: rotate(0deg) translate3d(0, 0, 0);}
+}
+
+@keyframes marjoram-storm {
+	0% {transform: translate3d(0, 0, 0) translateZ(0);}
+
+	25% {transform: translate3d(4px, 0, 0) translateZ(0);}
+
+	50% {transform: translate3d(-3px, 0, 0) translateZ(0);}
+
+	75% { transform: translate3d(2px, 0, 0) translateZ(0);}
+
+	100% {transform: translate3d(0, 0, 0) translateZ(0);}
+}
+
+
+/* === red cabbage === */
+.red-cabbage-btn {
+	font-size: 22px;
+	border: none;
+	background: none;
+	position: relative;
+	padding: 0;
+	width: 200px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #111;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.red-cabbage-btn .front-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.red-cabbage-btn .back-text {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.red-cabbage-btn:hover .front-text {
+	opacity: 0;
+	transform: rotate3d(3, 2, 2, 90deg) translateZ(60px);
+}
+
+
+/* === fennel === */
+.fennel-btn {
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	perspective: 1000;
+	background-color: #fff;
+	border: 0;
+}
+
+.fennel-btn .btn-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.fennel-btn .front,
+.fennel-btn .back {
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.fennel-btn .front {
+	z-index: 10;
+	background-color: #fff;
+}
+
+.fennel-btn .back {
+	background-color: #111;
+	transform: rotateY(-180deg);
+	color: white;
+}
+
+.fennel-btn:hover .btn-content {
+	transform: rotateY(180deg);
+}
+
+
+/* === cauliflower === */
+.cauliflower-btn {
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	perspective: 1000;
+	background-color: #fff;
+	border: 0;
+}
+
+.cauliflower-btn .btn-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.cauliflower-btn .front,
+.cauliflower-btn .back {
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 3px;
+	border: 1px solid #111;
+}
+
+.cauliflower-btn .front {
+	z-index: 10;
+	background-color: #fff;
+}
+
+.cauliflower-btn .back {
+	background-color: #111;
+	transform: rotateX(180deg);
+	color: white;
+}
+
+.cauliflower-btn:hover .btn-content {
+	transform: rotateX(-180deg);
+}
+
+
+/* === collard === */
+.collard-greens-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.collard-greens-btn:before,
+.collard-greens-btn:after {
+	content: '';
+	position: absolute;
+	transition: all 0.3s;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	border-radius: 3px;
+}
+
+.collard-greens-btn:before {
+	opacity: 0;
+	background-color: #111;
+	transform: scale(1, 0.1);
+}
+
+.collard-greens-btn:after {
+	transition: all 0.3s;
+	border: 1px solid #111;
+}
+
+.collard-greens-btn:hover {
+	color: #fff;
+}
+
+.collard-greens-btn:hover:before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
+.collard-greens-btn:hover:after {
+	transform: scale(1, 0.1);
+	opacity: 0;
+}
+
+
+/* === mustard === */
+.mustard-greens-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.mustard-greens-btn:before,
+.mustard-greens-btn:after {
+	content: '';
+	position: absolute;
+	transition: all 0.3s;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	border-radius: 3px;
+}
+
+.mustard-greens-btn:before {
+	opacity: 0;
+	background-color: #111;
+	transform: scale(0.1, 0.1);
+}
+
+.mustard-greens-btn:after {
+	transition: all 0.3s;
+	border: 1px solid #111;
+}
+
+.mustard-greens-btn:hover {
+	color: #fff;
+}
+
+.mustard-greens-btn:hover:before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
+.mustard-greens-btn:hover:after {
+	transform: scale(0, 0);
+	opacity: 0;
+}
+
+.mustard-greens-btn:hover span {
+	transform: scale(1.2, 1.2);
+}
+
+
+/* === basil === */
+.basil-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.basil-btn:before,
+.basil-btn:after {
+	content: '';
+	position: absolute;
+	transition: all 0.3s;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.basil-btn:before {
+	opacity: 0;
+	background-color: #111;
+	transform: scale(1.3, 1.3);
+	border-radius: 3px;
+}
+
+.basil-btn:after {
+	transition: all 0.3s;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.basil-btn:hover {
+	color: #fff;
+}
+
+.basil-btn:hover:after {
+	transform: scale(0, 0);
+	opacity: 0;
+}
+
+.basil-btn:hover:before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
+
+/* === plumcot === */
+.plumcot-btn {
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	perspective: 1000;
+	background-color: #fff;
+	border: 0;
+}
+
+.plumcot-btn .btn-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.plumcot-btn .front,
+.plumcot-btn .back {
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.plumcot-btn .front {
+	z-index: 10;
+	background-color: #fff;
+}
+
+.plumcot-btn .back {
+	background-color: #111;
+	transform: rotateY(-180deg);
+	color: white;
+}
+
+.plumcot-btn:hover .btn-content {
+	transform: rotate3d(1, 10, 0, 180deg);
+}
+
+
+/* === pomegranate === */
+.pomegranate-btn {
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	perspective: 1000px;
+	background-color: #fff;
+	border: 0;
+}
+
+.pomegranate-btn .btn-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+	position: relative;
+	transform-origin: 100% 30px;
+}
+
+.pomegranate-btn .front,
+.pomegranate-btn .back {
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.pomegranate-btn .front {
+	z-index: 10;
+	transform: translateZ(25px);
+	background-color: #fff;
+}
+
+.pomegranate-btn .back {
+	background-color: #111;
+	transform: rotateX(180deg);
+	color: #fff;
+	transform: rotateX(90deg) translateZ(27px);
+	background-image: linear-gradient(90deg, #111, #3c3c3c);
+}
+
+.pomegranate-btn:hover .btn-content {
+	transform: rotateX(-90deg);
+}
+
+
+/* === pomelo === */
+.pomelo-btn {
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	perspective: 1000px;
+	background-color: #fff;
+	border: 0;
+}
+
+.pomelo-btn .btn-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+	position: relative;
+	transform-origin: 100% 30px;
+}
+
+.pomelo-btn .front,
+.pomelo-btn .back {
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
+
+.pomelo-btn .front {
+	z-index: 10;
+	transform: translateZ(27px);
+	background-color: #fff;
+}
+
+.pomelo-btn .back {
+	background-color: #111;
+	transform: rotateX(180deg);
+	color: white;
+	transform: rotateX(-90deg) translateZ(25px);
+	background-image: linear-gradient(90deg, #111, #3c3c3c);
+}
+
+.pomelo-btn:hover .btn-content {
+	transform: rotateX(90deg);
+}
+
+
+/* === saskatoon === */
+.saskatoon-btn {
+  width: 220px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  border: 1px solid #111;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: transform 1.2s;
+  background-color: #fff;
+  transition-timing-function: steps(3);
+}
+
+.saskatoon-btn:hover {
+  transform: scale(1.3);
+}
+
+
+/* === ibarrae === */
+.ibarrae-btn {
+  width: 220px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  border: 1px solid #111;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: letter-spacing 0.5s 0.15s;
+}
+
+.ibarrae-btn:hover {
+	letter-spacing: 3px;
+	transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+	animation: ibarrae-move 0.5s 1;
+}
+
+@keyframes ibarrae-move {
+  0%, 100% {transform: scale(1, 1);}
+
+  25% {transform: scale(0.9, 1.1);}
+
+  50% {transform: scale(1.1, 0.9);}
+
+  75% {transform: scale(0.95, 1.05);}
+}
+
+
+/* === caperberry === */
+.caperberry-btn {
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #111;
+	border: 1px solid #111;
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: 0.25s ease;
+	background-color: #fff;
+}
+
+.caperberry-btn:hover {
+	transform: skewX(-20deg);
+}
+
+
+/* === chokecherry === */
+.chokecherry-btn {
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #111;
+	border: 1px solid #111;
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: 0.25s ease;
+	background-color: #fff;
+}
+
+.chokecherry-btn:hover {
+	transform: skewY(-12deg);
+}
+
+
+/* === vismeifolia === */
+.vismeifolia-btn {
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #111;
+	border: 1px solid #111;
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: 0.5s;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.vismeifolia-btn:hover {
+	text-shadow: 0 0 0 #000, -200px 0 0 rgba(0, 0, 0, .7), 200px 0 0 rgba(0, 0, 0, .7), 0 45px 0 rgba(0, 0, 0, .7), 0 -45px 0 rgba(0, 0, 0, .7);
+}
+
+
+/* === coriander === */
+.coriander-btn {
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 24px;
+	background-color: #fff;
+	z-index: 1;
+	display: block;
+}
+
+.coriander-btn span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	background: #e7e7e7;
+	outline: 1px solid transparent;
+	transform-style: preserve-3d;
+	transition: all 0.4s;
+}
+
+.coriander-btn span:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.4s;
+	width: 100%;
+	height: 42%;
+	left: 0;
+	top: -40%;
+	background-color: #888;
+	transform-origin: 0% 100%;
+	transform: rotateX(90deg);
+}
+
+.coriander-btn:hover span {
+	transform: rotateX(-45deg);
+}
+
+
+/* === chamomile === */
+.chamomile-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	background-color: #fff;
+	z-index: 1;
+	perspective: 800px;
+}
+
+.chamomile-btn span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 60px;
+	background: #e7e7e7;
+	outline: 1px solid transparent;
+	transform-style: preserve-3d;
+	transition: all 0.4s;
+}
+
+.chamomile-btn span:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.4s;
+	width: 100%;
+	height: 40%;
+	left: 0;
+	top: 100%;
+	background: #888;
+	transform-origin: 0% 0%;
+	transform: rotateX(-90deg);
+}
+
+.chamomile-btn:hover span {
+	transform: rotateX(35deg);
+}
+
+
+/* === daikon === */
+.daikon-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	background-color: #fff;
+	z-index: 1;
+	perspective: 800px;
+}
+
+.daikon-btn span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 60px;
+	background: #e7e7e7;
+	outline: 1px solid transparent;
+	transform-style: preserve-3d;
+	transition: all 0.4s;
+}
+
+.daikon-btn span:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.4s;
+	width: 20%;
+	height: 100%;
+	left: -20%;
+	top: 0;
+	background: #888;
+	transform-origin: 100% 0%;
+	transform: rotateY(-90deg);
+}
+
+.daikon-btn:hover span {
+	transform: rotateY(25deg);
+}
+
+
+/* === dill === */
+.dill-btn {
+	width: 220px;
+	height: 54px;
+	position: relative;
+	border: 0;
+	color: #111;
+	font-size: 22px;
+	background-color: #fff;
+	z-index: 1;
+	perspective: 800px;
+}
+
+.dill-btn span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 60px;
+	background: #e7e7e7;
+	outline: 1px solid transparent;
+	transform-style: preserve-3d;
+	transition: all 0.4s;
+}
+
+.dill-btn span:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.4s;
+	width: 20%;
+	height: 100%;
+	left: 100%;
+	top: 0;
+	background: #888;
+	transform-origin: 0% 0%;
+	transform: rotateY(90deg);
+}
+
+.dill-btn:hover span {
+	transform: rotateY(-25deg);
+}
+
+
+/* === marrow === */
+.marrow-btn {
+	width: 220px;
+	height: 54px;
+	border: 2px solid #111;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-block;
+	font-size: 22px;
+	line-height: 40px;
+	padding: 0;
+	background: transparent;
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	perspective: 300px;
+	transform-style: preserve-3d;
+	border-radius: 3px;
+}
+
+.marrow-btn:hover {
+	color: #111;
+}
+
+.marrow-btn:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #111;
+	z-index: -1;
+	transform-origin: center bottom;
+	transform: rotateX(0);
+	transition: all 0.3s ease;
+}
+
+.marrow-btn:hover:after {
+	transform: rotateX(-180deg);
+}
+
+
+/* === habanero === */
+.habanero-btn {
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	font-size: 24px;
+	border: 1px solid #111;
+	background-color: #fff;
+	overflow: hidden;
+	transition: border-color 0.3s, color 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	color: #111;
+	border-radius: 3px;
+}
+
+.habanero-btn:before,
+.habanero-btn:after {
+	content: attr(data-text);
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	background-color: #111;
+	color: #fff;
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.habanero-btn:before {
+	top: 0;
+	padding-top: 12px;
+}
+
+.habanero-btn:after {
+	bottom: 0;
+	line-height: 0;
+}
+
+.habanero-btn span {
+	display: block;
+	transform: scale3d(0.2, 0.2, 1);
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.habanero-btn:hover:before {
+	transform: translate3d(0, -100%, 0);
+}
+
+.habanero-btn:hover:after {
+	transform: translate3d(0, 100%, 0);
+}
+
+.habanero-btn:hover span {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
+
+
+/* === eddoe === */
+.eddoe-btn {
+	color: #fff;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 54px;
+	outline: none;
+	border: none;
+	transition: all 0.3s ease;
+	overflow: hidden;
+	font-size: 22px;
+	z-index: 1;
+	border-radius: 3px;
+}
+
+.eddoe-btn:after {
+	position: absolute;
+	content: " ";
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #111;
+	transition: all 0.3s ease;
+}
+
+.eddoe-btn:hover:after {
+	transform: scale(2) rotate(180deg);
+}
+
+
+/* === nipponica === */
+.nipponica-btn {
+	overflow: hidden;
+	z-index: 1;
+	transition: all 0.3s ease-in-out 0s;
+	width: 220px;
+	height: 54px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	font-size: 22px;
+	color: #fff;
+	border: 1px solid #111;
+	background: #111;
+	border-radius: 3px;
+}
+
+.nipponica-btn:after {
+	content: "";
+	width: 120%;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	z-index: -1;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.nipponica-btn:hover:after{
+	height: 220%;
+	background: #fff;
+	opacity: 1;
+}
+
+.nipponica-btn:hover{
+	color: #111;
+	border-color: #353535;
+}
+
+
+/* === cascadensis === */
+.cascadensis-btn {
+	border: none;
+	overflow: hidden;
+	z-index: 1;
+	transition: all .3s cubic-bezier(1, 0.15, 0.34, 1.03);
+	background: #fe6d6d;
+	color: #fff;
+	font-size: 22px;
+	position: relative;
+	width: 220px;
+	height: 54px;
+	background-color: #111;
+	border-radius: 3px;
+}
+
+.cascadensis-btn:before{
+	content: "";
+	background: #fff;
+	border-radius: 50%;
+	padding: 18%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	transform: translate3d(-50%, -50%, 0) scale(0);
+	transition: transform .3s cubic-bezier(1, 0.15, 0.34, 1.03);
+}
+
+.cascadensis-btn span{
+	display: block;
+	position: relative;
+	z-index: 3;
+}
+
+.cascadensis-btn:hover:before{
+	transform: translate3d(-50%, -50%, 0) scale(2.5);
+}
+
+.cascadensis-btn:hover{ 
+	color: #111; 
+}
+
+
+/* === cucumber === */
+.cucumber-btn {
+	text-decoration: none;
+	border: 2px solid #111;
+	color: transparent;
+	font-size: 21px;
+	transition: all 0.5s;
+	position: relative;
+	width: 220px;
+	height: 54px;
+	background-color: transparent;
+	border-radius: 3px;
+}
+
+.cucumber-btn:before {
+	content: attr(data-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background: #111;
+	top: 0;
+	left: 100%;
+	transition: all 1s;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform: scale(0) rotatey(0);
+	opacity: 0;
+}
+
+.cucumber-btn:hover:before {
+	transform: scale(1) rotatey(360deg);
+	left: 0;
+	opacity: 1;
+}
+
+.cucumber-btn:after {
+	content: attr(data-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background: #111;
+	top: 0;
+	left: 0;
+	transition: all 1s;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform: scale(1) rotatey(0);
+	opacity: 1;
+}
+
+.cucumber-btn:hover:after {
+	transform: scale(0) rotatey(360deg);
+	left: -100%;
+	opacity: 0;
+}
+
+
+/* === xanthosoma === */
+.xanthosoma-btn {
+	box-sizing: border-box;
+	width: 220px;
+	height: 54px;
+	cursor: pointer;
+	border: 5px solid #111;
+	transition: 200ms;
+	position: relative;
+	z-index: 1;
+	font-size: 22px;
+}
+
+.xanthosoma-btn span {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #111;
+	inset: 0;
+	color: #fff;
+	transition: 500ms;
+	z-index: 5;
+}
+
+.xanthosoma-btn:before,
+.xanthosoma-btn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.xanthosoma-btn:before {
+	border: 5px solid #7e5791;
+	transition: all 200ms linear;
+	transition-delay: 0.3;
+	z-index: 1;
+}
+
+.xanthosoma-btn:after {
+	border: 5px solid #b37ccf;
+	transition: all 0s linear;
+	transition-delay: 0.5;
+	z-index: -2;
+}
+
+.xanthosoma-btn:hover {
+	border: 5px solid #5b3f69;
+}
+
+.xanthosoma-btn:hover span {
+	letter-spacing: 2px;
+}
+
+.xanthosoma-btn:hover:before {
+	inset: -10px;
+	opacity: 1;
+}
+
+.xanthosoma-btn:hover:after {
+	inset: -15px;
+	opacity: 1;
+	transition: all 500ms linear;
+	transition-delay: 0s;
+}
+
+
+/* === cestracion === */
+.cestracion-btn {
+	position: relative;
+	z-index: 0;
+	color: #fff;
+	mix-blend-mode: darken;
+	width: 220px;
+	height: 54px;
+	font-size: 22px;
+}
+
+.cestracion-btn:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: -15px -10px;
+	padding: 6px;
+	background: linear-gradient(#111 0 0) 0 50%, linear-gradient(#111 0 0) 50% 50%, linear-gradient(#111 0 0) 100% 50%, #fff;
+	background-size: 34% 80%;
+	background-origin: content-box, content-box, content-box, padding-box;
+	background-clip: content-box, content-box, content-box, padding-box;
+	background-repeat: no-repeat;
+	filter: blur(3px) contrast(30);
+}
+
+.cestracion-btn:hover:before {
+	background-position: 0 50.01%, 50% 49.99%, 100% 50.01%;
+	transition: 0.4s cubic-bezier(0.5, 10000, 0.5, -10000);
+}
+
+
+/* === batjanense === */
+.batjanense-btn {
+	position: relative;
+	z-index: 0;
+	font-size: 22px;
+	color: #fff;
+	width: 220px;
+	height: 54px;
+	mix-blend-mode: darken;
+}
+
+.batjanense-btn:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: -15px -5px;
+	padding: 6px;
+	background: linear-gradient(#111 0 0), linear-gradient(#111 0 0), linear-gradient(#111 0 0), #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 80%, 30px 0%, 30px 0%;
+	background-origin: content-box, content-box, content-box, padding-box;
+	background-clip: content-box, content-box, content-box, padding-box;
+	filter: blur(2px) contrast(30);
+}
+
+.batjanense-btn:hover:before {
+	background-size: 100% 80%, 30px 100%, 30px 100%;
+	background-position: center, left -40px top 0, right -40px top 0;
+	transition: .3s, background-position .5s .3s linear;
+}
+
+
+
+
+

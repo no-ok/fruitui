@@ -1,0 +1,3278 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+    <title>Buttons with transform animation on hover</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/transform.css">
+  </head>
+
+  <body class="links-page">
+    <div id="wrapper" style="background: linear-gradient(to right, #b7fdf6, #fdd9ac, #ffacd6);">
+      <header class="main-header" id="navbar">
+        <div class="container">
+          <nav class="main-nav">
+            <a href="../index.html"><span>Index</span></a>
+
+            <a href="../links/border.html"><span>Links</span></a>
+
+            <a href="#" class="active"><span>Buttons</span></a>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="page-content">
+        <div class="container">
+          <div class="content-header">
+            <div class="page-navigation">
+              <a href="overlay.html">Overlay</a>
+
+              <a href="border.html">Border</a>
+
+              <a href="transform.html" class="active">Transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color/glitch</a>
+            </div>
+          </div>
+
+          <div class="buttons-grid">
+            <!-- brassica -->
+            <div class="button-holder">
+              <button class="brassica-btn" data-text="read more" data-hystmodal="#myModal">
+                <span>brassica</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="brassica-btn" data-text="read more"&gt;
+                        &lt;span&gt;brassica&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .brassica-btn {
+                        letter-spacing: 1px;
+                        font-size: 22px;
+                        line-height: 54px;
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        display: flex;
+                        color: #111;
+                        border: 1px solid #111;
+                        position: relative;
+                        transition-duration: 0.4s;
+                        overflow: hidden;
+                        background-color: #fff;
+                        border-radius: 3px;
+                      }
+
+                      .brassica-btn:before,
+                      .brassica-btn span {
+                        margin: 0 auto;
+                        transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+                        transition-duration: 0.4s;
+                      }
+
+                      .brassica-btn:hover {
+                        background-color: #111;
+                      }
+
+                      .brassica-btn:hover span {
+                        transform: translateY(-400%) scale(-0.1, 20);
+                      }
+
+                      .brassica-btn:before {
+                        content: attr(data-text);
+                        color: #fff;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        transform: translateY(500%) scale(-0.1, 20);
+                      }
+
+                      .brassica-btn:hover:before {
+                        letter-spacing: 0.05em;
+                        transform: translateY(0) scale(1, 1);
+                      }
+
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- savoy cabbage -->
+            <div class="button-holder">
+              <button class="savoy-cabbage-btn" data-hystmodal="#myModal">
+                <span><span>savoy cabbage</span></span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="savoy-cabbage-btn"&gt;
+                        &lt;span&gt;
+                          &lt;span&gt;savoy cabbage&lt;/span&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .savoy-cabbage-btn {
+                        background-color: #fff;
+                        border: 1px solid #111;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 22px;
+                        height: 54px;
+                        width: 220px;
+                        border-radius: 3px;
+                      }
+
+                      .savoy-cabbage-btn:before {
+                        content: '';
+                        top: 10px;
+                        left: 10px;
+                        position: absolute;
+                        width: calc(100% - 20px);
+                        height: calc(100% - 20px);
+                        background: rgba(0, 0, 0, 0.5);
+                        filter: blur(7px);
+                        border-radius: 7px;
+                        z-index: -1;
+                        transform: translate3d(0, 15px, 0);
+                        transition: transform 0.45s;
+                      }
+
+                      .savoy-cabbage-btn:hover::before {
+                        transform: translate3d(0, 0, 0);
+                      }
+
+                      .savoy-cabbage-btn span {
+                        display: block;
+                      }
+
+                      .savoy-cabbage-btn>span {
+                        height: 100%;
+                        overflow: hidden;
+                        line-height: 52px;
+                      }
+
+                      .savoy-cabbage-btn:hover>span>span {
+                        animation: savoy-cabbage-move 0.15s ease-out forwards 3;
+                      }
+
+                      @keyframes savoy-cabbage-move {
+                        50% {transform: translate3d(0, 100%, 0);opacity: 0;}
+
+                        51% {transform: translate3d(0, -100%, 0);opacity: 0;}
+
+                        100% {transform: translate3d(0, 0, 0);opacity: 1;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- myrtifolia -->
+            <div class="button-holder">
+              <button class="myrtifolia-btn" data-hystmodal="#myModal">myrtifolia</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="myrtifolia-btn"&gt;myrtifolia&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .myrtifolia-btn {
+                        width: 220px;
+                        height: 54px;
+                        font-size: 22px;
+                        overflow: hidden;
+                        text-shadow: 0 0 0 #111, 0 -45px 0 red;
+                        border: 1px solid #111;
+                        color: rgba(0, 0, 0, 0);
+                        border-radius: 3px;
+                        background-color: #fff;
+                      }
+
+                      .myrtifolia-btn:hover {
+                        animation: drop .6s 1 linear;
+                      }
+
+                      @keyframes drop {
+                        0% {text-shadow: 0 0 0 #111, 0 -45px 0 red;}
+
+                        20% {text-shadow: 0 0 0 #111, 0 -15px 0 red;}
+
+                        30% {text-shadow: 0 15px 0 #111, 0 0px 0 red;}
+
+                        40% {text-shadow: 0 45px 0 #111, 0 0px 0 red;}
+
+                        41% {text-shadow: 0 45px 0 #111, 0 0px 0 red, 0 -45px 0 #111;}
+
+                        70% {text-shadow: 0 45px 0 #111, 0 15px 0 red, 0 0px 0 #111;}
+
+                        80% {text-shadow: 0 45px 0 #111, 0 45px 0 red, 0 0px 0 #111;}
+
+                        100% {text-shadow: 0 45px 0 #111, 0 45px 0 red, 0 0px 0 #111;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mung beans -->
+            <div class="button-holder">
+              <button class="mung-beans-btn" data-hystmodal="#myModal">
+                <span class="mung-beans-marquee">
+                  <span data-text="mung beans">mung beans</span>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="mung-beans-btn"&gt;
+                        &lt;span class="mung-beans-marquee"&gt;
+                          &lt;span data-text="mung beans"&gt;mung beans&lt;/span&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mung-beans-btn {
+                        font-size: 24px;
+                        width: 220px;
+                        height: 54px;
+                        white-space: nowrap;
+                        transition: color .3s;
+                        background: #fff;
+                        border-radius: 3px;
+                        color: #111;
+                        border: 1px solid #111;
+                      }
+
+                      .mung-beans-btn:hover {
+                        background: #ffde7d;
+                        border-color: #af8508;
+                      }
+
+                      .mung-beans-btn:hover .mung-beans-marquee span {
+                        animation: mung-beans-marquee 1.2s linear infinite;
+                      }
+
+                      .mung-beans-marquee {
+                        display: block;
+                        overflow: hidden;
+                      }
+
+                      .mung-beans-marquee span {
+                        position: relative;
+                        display: inline-block;
+                        padding:0 22px;
+                        
+                      }
+
+                      .mung-beans-marquee span:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        left: 100%;
+                        padding: 0 23px;
+                      }
+
+                      @keyframes mung-beans-marquee {
+                        0% {transform: translate3d(0,0,0);}
+
+                        100% {transform: translate3d(-100%,0,0);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="button-holder">
+              <button class="tracheophytes-btn" data-hystmodal="#myModal">
+                <span class="tracheophytes-marquee">
+                  <span data-text="tracheophytes">tracheophytes</span>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="tracheophytes-btn"&gt;
+                        &lt;span class="tracheophytes-marquee"&gt;
+                          &lt;span data-text="tracheophytes"&gt;tracheophytes&lt;/span&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .tracheophytes-btn {
+                        font-size: 22px;
+                        width: 220px;
+                        height: 54px;
+                        white-space: nowrap;
+                        transition: color .3s;
+                        background: #fff;
+                        border-radius: 3px;
+                        color: #111;
+                        border: 1px solid #111;
+                      }
+
+                      .tracheophytes-btn:hover {
+                        background-color: #ffde7d;
+                        border-color: #af8508;
+                      }
+
+                      .tracheophytes-btn:hover .tracheophytes-marquee span {
+                        animation: tracheophytes-marquee 1.2s linear infinite;
+                      }
+
+                      .tracheophytes-marquee {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        overflow: hidden;
+                      }
+
+                      .tracheophytes-marquee span {
+                        position: relative;
+                        display: inline-block;
+                        padding:0 22px;
+                        
+                      }
+
+                      .tracheophytes-marquee span:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        left: 100%;
+                        padding: 0 23px;
+                      }
+
+                      @keyframes tracheophytes-marquee {
+                        0% { transform: rotate(-13deg) translate3d(0,0,0);}
+
+                        100% {transform: rotate(-13deg) translate3d(-100%,0,0);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- parsley -->
+            <div class="button-holder">
+              <button class="parsley-btn" data-hystmodal="#myModal">
+                <span>parsley</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="parsley-btn"&gt;
+                        &lt;span&gt;parsley&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .parsley-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        z-index: 1;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .parsley-btn:after {
+                        content: '';
+                        background-color: #fff;
+                        position: absolute;
+                        left: 50%;
+                        right: 50%;
+                        z-index: 1;
+                        top: 0;
+                        height: 100%;
+                        width: 0;
+                        margin: 0 auto;
+                      }
+
+                      .parsley-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        transition: all 0.4s ease;
+                        height: 100%;
+                        transition: all 280ms ease-in-out;
+                        z-index: 5;
+                      }
+
+                      .parsley-btn span:after,
+                      .parsley-btn span:before {
+                        backface-visibility: hidden;
+                        background-color: #111;
+                        height: 3px;
+                        content: " ";
+                        display: block;
+                        margin: 0 auto;
+                        position: absolute;
+                        transition: all 280ms ease-in-out;
+                        width: 0;
+                        z-index: 1;
+                      }
+
+                      .parsley-btn span:before {
+                        top: -2px;
+                      }
+
+                      .parsley-btn span:after {
+                        bottom: -2px;
+                      }
+
+                      .parsley-btn:hover {
+                        letter-spacing: 5px;
+                      }
+
+                      .parsley-btn:hover:after {
+                        left: -1px;
+                        right: -1px;
+                        width: calc(100% + 2px);
+                        transition: width 350ms ease-in-out;
+                      }
+
+                      .parsley-btn:hover span:after,
+                      .parsley-btn:hover span:before {
+                        backface-visibility: hidden;
+                        transition: width 350ms ease-in-out;
+                        width: 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div> 
+            </div>
+
+            <!-- cayenne -->
+            <div class="button-holder">
+              <button class="cayenne-btn" data-text="cayenne" data-hystmodal="#myModal">
+                <span>c</span>
+                <span>a</span>
+                <span>y</span>
+                <span>e</span>
+                <span>n</span> 
+                <span>n</span>
+                <span>n</span>
+                <span>e</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cayenne-btn" data-text="cayenne"&gt;
+                        &lt;span&gt;c&lt;/span&gt;
+                        &lt;span&gt;a&lt;/span&gt;
+                        &lt;span&gt;y&lt;/span&gt;
+                        &lt;span&gt;e&lt;/span&gt;
+                        &lt;span&gt;n&lt;/span&gt; 
+                        &lt;span&gt;n&lt;/span&gt;
+                        &lt;span&gt;n&lt;/span&gt;
+                        &lt;span&gt;e&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cayenne-btn {
+                        z-index: 1;
+                        font-size: 22px;
+                        border: 1px solid #111;
+                        background-color: #fff;
+                        position: relative;
+                        transition: border-color 0.3s, color 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                        color: #111;
+                        overflow: hidden;
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 3px;
+                      }
+
+                      .cayenne-btn span {
+                        display: inline-block;
+                        opacity: 0;
+                        padding: 0 0.5px;
+                        color: #fff;
+                        transform: translate3d(0, -10px, 0);
+                        transition: transform 0.3s, opacity 0.3s;
+                        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                      }
+
+                      .cayenne-btn:before {
+                        content: attr(data-text);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+
+                      .cayenne-btn:hover:hover {
+                        background-color: #222;
+                      }
+
+                      .cayenne-btn:hover:before {
+                        opacity: 0;
+                        transform: translate3d(0, 100%, 0);
+                      }
+
+                      .cayenne-btn:hover span {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                      }
+
+                      .cayenne-btn:hover span:nth-child(1) {
+                        transition-delay: 0.045s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(2) {
+                        transition-delay: 0.09s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(3) {
+                        transition-delay: 0.135s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(4) {
+                        transition-delay: 0.18s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(5) {
+                        transition-delay: 0.225s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(6) {
+                        transition-delay: 0.27s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(7) {
+                        transition-delay: 0.315s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(8) {
+                        transition-delay: 0.36s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(9) {
+                        transition-delay: 0.405s;
+                      }
+
+                      .cayenne-btn:hover span:nth-child(10) {
+                        transition-delay: 0.45s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- radicchio -->
+            <div class="button-holder">
+              <button class="radicchio-btn" data-hystmodal="#myModal">
+                <span>r</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>c</span>
+                <span>c</span>
+                <span>h</span>
+                <span>i</span>
+                <span>o</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="radicchio-btn"&gt;
+                        &lt;span&gt;r&lt;/span&gt;
+                        &lt;span&gt;a&lt;/span&gt;
+                        &lt;span&gt;d&lt;/span&gt;
+                        &lt;span&gt;i&lt;/span&gt;
+                        &lt;span&gt;c&lt;/span&gt;
+                        &lt;span&gt;c&lt;/span&gt;
+                        &lt;span&gt;h&lt;/span&gt;
+                        &lt;span&gt;i&lt;/span&gt;
+                        &lt;span&gt;o&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .radicchio-btn {
+                        overflow: hidden;
+                        transition: background-color 0.3s;
+                        background-color: #fff;
+                        color: #111;
+                        width: 220px;
+                        height: 54px;
+                        font-size: 22px;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .radicchio-btn>span {
+                        display: inline-block;
+                        margin: 0 -1px;
+                      }
+
+                      .radicchio-btn:hover {
+                        background-color: #111;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(odd) {
+                        animation: radicchio-move-1 0.5s forwards;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(even) {
+                        animation: radicchio-move-2 0.5s forwards;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(odd),
+                      .radicchio-btn:hover span:nth-child(even) {
+                        transition-animation-function: cubic-bezier(0.75, 0, 0.125, 1);
+                      }
+
+                      .radicchio-btn:hover span:nth-child(1) {
+                        animation-delay: 0s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(2) {
+                        animation-delay: 0.05s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(3) {
+                        animation-delay: 0.1s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(4) {
+                        animation-delay: 0.15s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(5) {
+                        animation-delay: 0.2s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(6) {
+                        animation-delay: 0.25s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(7) {
+                        animation-delay: 0.3s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(8) {
+                        animation-delay: 0.35s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(9) {
+                        animation-delay: 0.4s;
+                      }
+
+                      .radicchio-btn:hover span:nth-child(10) {
+                        animation-delay: 0.45s;
+                      }
+
+                      @keyframes radicchio-move-1 {
+                        0%,100% { opacity: 1; transform: translate3d(0, 0, 0);}
+
+                        49% {opacity: 1; transform: translate3d(0, 100%, 0);}
+
+                        50% {opacity: 0; transform: translate3d(0, 100%, 0); color: inherit;}
+
+                        51% {opacity: 0; transform: translate3d(0, -100%, 0); color: #fff;}
+
+                        100% {color: #fff;}
+                      }
+
+                      @keyframes radicchio-move-2 {
+                        0%, 100% {opacity: 1; transform: translate3d(0, 0, 0);}
+
+                        49% {opacity: 1; transform: translate3d(0, -100%, 0);}
+
+                        50% {opacity: 0; transform: translate3d(0, -100%, 0); color: inherit;}
+
+                        51% {opacity: 0; transform: translate3d(0, 100%, 0);color: #fff;}
+
+                        100% {color: #fff;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          
+            <!-- cymbopogon -->
+            <div class="button-holder">
+              <button class="cymbopogon-btn" data-hystmodal="#myModal">
+                <span>cymbopogon</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cymbopogon-btn"&gt;
+                        &lt;span&gt;cymbopogon&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cymbopogon-btn {
+                        position: relative;
+                        height: 54px;
+                        width: 220px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                        border: 1px solid #111;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        overflow: hidden;
+                        transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+                        color: #111;
+                        border-radius: 3px;
+                      }
+
+                      .cymbopogon-btn:hover {
+                        animation: cymbopogon-rotate 0.7s ease-in-out both;
+                      }
+
+                      .cymbopogon-btn:hover span {
+                        animation: cymbopogon-storm 0.7s ease-in-out both;
+                        animation-delay: 0.06s;
+                      }
+
+                      .cymbopogon-btn:before,
+                      .cymbopogon-btn:after {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background: #1d89ff;
+                        content: '';
+                        opacity: 0;
+                        transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+                        z-index: -1;
+                        transform: translate(100%, -25%) translate3d(0, 0, 0);
+                      }
+
+                      .cymbopogon-btn:hover {
+                        border: 1px solid rgba(22, 76, 167, 0.6);
+                      }
+
+                      .cymbopogon-btn:hover:before,
+                      .cymbopogon-btn:hover:after {
+                        opacity: 0.15;
+                        transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+                      }
+
+                      .cymbopogon-btn:hover:before {
+                        transform: translate3d(50%, 0, 0) scale(0.9);
+                      }
+
+                      .cymbopogon-btn:hover:after {
+                        transform: translate(50%, 0) scale(1.1);
+                      }
+
+                      @keyframes cymbopogon-rotate {
+                        0% {transform: rotate(0deg) translate3d(0, 0, 0);}
+
+                        25% {transform: rotate(3deg) translate3d(0, 0, 0);}
+
+                        50% {transform: rotate(-3deg) translate3d(0, 0, 0);}
+
+                        75% {transform: rotate(1deg) translate3d(0, 0, 0);}
+
+                        100% {transform: rotate(0deg) translate3d(0, 0, 0);}
+                      }
+
+                      @keyframes cymbopogon-storm {
+                        0% {transform: translate3d(0, 0, 0) translateZ(0);}
+
+                        25% {transform: translate3d(4px, 0, 0) translateZ(0);}
+
+                        50% {transform: translate3d(-3px, 0, 0) translateZ(0);}
+
+                        75% {transform: translate3d(2px, 0, 0) translateZ(0);}
+
+                        100% {transform: translate3d(0, 0, 0) translateZ(0);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- marjoram -->
+            <div class="button-holder">
+              <button class="marjoram-btn" data-hystmodal="#myModal">
+                <span>marjoram</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="marjoram-btn"&gt;
+                        &lt;span&gt;marjoram&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .marjoram-btn {
+                        position: relative;
+                        margin: 0;
+                        height: 54px;
+                        width: 220px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                        border: 1px solid #111;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+                        border: 1px solid;
+                        overflow: hidden;
+                        border-radius: 3px;
+                      }
+
+                      .marjoram-btn span {
+                        z-index: 20;
+                      }
+
+                      .marjoram-btn:after {
+                        background-color: #111;
+                        content: "";
+                        height: 155px;
+                        left: -75px;
+                        opacity: .4;
+                        position: absolute;
+                        top: -50px;
+                        transform: rotate(35deg);
+                        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                        width: 50px;
+                        z-index: -10;
+                      }
+
+                      .marjoram-btn:hover {
+                        border: 1px solid rgba(22, 76, 167, 0.6);
+                        animation: marjoram-rotate 0.7s ease-in-out both;
+                      }
+
+                      .marjoram-btn:hover:after {
+                        left: 120%;
+                        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                      }
+
+                      .marjoram-btn:hover span {
+                        animation: marjoram-storm 0.7s ease-in-out both;
+                        animation-delay: 0.06s;
+                      }
+
+                      @keyframes marjoram-rotate {
+                        0% {transform: rotate(0deg) translate3d(0, 0, 0);}
+
+                        25% {transform: rotate(3deg) translate3d(0, 0, 0);}
+
+                        50% {transform: rotate(-3deg) translate3d(0, 0, 0);}
+
+                        75% {transform: rotate(1deg) translate3d(0, 0, 0);}
+
+                        100% {transform: rotate(0deg) translate3d(0, 0, 0);}
+                      }
+
+                      @keyframes marjoram-storm {
+                        0% {transform: translate3d(0, 0, 0) translateZ(0);}
+
+                        25% {transform: translate3d(4px, 0, 0) translateZ(0);}
+
+                        50% {transform: translate3d(-3px, 0, 0) translateZ(0);}
+
+                        75% { transform: translate3d(2px, 0, 0) translateZ(0);}
+
+                        100% {transform: translate3d(0, 0, 0) translateZ(0);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- red cabbage -->
+            <div class="button-holder">
+              <button class="red-cabbage-btn" data-hystmodal="#myModal">
+                read more
+                <span class="front-text">red cabbage</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="red-cabbage-btn"&gt;
+                        read more
+                        &lt;span class="front-text"&gt;red cabbage&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .red-cabbage-btn {
+                        font-size: 22px;
+                        border: none;
+                        background: none;
+                        position: relative;
+                        padding: 0;
+                        width: 200px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #111;
+                        color: #fff;
+                        border-radius: 3px;
+                      }
+
+                      .red-cabbage-btn .front-text {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: all 0.5s ease;
+                        background-color: #fff;
+                        width: 100%;
+                        height: 100%;
+                        color: #111;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .red-cabbage-btn .back-text {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                      }
+
+                      .red-cabbage-btn:hover .front-text {
+                        opacity: 0;
+                        transform: rotate3d(3, 2, 2, 90deg) translateZ(60px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- fennel -->
+            <div class="button-holder">
+              <button class="fennel-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <div class="button front">
+                      fennel
+                  </div>
+                  <div class="button back">
+                      read more
+                  </div>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="fennel-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;div class="button front"&gt;
+                              fennel
+                          &lt;/div&gt;
+                          &lt;div class="button back"&gt;
+                              read more
+                          &lt;/div&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .fennel-btn {
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        perspective: 1000;
+                        background-color: #fff;
+                        border: 0;
+                      }
+
+                      .fennel-btn .btn-content {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                        transform-style: preserve-3d;
+                        position: relative;
+                      }
+
+                      .fennel-btn .front,
+                      .fennel-btn .back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .fennel-btn .front {
+                        z-index: 10;
+                        background-color: #fff;
+                      }
+
+                      .fennel-btn .back {
+                        background-color: #111;
+                        transform: rotateY(-180deg);
+                        color: white;
+                      }
+
+                      .fennel-btn:hover .btn-content {
+                        transform: rotateY(180deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cauliflower -->
+            <div class="button-holder">
+              <button class="cauliflower-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <div class="button front">
+                    cauliflower
+                  </div>
+
+                  <div class="button back">
+                      read more
+                  </div>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cauliflower-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;div class="button front"&gt;
+                            cauliflower
+                          &lt;/div&gt;
+
+                          &lt;div class="button back"&gt;
+                              read more
+                          &lt;/div&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cauliflower-btn {
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        perspective: 1000;
+                        background-color: #fff;
+                        border: 0;
+                      }
+
+                      .cauliflower-btn .btn-content {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                        transform-style: preserve-3d;
+                        position: relative;
+                      }
+
+                      .cauliflower-btn .front,
+                      .cauliflower-btn .back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border-radius: 3px;
+                        border: 1px solid #111;
+                      }
+
+                      .cauliflower-btn .front {
+                        z-index: 10;
+                        background-color: #fff;
+                      }
+
+                      .cauliflower-btn .back {
+                        background-color: #111;
+                        transform: rotateX(180deg);
+                        color: white;
+                      }
+
+                      .cauliflower-btn:hover .btn-content {
+                        transform: rotateX(-180deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- collard greens -->
+            <div class="button-holder">
+              <button class="collard-greens-btn" data-hystmodal="#myModal">
+                <span>collard greens</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="collard-greens-btn"&gt;
+                        &lt;span&gt;collard greens&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .collard-greens-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 1;
+                        background-color: #fff;
+                      }
+
+                      .collard-greens-btn:before,
+                      .collard-greens-btn:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 0.3s;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        border-radius: 3px;
+                      }
+
+                      .collard-greens-btn:before {
+                        opacity: 0;
+                        background-color: #111;
+                        transform: scale(1, 0.1);
+                      }
+
+                      .collard-greens-btn:after {
+                        transition: all 0.3s;
+                        border: 1px solid #111;
+                      }
+
+                      .collard-greens-btn:hover {
+                        color: #fff;
+                      }
+
+                      .collard-greens-btn:hover:before {
+                        opacity: 1;
+                        transform: scale(1, 1);
+                      }
+
+                      .collard-greens-btn:hover:after {
+                        transform: scale(1, 0.1);
+                        opacity: 0;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mustard greens -->
+            <div class="button-holder">
+              <button class="mustard-greens-btn" data-hystmodal="#myModal">
+                <span>mustard greens</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="mustard-greens-btn"&gt;
+                        &lt;span&gt;mustard greens&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mustard-greens-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 1;
+                        background-color: #fff;
+                      }
+
+                      .mustard-greens-btn:before,
+                      .mustard-greens-btn:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 0.3s;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        border-radius: 3px;
+                      }
+
+                      .mustard-greens-btn:before {
+                        opacity: 0;
+                        background-color: #111;
+                        transform: scale(0.1, 0.1);
+                      }
+
+                      .mustard-greens-btn:after {
+                        transition: all 0.3s;
+                        border: 1px solid #111;
+                      }
+
+                      .mustard-greens-btn:hover {
+                        color: #fff;
+                      }
+
+                      .mustard-greens-btn:hover:before {
+                        opacity: 1;
+                        transform: scale(1, 1);
+                      }
+
+                      .mustard-greens-btn:hover:after {
+                        transform: scale(0, 0);
+                        opacity: 0;
+                      }
+
+                      .mustard-greens-btn:hover span {
+                        transform: scale(1.2, 1.2);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- basil -->
+            <div class="button-holder">
+              <button class="basil-btn" data-hystmodal="#myModal">
+                <span>basil</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="basil-btn"&gt;
+                        &lt;span&gt;basil&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .basil-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        z-index: 1;
+                      }
+
+                      .basil-btn:before,
+                      .basil-btn:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 0.3s;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                      }
+
+                      .basil-btn:before {
+                        opacity: 0;
+                        background-color: #111;
+                        transform: scale(1.3, 1.3);
+                        border-radius: 3px;
+                      }
+
+                      .basil-btn:after {
+                        transition: all 0.3s;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .basil-btn:hover {
+                        color: #fff;
+                      }
+
+                      .basil-btn:hover:after {
+                        transform: scale(0, 0);
+                        opacity: 0;
+                      }
+
+                      .basil-btn:hover:before {
+                        opacity: 1;
+                        transform: scale(1, 1);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- plumcot -->
+            <div class="button-holder">
+              <button class="plumcot-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <div class="button front">
+                    plumcot
+                  </div>
+
+                  <div class="button back">
+                      read more
+                  </div>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="plumcot-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;div class="button front"&gt;
+                            plumcot
+                          &lt;/div&gt;
+
+                          &lt;div class="button back"&gt;
+                              read more
+                          &lt;/div&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .plumcot-btn {
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        perspective: 1000;
+                        background-color: #fff;
+                        border: 0;
+                      }
+
+                      .plumcot-btn .btn-content {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                        transform-style: preserve-3d;
+                        position: relative;
+                      }
+
+                      .plumcot-btn .front,
+                      .plumcot-btn .back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .plumcot-btn .front {
+                        z-index: 10;
+                        background-color: #fff;
+                      }
+
+                      .plumcot-btn .back {
+                        background-color: #111;
+                        transform: rotateY(-180deg);
+                        color: white;
+                      }
+
+                      .plumcot-btn:hover .btn-content {
+                        transform: rotate3d(1, 10, 0, 180deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pomegranate -->
+            <div class="button-holder">
+              <button class="pomegranate-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <div class="button front">
+                    pomegranate
+                  </div>
+
+                  <div class="button back">
+                      read more
+                  </div>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="pomegranate-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;div class="button front"&gt;
+                            pomegranate
+                          &lt;/div&gt;
+
+                          &lt;div class="button back"&gt;
+                              read more
+                          &lt;/div&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pomegranate-btn {
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        perspective: 1000px;
+                        background-color: #fff;
+                        border: 0;
+                      }
+
+                      .pomegranate-btn .btn-content {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                        transform-style: preserve-3d;
+                        position: relative;
+                        transform-origin: 100% 30px;
+                      }
+
+                      .pomegranate-btn .front,
+                      .pomegranate-btn .back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .pomegranate-btn .front {
+                        z-index: 10;
+                        transform: translateZ(25px);
+                        background-color: #fff;
+                      }
+
+                      .pomegranate-btn .back {
+                        background-color: #111;
+                        transform: rotateX(180deg);
+                        color: #fff;
+                        transform: rotateX(90deg) translateZ(27px);
+                        background-image: linear-gradient(90deg, #111, #3c3c3c);
+                      }
+
+                      .pomegranate-btn:hover .btn-content {
+                        transform: rotateX(-90deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pomelo -->
+            <div class="button-holder">
+              <button class="pomelo-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <div class="button front">
+                    pomelo
+                  </div>
+
+                  <div class="button back">
+                      read more
+                  </div>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="pomelo-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;div class="button front"&gt;
+                            pomelo
+                          &lt;/div&gt;
+
+                          &lt;div class="button back"&gt;
+                              read more
+                          &lt;/div&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pomelo-btn {
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        perspective: 1000px;
+                        background-color: #fff;
+                        border: 0;
+                      }
+
+                      .pomelo-btn .btn-content {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                        transform-style: preserve-3d;
+                        position: relative;
+                        transform-origin: 100% 30px;
+                      }
+
+                      .pomelo-btn .front,
+                      .pomelo-btn .back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border: 1px solid #111;
+                        border-radius: 3px;
+                      }
+
+                      .pomelo-btn .front {
+                        z-index: 10;
+                        transform: translateZ(27px);
+                        background-color: #fff;
+                      }
+
+                      .pomelo-btn .back {
+                        background-color: #111;
+                        transform: rotateX(180deg);
+                        color: white;
+                        transform: rotateX(-90deg) translateZ(25px);
+                        background-image: linear-gradient(90deg, #111, #3c3c3c);
+                      }
+
+                      .pomelo-btn:hover .btn-content {
+                        transform: rotateX(90deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- saskatoon -->
+            <div class="button-holder">
+              <button class="saskatoon-btn" data-hystmodal="#myModal">saskatoon</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="saskatoon-btn"&gt;saskatoon&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .saskatoon-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        transition: transform 1.2s;
+                        background-color: #fff;
+                        transition-timing-function: steps(3);
+                      }
+
+                      .saskatoon-btn:hover {
+                        transform: scale(1.3);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- ibarrae -->
+            <div class="button-holder">
+              <button class="ibarrae-btn" data-hystmodal="#myModal">ibarrae</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="ibarrae-btn"&gt;ibarrae&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .ibarrae-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        background-color: #fff;
+                        transition: letter-spacing 0.5s 0.15s;
+                      }
+
+                      .ibarrae-btn:hover {
+                        letter-spacing: 3px;
+                        transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+                        animation: ibarrae-move 0.5s 1;
+                      }
+
+                      @keyframes ibarrae-move {
+                        0%, 100% {transform: scale(1, 1);}
+
+                        25% {transform: scale(0.9, 1.1);}
+
+                        50% {transform: scale(1.1, 0.9);}
+
+                        75% {transform: scale(0.95, 1.05);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- caperberry -->
+            <div class="button-holder">
+              <button class="caperberry-btn" data-hystmodal="#myModal">caperberry</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="caperberry-btn"&gt;caperberry&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .caperberry-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        transition: 0.25s ease;
+                        background-color: #fff;
+                      }
+
+                      .caperberry-btn:hover {
+                        transform: skewX(-20deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- chokecherry -->
+            <div class="button-holder">
+              <button class="chokecherry-btn" data-hystmodal="#myModal">chokecherry</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="chokecherry-btn"&gt;chokecherry&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .chokecherry-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        transition: 0.25s ease;
+                        background-color: #fff;
+                      }
+
+                      .chokecherry-btn:hover {
+                        transform: skewY(-12deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- vismeifolia -->
+            <div class="button-holder">
+              <button class="vismeifolia-btn" data-hystmodal="#myModal">vismeifolia</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="vismeifolia-btn"&gt;vismeifolia&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .vismeifolia-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        transition: 0.5s;
+                        overflow: hidden;
+                        background-color: #fff;
+                      }
+
+                      .vismeifolia-btn:hover {
+                        text-shadow: 0 0 0 #000, -200px 0 0 rgba(0, 0, 0, .7), 200px 0 0 rgba(0, 0, 0, .7), 0 45px 0 rgba(0, 0, 0, .7), 0 -45px 0 rgba(0, 0, 0, .7);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons-grid">
+            <!-- coriander -->
+            <div class="button-holder">
+              <button class="coriander-btn" data-hystmodal="#myModal">
+                <span>coriander</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="coriander-btn"&gt;
+                        &lt;span&gt;coriander&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .coriander-btn {
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 24px;
+                        background-color: #fff;
+                        z-index: 1;
+                        display: block;
+                      }
+
+                      .coriander-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: #e7e7e7;
+                        outline: 1px solid transparent;
+                        transform-style: preserve-3d;
+                        transition: all 0.4s;
+                      }
+
+                      .coriander-btn span:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.4s;
+                        width: 100%;
+                        height: 42%;
+                        left: 0;
+                        top: -40%;
+                        background-color: #888;
+                        transform-origin: 0% 100%;
+                        transform: rotateX(90deg);
+                      }
+
+                      .coriander-btn:hover span {
+                        transform: rotateX(-45deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- chamomile -->
+            <div class="button-holder">
+              <button class="chamomile-btn" data-hystmodal="#myModal">
+                <span>chamomile</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="chamomile-btn"&gt;
+                        &lt;span&gt;chamomile&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .chamomile-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        z-index: 1;
+                        perspective: 800px;
+                      }
+
+                      .chamomile-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 60px;
+                        background: #e7e7e7;
+                        outline: 1px solid transparent;
+                        transform-style: preserve-3d;
+                        transition: all 0.4s;
+                      }
+
+                      .chamomile-btn span:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.4s;
+                        width: 100%;
+                        height: 40%;
+                        left: 0;
+                        top: 100%;
+                        background: #888;
+                        transform-origin: 0% 0%;
+                        transform: rotateX(-90deg);
+                      }
+
+                      .chamomile-btn:hover span {
+                        transform: rotateX(35deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- daikon -->
+            <div class="button-holder">
+              <button class="daikon-btn" data-hystmodal="#myModal">
+                <span>daikon</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="daikon-btn"&gt;
+                        &lt;span&gt;daikon&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .daikon-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        z-index: 1;
+                        perspective: 800px;
+                      }
+
+                      .daikon-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 60px;
+                        background: #e7e7e7;
+                        outline: 1px solid transparent;
+                        transform-style: preserve-3d;
+                        transition: all 0.4s;
+                      }
+
+                      .daikon-btn span:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.4s;
+                        width: 20%;
+                        height: 100%;
+                        left: -20%;
+                        top: 0;
+                        background: #888;
+                        transform-origin: 100% 0%;
+                        transform: rotateY(-90deg);
+                      }
+
+                      .daikon-btn:hover span {
+                        transform: rotateY(25deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- dill -->
+            <div class="button-holder">
+              <button class="dill-btn" data-hystmodal="#myModal">
+                <span>dill</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="dill-btn"&gt;
+                        &lt;span&gt;dill&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .dill-btn {
+                        width: 220px;
+                        height: 54px;
+                        position: relative;
+                        border: 0;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        z-index: 1;
+                        perspective: 800px;
+                      }
+
+                      .dill-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 60px;
+                        background: #e7e7e7;
+                        outline: 1px solid transparent;
+                        transform-style: preserve-3d;
+                        transition: all 0.4s;
+                      }
+
+                      .dill-btn span:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.4s;
+                        width: 20%;
+                        height: 100%;
+                        left: 100%;
+                        top: 0;
+                        background: #888;
+                        transform-origin: 0% 0%;
+                        transform: rotateY(90deg);
+                      }
+
+                      .dill-btn:hover span {
+                        transform: rotateY(-25deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- marrow -->
+            <div class="button-holder">
+              <button class="marrow-btn" data-hystmodal="#myModal">marrow</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="marrow-btn"&gt;marrow&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .marrow-btn {
+                        width: 220px;
+                        height: 54px;
+                        border: 2px solid #111;
+                        background: transparent;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        display: inline-block;
+                        font-size: 22px;
+                        line-height: 40px;
+                        padding: 0;
+                        background: transparent;
+                        position: relative;
+                        z-index: 2;
+                        color: #fff;
+                        perspective: 300px;
+                        transform-style: preserve-3d;
+                        border-radius: 3px;
+                      }
+
+                      .marrow-btn:hover {
+                        color: #111;
+                      }
+
+                      .marrow-btn:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #111;
+                        z-index: -1;
+                        transform-origin: center bottom;
+                        transform: rotateX(0);
+                        transition: all 0.3s ease;
+                      }
+
+                      .marrow-btn:hover:after {
+                        transform: rotateX(-180deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- habanero -->
+            <div class="button-holder">
+              <button class="habanero-btn" data-text="habanero" data-hystmodal="#myModal">
+                <span>habanero</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="habanero-btn" data-text="habanero"&gt;
+                        &lt;span&gt;habanero&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .habanero-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        z-index: 1;
+                        font-size: 24px;
+                        border: 1px solid #111;
+                        background-color: #fff;
+                        overflow: hidden;
+                        transition: border-color 0.3s, color 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                        color: #111;
+                        border-radius: 3px;
+                      }
+
+                      .habanero-btn:before,
+                      .habanero-btn:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 50%;
+                        left: 0;
+                        background-color: #111;
+                        color: #fff;
+                        transition: transform 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                      }
+
+                      .habanero-btn:before {
+                        top: 0;
+                        padding-top: 12px;
+                      }
+
+                      .habanero-btn:after {
+                        bottom: 0;
+                        line-height: 0;
+                      }
+
+                      .habanero-btn span {
+                        display: block;
+                        transform: scale3d(0.2, 0.2, 1);
+                        opacity: 0;
+                        transition: transform 0.3s, opacity 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                      }
+
+                      .habanero-btn:hover:before {
+                        transform: translate3d(0, -100%, 0);
+                      }
+
+                      .habanero-btn:hover:after {
+                        transform: translate3d(0, 100%, 0);
+                      }
+
+                      .habanero-btn:hover span {
+                        opacity: 1;
+                        transform: scale3d(1, 1, 1);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- eddoe -->
+            <div class="button-holder">
+              <button class="eddoe-btn" data-hystmodal="#myModal">eddoe</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="eddoe-btn"&gt;eddoe&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .eddoe-btn {
+                        color: #fff;
+                        background: transparent;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        outline: none;
+                        border: none;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+                        font-size: 22px;
+                        z-index: 1;
+                        border-radius: 3px;
+                      }
+
+                      .eddoe-btn:after {
+                        position: absolute;
+                        content: " ";
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #111;
+                        transition: all 0.3s ease;
+                      }
+
+                      .eddoe-btn:hover:after {
+                        transform: scale(2) rotate(180deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- nipponica -->
+            <div class="button-holder">
+              <button class="nipponica-btn" data-hystmodal="#myModal">nipponica</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="nipponica-btn"&gt;eddoe&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .nipponica-btn {
+                        overflow: hidden;
+                        z-index: 1;
+                        transition: all 0.3s ease-in-out 0s;
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        z-index: 1;
+                        font-size: 22px;
+                        color: #fff;
+                        border: 1px solid #111;
+                        background: #111;
+                        border-radius: 3px;
+                      }
+
+                      .nipponica-btn:after {
+                        content: "";
+                        width: 120%;
+                        height: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        opacity: 0;
+                        z-index: -1;
+                        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                        transition: all 0.3s ease-in-out 0s;
+                      }
+
+                      .nipponica-btn:hover:after{
+                        height: 220%;
+                        background: #fff;
+                        opacity: 1;
+                      }
+
+                      .nipponica-btn:hover{
+                        color: #111;
+                        border-color: #353535;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cascadensis -->
+            <div class="button-holder">
+              <button class="cascadensis-btn" data-hystmodal="#myModal"><span>cascadensis</span></button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="eddoe-btn"&gt;eddoe&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cascadensis-btn {
+                        border: none;
+                        overflow: hidden;
+                        z-index: 1;
+                        transition: all .3s cubic-bezier(1, 0.15, 0.34, 1.03);
+                        background: #fe6d6d;
+                        color: #fff;
+                        font-size: 22px;
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        background-color: #111;
+                        border-radius: 3px;
+                      }
+
+                      .cascadensis-btn:before{
+                        content: "";
+                        background: #fff;
+                        border-radius: 50%;
+                        padding: 18%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: -1;
+                        transform: translate3d(-50%, -50%, 0) scale(0);
+                        transition: transform .3s cubic-bezier(1, 0.15, 0.34, 1.03);
+                      }
+
+                      .cascadensis-btn span{
+                        display: block;
+                        position: relative;
+                        z-index: 3;
+                      }
+
+                      .cascadensis-btn:hover:before{
+                        transform: translate3d(-50%, -50%, 0) scale(2.5);
+                      }
+
+                      .cascadensis-btn:hover{ 
+                        color: #111; 
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- cucumber -->
+            <div class="button-holder">
+              <button class="cucumber-btn" data-text="cucumber" data-hystmodal="#myModal">cucumber</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cucumber-btn" data-text="cucumber"&gt;cucumber&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cucumber-btn {
+                        text-decoration: none;
+                        border: 2px solid #111;
+                        color: transparent;
+                        font-size: 21px;
+                        transition: all 0.5s;
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        background-color: transparent;
+                        border-radius: 3px;
+                      }
+
+                      .cucumber-btn:before {
+                        content: attr(data-text);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        background: #111;
+                        top: 0;
+                        left: 100%;
+                        transition: all 1s;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        transform: scale(0) rotatey(0);
+                        opacity: 0;
+                      }
+
+                      .cucumber-btn:hover:before {
+                        transform: scale(1) rotatey(360deg);
+                        left: 0;
+                        opacity: 1;
+                      }
+
+                      .cucumber-btn:after {
+                        content: attr(data-text);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        background: #111;
+                        top: 0;
+                        left: 0;
+                        transition: all 1s;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        transform: scale(1) rotatey(0);
+                        opacity: 1;
+                      }
+
+                      .cucumber-btn:hover:after {
+                        transform: scale(0) rotatey(360deg);
+                        left: -100%;
+                        opacity: 0;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- xanthosoma -->
+            <div class="button-holder">
+              <button class="xanthosoma-btn" data-hystmodal="#myModal">
+                <span>xanthosoma</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="xanthosoma-btn"&gt;
+                        &lt;span&gt;xanthosoma&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .xanthosoma-btn {
+                        box-sizing: border-box;
+                        width: 220px;
+                        height: 54px;
+                        cursor: pointer;
+                        border: 5px solid #111;
+                        transition: 200ms;
+                        position: relative;
+                        z-index: 1;
+                        font-size: 22px;
+                      }
+
+                      .xanthosoma-btn span {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #111;
+                        inset: 0;
+                        color: #fff;
+                        transition: 500ms;
+                        z-index: 5;
+                      }
+
+                      .xanthosoma-btn:before,
+                      .xanthosoma-btn:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        opacity: 0;
+                        pointer-events: none;
+                      }
+
+                      .xanthosoma-btn:before {
+                        border: 5px solid #7e5791;
+                        transition: all 200ms linear;
+                        transition-delay: 0.3;
+                        z-index: 1;
+                      }
+
+                      .xanthosoma-btn:after {
+                        border: 5px solid #b37ccf;
+                        transition: all 0s linear;
+                        transition-delay: 0.5;
+                        z-index: -2;
+                      }
+
+                      .xanthosoma-btn:hover {
+                        border: 5px solid #5b3f69;
+                      }
+
+                      .xanthosoma-btn:hover span {
+                        letter-spacing: 2px;
+                      }
+
+                      .xanthosoma-btn:hover:before {
+                        inset: -10px;
+                        opacity: 1;
+                      }
+
+                      .xanthosoma-btn:hover:after {
+                        inset: -15px;
+                        opacity: 1;
+                        transition: all 500ms linear;
+                        transition-delay: 0s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cestracion -->
+            <div class="button-holder">
+              <button class="cestracion-btn" data-hystmodal="#myModal">cestracion</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cestracion-btn"&gt;cestracion&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cestracion-btn {
+                        position: relative;
+                        z-index: 0;
+                        color: #fff;
+                        mix-blend-mode: darken;
+                        width: 220px;
+                        height: 54px;
+                        font-size: 22px;
+                      }
+
+                      .cestracion-btn:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: -15px -10px;
+                        padding: 6px;
+                        background: linear-gradient(#111 0 0) 0 50%, linear-gradient(#111 0 0) 50% 50%, linear-gradient(#111 0 0) 100% 50%, #fff;
+                        background-size: 34% 80%;
+                        background-origin: content-box, content-box, content-box, padding-box;
+                        background-clip: content-box, content-box, content-box, padding-box;
+                        background-repeat: no-repeat;
+                        filter: blur(3px) contrast(30);
+                      }
+
+                      .cestracion-btn:hover:before {
+                        background-position: 0 50.01%, 50% 49.99%, 100% 50.01%;
+                        transition: 0.4s cubic-bezier(0.5, 10000, 0.5, -10000);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- batjanense -->
+            <div class="button-holder">
+              <button class="batjanense-btn" data-hystmodal="#myModal">batjanense</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="batjanense-btn"&gt;batjanense&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .batjanense-btn {
+                        position: relative;
+                        z-index: 0;
+                        font-size: 22px;
+                        color: #fff;
+                        width: 220px;
+                        height: 54px;
+                        mix-blend-mode: darken;
+                      }
+
+                      .batjanense-btn:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: -15px -5px;
+                        padding: 6px;
+                        background: linear-gradient(#111 0 0), linear-gradient(#111 0 0), linear-gradient(#111 0 0), #fff;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 100% 80%, 30px 0%, 30px 0%;
+                        background-origin: content-box, content-box, content-box, padding-box;
+                        background-clip: content-box, content-box, content-box, padding-box;
+                        filter: blur(2px) contrast(30);
+                      }
+
+                      .batjanense-btn:hover:before {
+                        background-size: 100% 80%, 30px 100%, 30px 100%;
+                        background-position: center, left -40px top 0, right -40px top 0;
+                        transition: .3s, background-position .5s .3s linear;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-footer">
+            <div class="page-navigation">
+              <a href="overlay.html">Overlay</a>
+
+              <a href="border.html">Border</a>
+
+              <a href="transform.html" class="active">Transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="text.html">Text</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+          <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6696 18.5001L1.0752 33.0944L3.9057 35.9249L18.5001 21.3306L33.0944 35.9249L35.9249 33.0944L21.3306 18.5001L35.9249 3.9057L33.0944 1.0752L18.5001 15.6696L3.9057 1.0752L1.0752 3.9057L15.6696 18.5001Z" fill="#212121"/></svg>
+            </button>  
+            
+            <div class="h2">Element markup and styles</div>
+
+            <div class="modal-body"></div>
+          </div>
+        </div> 
+      </div>
+
+      <script src="../js/jquery-3.2.1.js"></script>
+      <script src="../js/hystmodal.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/custom.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1342 @@
+/* === ivy gourd === */
+.ivy-gourd-link {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  padding: 0;
+  width: 190px;
+  font-size: 24px;
+}
+
+.ivy-gourd-link .circle {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+  background: #111;
+  border-radius: 48px;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.ivy-gourd-link .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+}
+
+.ivy-gourd-link .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.ivy-gourd-link .circle .icon.arrow:before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.ivy-gourd-link .button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  line-height: 1;
+  text-align: center;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.ivy-gourd-link:hover .circle {
+  width: 100%;
+}
+
+.ivy-gourd-link:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.ivy-gourd-link:hover .button-text {
+  color: #fff;
+}
+
+
+/* === quince === */
+.quince-link {
+  position: relative;
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
+.quince-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background-color: #e7e7e7;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 56px;
+  height: 56px;
+}
+
+.quince-link span {
+  position: relative;
+}
+
+.quince-link svg {
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.quince-link:hover:before {
+  width: 100%;
+}
+
+.quince-link:hover svg {
+  transform: translateX(0);
+}
+
+
+/* === plumcot === */
+.plumcot-link {
+  letter-spacing: 1px;
+  position: relative;
+  border: none;
+  height: 60px;
+  width: 220px;
+  font-size: 24px;
+  z-index: 2;
+  transition: .01s .23s ease-out all;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+}
+
+.plumcot-link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  background: #e7e7e7;
+  z-index: -1;
+  transition: .3s ease-in all;
+}
+
+.plumcot-link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  transform: translateX(-20px);
+  top: 0;
+  height: 100%;
+  width: 5%;
+  background: #111;
+  z-index: -1;
+  transition: all ease-in 0.4s .02s;
+}
+
+.plumcot-link .front-arrow {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 30px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding-bottom: 2px;
+  transition: .3s .3s ease all;
+  color: #111;
+}
+
+.plumcot-link .front-arrow:after {
+  content: '\2192';
+  font-size: 28px;
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+}
+
+.plumcot-link .back-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-110%);
+  width: 220px;
+  height: 60px;
+  transition: .2s .2s ease all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+
+.plumcot-link .back-text:after {
+  content: '\2192';
+  font-size: 28px;
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  width: 30px;
+  color: #111;
+  left: 30px;
+  transform: translateX(-50px);
+  transition: .5s .3s ease all;
+}
+
+.plumcot-link:hover {
+  color: transparent;
+}
+
+.plumcot-link:hover:before {
+  left: 100%;
+  width: 25%;
+}
+
+.plumcot-link:hover:after {
+  transform: translateX(150%);
+  width: 150px;
+}
+
+.plumcot-link:hover .front-arrow {
+  transform: translateX(50px);
+}
+
+.plumcot-link:hover .back-text {
+  padding-left: 15px;
+  transform: translateX(0);
+  transition: all .2s ease .3s;
+}
+
+.plumcot-link:hover .back-text:after {
+  transform: translateX(0);
+}
+
+
+/* === grapefruit === */
+.grapefruit-link {
+  height: 30px;
+  align-items: center;
+  color: #111;
+  text-decoration: none;
+  display: flex;
+  font-size: 24px;
+}
+
+.grapefruit-link .mask {
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+}
+
+.grapefruit-link .link-container {
+  transition: transform 0.4s ease;
+}
+
+.grapefruit-link .title {
+  display: block;
+  line-height: 20px;
+  transition: transform 0.4s ease;
+}
+
+.grapefruit-link .link-title-one {
+  transform-origin: right center;
+}
+
+.grapefruit-link .link-title-two {
+  transform-origin: left center;
+  transform: rotate(20deg);
+}
+
+.grapefruit-link .link-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.grapefruit-link .icon {
+  display: block;
+  position: absolute;
+  transition: transform 0.4s ease;
+}
+
+.grapefruit-link .icon:nth-child(2) {
+  transform: translate(-50px);
+}
+
+.grapefruit-link:hover .link-container {
+  transform: translateY(-20px);
+}
+
+.grapefruit-link:hover .link-title-one {
+  transform: rotate(20deg);
+}
+
+.grapefruit-link:hover .link-title-two {
+  transform: rotate(0);
+}
+
+.grapefruit-link:hover .icon:first-child {
+  transform: translate(50px);
+}
+
+.grapefruit-link:hover .icon:nth-child(2) {
+  transform: translate(0px);
+}
+
+
+/* === jambul === */
+.jambul-link {
+  font-size: 24px;
+  padding: 15px 25px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 5px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.jambul-link:before {
+  content: attr(data-hover);
+  filter: blur(2px);
+}
+
+.jambul-link:after {
+  content: '';
+  padding: 15px 25px;
+  position: absolute;
+  width: 50px;
+  height: calc(100% + 0px);
+  top: 0;
+  left: 0;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  opacity: 0;
+}
+
+.jambul-link .inner {
+  display: block;
+  overflow: hidden;
+  padding: 15px 25px;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.jambul-link .inner span {
+  display: block;
+  white-space: nowrap;
+}
+
+.jambul-link:hover .inner {
+  opacity: 1;
+  animation: jambul-move 1s linear infinite alternate;
+}
+
+.jambul-link:hover .inner span {
+  animation: jambul-inner-move 1s linear infinite alternate;
+}
+
+.jambul-link:hover:after {
+  opacity: 1;
+  animation: jambul-move 1s linear infinite alternate;
+}
+
+@keyframes jambul-move {
+  0% {transform: translateX(0);}
+
+  100% {transform: translateX(190px);}
+}
+
+@keyframes jambul-inner-move {
+  0% {transform: translateX(0);}
+
+  100% {transform: translateX(-190px);}
+}
+
+
+/* === caviar lime === */
+.caviar-lime-link {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.caviar-lime-link:before {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  color: transparent;
+  content: "•";
+  text-shadow: transparent 0px 0px;
+  font-size: 30px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: text-shadow 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+.caviar-lime-link:hover:before {
+  color: #111;
+  text-shadow: 20px 0 #111, -20px 0 #111;
+}
+
+
+/* === tomatillo === */
+.tomatillo-link {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.tomatillo-link:before, 
+.tomatillo-link:after {
+  display: inline-block;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.tomatillo-link:before {
+  margin-right: 10px;
+  content: '[';
+  transform: translateX(20px);
+}
+
+.tomatillo-link:after {
+  margin-left: 10px;
+  content: ']';
+  transform: translateX(-20px);
+}
+
+.tomatillo-link:hover:before, 
+.tomatillo-link:hover:after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+
+/* === alicastrum === */
+.alicastrum-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 6px;
+  background: radial-gradient(circle closest-side, #111 86%, transparent) bottom/80% 8px repeat-x;
+  transition: 0.5s;
+}
+
+.alicastrum-link:hover {
+  background-size: 8px 8px;
+}
+
+
+/* === chinese chestnut === */
+.chinese-chestnut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 6px;
+  background: radial-gradient(circle closest-side, #111 80%, transparent) bottom 0 left 50%/100% 10px no-repeat, linear-gradient(#111 0 0) bottom 4px left 50%/0% 2px no-repeat;
+  transition: 0.5s;
+}
+
+.chinese-chestnut-link:hover {
+  background-size: 100% 2px, 100% 2px;
+  background-position: bottom 4px left 50%, bottom 4px left 50%;
+}
+
+.chinese-chestnut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 6px;
+  background: radial-gradient(circle closest-side, #111 80%, transparent) bottom 0 left 50%/100% 10px no-repeat, linear-gradient(#111 0 0) bottom 4px left 50%/0% 2px no-repeat;
+  transition: 0.5s;
+}
+
+.chinese-chestnut-link:hover {
+  background-size: 100% 2px, 100% 2px;
+  background-position: bottom 4px left 50%, bottom 4px left 50%;
+}
+
+
+/* === pectinellus === */
+.pectinellus-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+}
+
+.pectinellus-link:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: -10px;
+  background-color: #111;
+  border-radius: 0;
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.pectinellus-link:hover:after {
+  width: 10px;
+  left: 50%;
+  height: 10px;
+  border-radius: 50%;
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+
+/* === sweet chestnut === */
+.sweet-chestnut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding-bottom: 8px;
+}
+
+.sweet-chestnut-link:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #111;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+.sweet-chestnut-link:hover:after {
+  width: 80px;
+}
+
+
+/* === maraval === */
+.maraval-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding-bottom: 5px;
+  background: radial-gradient(circle closest-side, #111 80%, transparent) bottom/8px 8px no-repeat, radial-gradient(circle closest-side, #111 80%, transparent) bottom/8px 8px no-repeat, linear-gradient(#111 0 0) bottom left/0% 8px no-repeat, linear-gradient(#111 0 0) bottom right/0% 8px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+}
+
+.maraval-link:hover {
+  background-size: 8px 8px, 8px 8px, 100% 8px, 100% 8px;
+  background-position: bottom left, bottom right;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+
+/* === moluccana === */
+.moluccana-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 7px;
+  background: radial-gradient(circle closest-side, #111 90%, transparent) bottom/3px 10px repeat-x;
+  transition: 0.5s;
+}
+
+.moluccana-link:hover {
+  background-size: 10px 10px;
+}
+
+
+/* === coco de mer === */
+.coco-mer-link {
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  white-space: nowrap;
+  color: #111;
+}
+
+.coco-mer-link:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: #111;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+  height: 9px;
+  border-radius: 20px;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-timing-function: cubic-bezier(0.2, 0.57, 0.67, 1.53);
+}
+
+.coco-mer-link span {
+  transform: translate3d(0, -4px, 0);
+  display: inline-block;
+  transition: transform 0.2s 0.05s cubic-bezier(0.2, 0.57, 0.67, 1.53);
+}
+
+.coco-mer-link:hover:before {
+  transition: 0.4s cubic-bezier(0.8, 0, 0.1, 1);
+  transform: scale3d(1.2, 0.1, 1);
+}
+
+.coco-mer-link:hover span {
+  transform: translate3d(0, 0, 0);
+  transition: 0.4s 0s cubic-bezier(0.8, 0, 0.1, 1);
+}
+
+
+/* === grape berry === */
+.grape-link {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  z-index: 1;
+}
+
+.grape-link span {
+  position: relative;
+  z-index: 2;
+}
+
+.grape-link:before,
+.grape-link:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  border: 2px solid pink;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateX(-50%) translateY(-50%) scale(0.2);
+  z-index: -1;
+}
+
+.grape-link:after {
+  width: 80px;
+  height: 80px;
+  border-width: 6px;
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.grape-link:hover:before,
+.grape-link:hover:after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+
+/* === hippophae === */
+.hippophae-link {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  z-index: 1;
+  transition: 0.25s;
+}
+
+.hippophae-link:before, 
+.hippophae-link:after {
+  content: "◯";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  font-size: 0px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  z-index: -1;
+}
+
+.hippophae-link:hover:before {
+  animation: hippophae-drop 1s;
+}
+
+.hippophae-link:hover:after {
+  animation: hippophae-drop 1s 0.5s;
+}
+
+.hippophae-link:hover {
+  color: red;
+  animation: hippophae-opacity forwards 1s;
+}
+
+@keyframes hippophae-pacity {
+  0% {opacity: 1;
+  }
+
+  100% {opacity: 1;}
+}
+
+@keyframes hippophae-drop {
+  0% {opacity: 1; font-size: 0;}
+
+  100% {opacity: 0; font-size: 100px;}
+}
+
+
+/* === goji berry === */
+.goji-link {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 15px;
+  z-index: 1;
+}
+
+.goji-link:before,
+.goji-link:after {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  margin-top: -1px;
+  background-color: transparent;
+  content: '';
+  z-index: -1;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.goji-link:before {
+  transform: translateY(-25px);
+}
+
+.goji-link:after {
+  transform: translateY(25px);
+}
+
+.goji-link:hover:before {
+  background-color: #111;
+  opacity: 0.4;
+  transform: rotate(45deg);
+}
+
+.goji-link:hover:after {
+  background-color: #111;
+  opacity: 0.4;
+  transform: rotate(-45deg);
+}
+
+
+/* === yangmei === */
+.yangmei-link {
+  position: relative;
+  text-decoration: none;
+  color: #646b8c;
+  padding: 0.2rem 0;
+  font-size: 24px;
+}
+
+.yangmei-link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 115%;
+  height: 2px;
+  transform-origin: right;
+  transform: scaleX(0);
+  background: #111;
+  transition: transform 300ms ease;
+  z-index: 1;
+}
+
+.yangmei-link span:before,
+.yangmei-link span:after {
+  content: "";
+  position: absolute;
+  right: -18%;
+  bottom: 0px;
+  background: #111;
+  transition: transform 200ms cubic-bezier(0.3, 1.5, 0.5, 1);
+  transition-delay: 240ms;
+  z-index: 2;
+}
+
+.yangmei-link span:before {
+  width: 2px;
+  height: 8px;
+  transform-origin: 0% 100%;
+  transform: rotate(-90deg);
+}
+
+.yangmei-link span:after {
+  height: 2px;
+  width: 8px;
+  transform-origin: 100% 0%;
+  transform: translateX(-1px) rotate(0deg);
+}
+
+.yangmei-link:hover {
+  color: #111;
+}
+
+.yangmei-link:hover:before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.yangmei-link:hover span:before {
+  transform: rotate(-45deg);
+}
+
+.yangmei-link:hover span:after {
+  transform: translateX(-2px) rotate(-45deg);
+}
+
+
+/* === zwetschge === */
+.zwetschge-link {
+  display: inline-block;
+  font-size: 24px;
+  padding-right: 22px;
+  line-height: 1em;
+  position: relative;
+}
+
+.zwetschge-link .link-icon {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.zwetschge-link .link-icon:before,
+.zwetschge-link .link-icon:after {
+  content: '';
+  transition: all 275ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  position: absolute;
+  right: 0;
+  background-color: #111;
+  width: 3px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.zwetschge-link .link-icon:before {
+  bottom: 50%;
+  transform: translateX(0) rotate(-45deg);
+  transform-origin: 100% 100%;
+}
+
+.zwetschge-link .link-icon:after {
+  top: 50%;
+  transform: translateX(0) rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.zwetschge-link:hover .link-icon:before {
+  transform: translateX(-12px) rotate(45deg);
+  transform-origin: 0 100%;
+}
+
+.zwetschge-link:hover .link-icon:after {
+  transform: translateX(-12px) rotate(-45deg);
+  transform-origin: 0 0;
+}
+
+
+/* === malvaceum === */
+.malvaceum-link {
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  color: #111;
+}
+
+.malvaceum-link:before, 
+.malvaceum-link span:before, 
+.malvaceum-link:after, 
+.malvaceum-link span:after {
+  content: "";
+  position: absolute;
+}
+
+.malvaceum-link:before, 
+.malvaceum-link span:before {
+  top: calc(50% - 5px);
+  left: -20px;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transform: translate3d(-24px, 0, 0) rotate(45deg)
+}
+
+.malvaceum-link:after, 
+.malvaceum-link span:after {
+  bottom: calc(50% - 7px);
+  right: -20px;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transform: translate3d(24px, 0, 0) rotate(45deg)
+}
+
+.malvaceum-link:before, 
+.malvaceum-link:after {
+  transition: transform .3s ease-out, opacity .3s
+}
+
+.malvaceum-link span:before, 
+.malvaceum-link span:after {
+  transition: transform .3s ease-out .15s, opacity 0s .05s
+}
+
+.malvaceum-link:hover {
+  overflow: visible
+}
+
+.malvaceum-link:hover:before, 
+.malvaceum-link:hover span:before {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+  opacity: 1
+}
+
+.malvaceum-link:hover:after, 
+.malvaceum-link:hover span:after {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+  opacity: 1
+}
+
+.malvaceum-link:before, 
+.malvaceum-link span:before {
+  border-right: 3px solid rgba(0, 0, 0, 0.4);
+  border-top: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.malvaceum-link:after, 
+.malvaceum-link span:after {
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+
+/* === black walnut === */
+.black-walnut-link {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #111;
+  padding: 5px 0 10px;
+  background: radial-gradient(50% 100% at 50% -5px, transparent calc(100% - 2px), #111 calc(100% - 2px) calc(100% - 1px), transparent) 0 100%, radial-gradient(50% 100% at 50% calc(100% + 5px), transparent calc(100% - 2px), #111 calc(100% - 2px) calc(100% - 1px), transparent) 10px calc(100% - 8px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+  transition: 99999s;
+}
+
+.black-walnut-link:hover {
+  transition: 40s linear;
+  background-position: 1000px 100%, 1010px calc(100% - 8px);
+}
+
+
+/* === rubus rosifolius === */
+.rubus-rosifolius-link {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 6px 14px;
+  background: conic-gradient(from 135deg at top, #111 90deg, transparent 0) left 50% bottom -8px/16px 8px, linear-gradient(90deg, #111 3px, transparent 0) left calc(50% + 6px) bottom -16px/16px 10px;
+  background-repeat: repeat-x;
+  transition: 0.5s;
+}
+
+.rubus-rosifolius-link:hover {
+  background: conic-gradient(from 135deg at top, #111 90deg, transparent 0) left 50% bottom 8px/16px 8px, linear-gradient(90deg, #111 3px, transparent 0) left calc(50% + 6px) bottom -2px/16px 10px;
+  background-repeat: repeat-x;
+}
+
+
+/* === purple mango === */
+.purple-mango-link {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  position: relative;
+  background-color: #fff;
+}
+
+.purple-mango-link:before {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+}
+
+.purple-mango-link .front-text {
+  color: #000;
+}
+
+.purple-mango-link:hover:before {
+  width: 100%;
+}
+
+
+/* === leucodermis === */
+.leucodermis-link {
+  display: inline-block;
+  padding: 12px 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+  font-size: 24px;
+}
+
+.leucodermis-link:before, 
+.leucodermis-link:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  border-radius: 50%;
+  background: #111;
+  top: calc(50% - 3px);
+  transition: height 0.3s 0.3s ease, border-radius 0.3s 0.3s ease, top 0.3s 0.3s ease, width 0.3s ease;
+}
+
+.leucodermis-link:before {
+  height: 6px;
+  left: 0;
+}
+
+.leucodermis-link:after {
+  height: 6px;
+  right: 0;
+}
+
+.leucodermis-link:hover {
+  transition: all 0.3s 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.leucodermis-link:hover:before, 
+.leucodermis-link:hover:after {
+  top: 10%;
+  width: 55%;
+  height: 80%;
+  z-index: -1;
+  border-radius: 3px;
+  transition: height 0.3s ease, border-radius 0.3s ease, top 0.3s ease, width 0.3s 0.3s ease;
+}
+
+
+/* === baccata === */
+.baccata-link {
+  display: inline-block;
+  padding: 10px 25px;
+  position: relative;
+  font-size: 24px;
+}
+
+.baccata-link:before, 
+.baccata-link:after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+}
+
+.baccata-link:after {
+  left: auto;
+  right: -10px;
+}
+
+.baccata-link:hover:before {
+  width: 50%;
+  left: 0;
+  opacity: 0;
+}
+
+.baccata-link:hover:after {
+  width: 50%;
+  right: 0;
+  opacity: 0;
+}
+
+.baccata-link span {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.baccata-link:hover span {
+  color: #111;
+}
+
+.baccata-link span:before, 
+.baccata-link span:after {
+  content: "";
+  width: 100%;
+  height: 0;
+  background: #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.baccata-link span:after {
+  top: auto;
+  bottom: 0;
+}
+
+.baccata-link:hover span:before, 
+.baccata-link:hover span:after {
+  height: 2px;
+}
+
+
+/* === parviflorus === */
+.parviflorus-link {
+  display: inline-block;
+  padding: 10px 25px;
+  position: relative;
+  font-size: 24px;
+}
+
+.parviflorus-link:before {
+  content: "";
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  background-color: #111;
+  opacity: 0;
+  position: absolute;
+  top: 32px;
+  transform: rotate(-45deg);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  visibility: hidden;
+}
+
+.parviflorus-link:after {
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  width: 0;
+}
+
+.parviflorus-link:after {
+  background-color: #111;
+}
+
+.parviflorus-link:hover:before {
+  opacity: 1;
+  top: 5px;
+  visibility: visible;
+}
+
+.parviflorus-link:hover:after {
+  width: 100%;
+}
+
+
+/* === cambuca === */
+.cambuca-link {
+  display: inline-block;
+  padding: 10px 25px;
+  position: relative;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.cambuca-link:before, 
+.cambuca-link:after {
+  width: 80px;
+  height: 80px;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -10%;
+  transition: all 1s cubic-bezier(0.45, 0.76, 0.58, 0.94);
+}
+
+.cambuca-link:before {
+  background-color: #fff;
+  z-index: -1;
+}
+
+.cambuca-link:after {
+  background-color: #111;
+  z-index: -2;
+  transform: scale(0.8);
+}
+
+.cambuca-link:hover:after {
+  transform: scale(1) translate(6px);
+}
+
+
+/* === cuspidata === */
+.cuspidata-link {
+  display: inline-block;
+  padding: 10px 25px;
+  position: relative;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.cuspidata-link:before {
+  content: '';
+  position: absolute !important;
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.48, 1.32);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cuspidata-link:hover:before {
+  opacity: 0.7;
+  background-image: repeating-conic-gradient(#bbb 0deg, #bbb 10deg, transparent 10deg, transparent 20deg); 
+  animation: cuspidata-move 20s infinite linear;
+}
+
+@keyframes cuspidata-move {
+  0% {transform: rotate(0);}
+  
+  100% {transform: rotate(360deg);}
+}
+
+
+/* === melanocarpa === */
+.melanocarpa-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.melanocarpa-link:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 140%;
+  height: 4px;
+  background-color: red;
+  transform: rotate3d(0, 0, 1, -45deg) scale3d(0, 1, 1);
+  transform-origin: 0 50%;
+  transition: transform 0.4s;
+  z-index: -1;
+}
+
+.melanocarpa-link:hover:before {
+  transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+}
+
+.melanocarpa-link span {
+  position: relative;
+  transition: color 0.4s;
+  z-index: 1;
+}
+
+

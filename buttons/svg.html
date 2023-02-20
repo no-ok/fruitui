@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+    <title>Buttons with SVG animation on hover</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/svg.css">
+  </head>
+
+  <body class="links-page">
+    <div id="wrapper" style="background-image: linear-gradient(to top, #7769ff 0%, #94f4bf 100%);">
+      <header class="main-header" id="navbar">
+        <div class="container">
+          <nav class="main-nav">
+            <a href="../index.html"><span>Index</span></a>
+
+            <a href="../links/border.html"><span>Links</span></a>
+
+            <a href="#" class="active"><span>Buttons</span></a>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="page-content">
+        <div class="container">
+          <div class="content-header">
+            <div class="page-navigation">
+              <a href="overlay.html">Overlay</a>
+
+              <a href="border.html">Border</a>
+
+              <a href="transform.html">Transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="svg.html" class="active">SVG</a>
+
+              <a href="color.html">Color/glitch</a>
+            </div>
+          </div>
+
+          <div class="buttons-grid">
+            <!-- jackfruit -->
+            <div class="button-holder">
+              <button class="jackfruit-btn" data-hystmodal="#myModal">
+                <span class="btn-text">jackfruit</span>
+
+                <span class="blob-btn-inner">
+                  <span class="blob-btn-blobs">
+                    <span class="blob-btn-blob"></span>
+                    <span class="blob-btn-blob"></span>
+                    <span class="blob-btn-blob"></span>
+                    <span class="blob-btn-blob"></span>
+                  </span>
+                </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="jackfruit">
+                      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="jackfruit"></feColorMatrix>
+                      <feBlend in2="jackfruit" in="SourceGraphic" result="mix"></feBlend>
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="jackfruit-btn"&gt;
+                        &lt;span class="btn-text"&gt;jackfruit&lt;/span&gt;
+
+                        &lt;span class="blob-btn-inner"&gt;
+                          &lt;span class="blob-btn-blobs"&gt;
+                            &lt;span class="blob-btn-blob"&gt;&lt;/span&gt;
+                            &lt;span class="blob-btn-blob"&gt;&lt;/span&gt;
+                            &lt;span class="blob-btn-blob"&gt;&lt;/span&gt;
+                            &lt;span class="blob-btn-blob"&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                        &lt;/span&gt;
+
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+                          &lt;defs&gt;
+                            &lt;filter id="jackfruit"&gt;
+                              &lt;feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"&gt;&lt;/feGaussianBlur&gt;
+                              &lt;feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="jackfruit"&gt;&lt;/feColorMatrix&gt;
+                              &lt;feBlend in2="jackfruit" in="SourceGraphic" result="mix"&gt;&lt;/feBlend&gt;
+                            &lt;/filter&gt;
+                          &lt;/defs&gt;
+                        &lt;/svg&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jackfruit-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        font-size: 22px;
+                        transition: color 0.5s;
+                        border: 1px solid #111;
+                        overflow: hidden;
+                        z-index: 1;
+                        border-radius: 3px;
+                        background-color: #fff;
+                      }
+
+                      .jackfruit-btn:before,
+                      .jackfruit-btn:after {
+                        content: "";
+                        position: absolute;
+                      }
+
+                      .jackfruit-btn:before {
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                      }
+
+                      .jackfruit-btn:after {
+                        z-index: -2;
+                        left: 3px;
+                        top: 3px;
+                        transition: all 0.3s 0.2s;
+                      }
+
+                      .jackfruit-btn .btn-text {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 13px;
+                      }
+
+                      .jackfruit-btn .blob-btn-inner {
+                        z-index: -1;
+                        overflow: hidden;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                      }
+
+                      .jackfruit-btn .blob-btn-blobs {
+                        position: relative;
+                        display: block;
+                        height: 100%;
+                        filter: url("#jackfruit");
+                      }
+
+                      .jackfruit-btn .blob-btn-blob {
+                        position: absolute;
+                        top: 2px;
+                        width: 25%;
+                        height: 100%;
+                        background: #222;
+                        border-radius: 100%;
+                        transform: translate3d(0, 150%, 0) scale(1.7);
+                        transition: transform 0.45s;
+                      }
+
+                      .jackfruit-btn .blob-btn-blob {
+                        transform: translate3d(0, 150%, 0) scale(1.4);
+                      }
+
+                      .jackfruit-btn .blob-btn-blob:nth-child(1) {
+                        left: 0%;
+                        transition-delay: 0s;
+                      }
+
+                      .jackfruit-btn .blob-btn-blob:nth-child(2) {
+                        left: 30%;
+                        transition-delay: 0.08s;
+                      }
+
+                      .jackfruit-btn .blob-btn-blob:nth-child(3) {
+                        left: 60%;
+                        transition-delay: 0.16s;
+                      }
+
+                      .jackfruit-btn .blob-btn-blob:nth-child(4) {
+                        left: 90%;
+                        transition-delay: 0.24s;
+                      }
+
+                      .jackfruit-btn:hover {
+                        color: #fff;
+                        border: 1px solid #222;
+                      }
+
+                      .jackfruit-btn:hover:after {
+                        transition: all 0.3s;
+                        left: 0;
+                        top: 0;
+                      }
+
+                      .jackfruit-btn:hover .blob-btn-blob {
+                        transform: translateZ(0) scale(1.4);
+                      }
+
+                      .jackfruit-btn .blob-btn:hover .blob-btn-blob {
+                        transform: translateZ(0) scale(1.7);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- plantain -->
+            <div class="button-holder">
+              <button class="plantain-btn" data-hystmodal="#myModal">
+                <span>plantain</span>
+
+                <svg width="595" height="137" viewBox="0 0 595 137" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M129.5 6.26005C142.97 3.92249 163.903 1.27191 177.5 0.18038C180.25 -0.0403345 192.625 -0.0614026 205 0.133227C229.35 0.515464 236.148 1.41237 252.929 6.45568C269.861 11.5446 280.148 12.3169 295.005 9.39977L295.005 9.02395L311.752 5.75433C333.989 1.4141 340.954 1.47186 363.841 6.19254C386.712 10.9092 401.59 11.1602 424.5 7.21435C437.97 4.89385 458.903 2.26263 472.5 1.17906C475.25 0.95996 487.625 0.939046 500 1.13225C524.35 1.5117 531.148 2.40206 547.929 7.40856C565.701 12.7109 576.152 13.2925 592.25 9.87347L595 9.28986V73.1444V137H445H300H295H150H0L0.002 72.5415L0.005 8.08294L16.752 4.78929C38.989 0.417144 45.954 0.475333 68.841 5.23072C91.712 9.98209 106.59 10.2349 129.5 6.26005Z"/>
+                </svg>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="plantain-btn"&gt;
+                        &lt;span&gt;plantain&lt;/span&gt;
+
+                        &lt;svg width="595" height="137" viewBox="0 0 595 137" xmlns="http://www.w3.org/2000/svg"&gt;
+                          &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M129.5 6.26005C142.97 3.92249 163.903 1.27191 177.5 0.18038C180.25 -0.0403345 192.625 -0.0614026 205 0.133227C229.35 0.515464 236.148 1.41237 252.929 6.45568C269.861 11.5446 280.148 12.3169 295.005 9.39977L295.005 9.02395L311.752 5.75433C333.989 1.4141 340.954 1.47186 363.841 6.19254C386.712 10.9092 401.59 11.1602 424.5 7.21435C437.97 4.89385 458.903 2.26263 472.5 1.17906C475.25 0.95996 487.625 0.939046 500 1.13225C524.35 1.5117 531.148 2.40206 547.929 7.40856C565.701 12.7109 576.152 13.2925 592.25 9.87347L595 9.28986V73.1444V137H445H300H295H150H0L0.002 72.5415L0.005 8.08294L16.752 4.78929C38.989 0.417144 45.954 0.475333 68.841 5.23072C91.712 9.98209 106.59 10.2349 129.5 6.26005Z"/&gt;
+                        &lt;/svg&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .plantain-btn {
+                        width: 220px;
+                        height: 54px;
+                        color: #111;
+                        border: 1px solid #111;
+                        font-size: 22px;
+                        white-space: nowrap;
+                        background: transparent;
+                        background-repeat: repeat-x;
+                        background-position: 0 -100%;
+                        transition: 0.7s ease;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                        border-radius: 3px;
+                      }
+
+                      .plantain-btn span {
+                        position: relative;
+                        z-index: 1;
+                      }
+
+                      .plantain-btn svg {
+                        transition: 1s ease;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        fill: #2851F6;
+                        z-index: -1;
+                      }
+
+                      .plantain-btn:hover {
+                        border-color: #2851F6;
+                        color: #fff;
+                      }
+
+                      .plantain-btn:hover svg {
+                        left: -250px;
+                        top: -30px;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- banana squash -->
+            <div class="button-holder">
+              <button class="banana-squash-btn" data-hystmodal="#myModal">banana squash</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="banana-squash-btn"&gt;banana squash&lt;/button&gt;
+                    </code>
+                  </pre>
+
+                  <div style="text-align: right;">
+                    <a href="img/pixels-1.svg" style="margin-right: 20px; text-decoration: underline; color: blue;" download="">🠋 download background img</a>
+                  </div>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .banana-squash-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        color: #111;
+                        transition: all 0.5s ease;
+                        border: 1px solid #111;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 22px;
+                        background-color: #fff;
+                        border-radius: 3px;
+                      }
+
+                      .banana-squash-btn:hover {
+                        color: #fff;
+                        border: 1px solid transparent;
+                        background: #111 url(../img/pixels-1.svg);
+                        transition-delay: 0.8s;
+                        background-size: 180px;
+                        animation: banana-squash 0.8s steps(8) forwards;
+                      }
+
+                      @keyframes banana-squash {
+                        0% {background-position-y: 0;}
+
+                        100% {background-position-y: -480px;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- tomato -->
+            <div class="button-holder">
+              <button class="tomato-btn" data-hystmodal="#myModal">
+                tomato
+
+                <span class="bubbles">
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="tomato-svg">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                      <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="tomato-btn"&gt;
+                        tomato
+
+                        &lt;span class="bubbles"&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                          &lt;span class="bubble"&gt;&lt;/span&gt;
+                        &lt;/span>
+
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+                          &lt;defs&gt;
+                            &lt;filter id="tomato-svg"&gt;
+                              &lt;feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" /&gt;
+                              &lt;feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" /&gt;
+                              &lt;feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" /&gt;
+                            &lt;/filter&gt;
+                          &lt;/defs&gt;
+                        &lt;/svg&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .tomato-btn {
+                        width: 220px;
+                        height: 54px;
+                        font-size: 22px;
+                        border: none;
+                        color: #fff;
+                        filter: url("#tomato-svg");
+                        position: relative;
+                        background-color: #111;
+                      }
+
+                      .tomato-btn svg {
+                        position: absolute;
+                        top: -4000px;
+                        left: -4000px;
+                        fill: red;
+                      }
+
+                      .tomato-btn .bubbles {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                      }
+
+                      .tomato-btn .bubble {
+                        background-color: #111;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        z-index: -1;
+                      }
+
+                      .tomato-btn .bubble:nth-child(1) {
+                        left: 48px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(2) {
+                        left: 31px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(3) {
+                        left: 91px;
+                        width: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(4) {
+                        left: 39px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(5) {
+                        left: 97px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(6) {
+                        left: 82px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(7) {
+                        left: 29px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(8) {
+                        left: 99px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(9) {
+                        left: 53px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn .bubble:nth-child(10) {
+                        left: 16px;
+                        width: 25px;
+                        height: 25px;
+                      }
+
+                      .tomato-btn:hover {
+                        background-color: tomato;
+                      }
+
+                      .tomato-btn:hover .bubble {
+                        background-color: tomato;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(1) {
+                        animation: move-1 3.02s infinite;
+                        animation-delay: 0.2s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(2) {
+                        animation: move-2 3.04s infinite;
+                        animation-delay: 0.4s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(3) {
+                        animation: move-3 3.06s infinite;
+                        animation-delay: 0.6s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(4) {
+                        animation: move-4 3.08s infinite;
+                        animation-delay: 0.8s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(5) {
+                        animation: move-5 3.1s infinite;
+                        animation-delay: 1s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(6) {
+                        animation: move-6 3.12s infinite;
+                        animation-delay: 1.2s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(7) {
+                        animation: move-7 3.14s infinite;
+                        animation-delay: 1.4s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(8) {
+                        animation: move-8 3.16s infinite;
+                        animation-delay: 1.6s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(9) {
+                        animation: move-9 3.18s infinite;
+                        animation-delay: 1.8s;
+                      }
+
+                      .tomato-btn:hover .bubble:nth-child(10) {
+                        animation: move-10 3.2s infinite;
+                        animation-delay: 2s;
+                      }
+
+
+                      @keyframes move-1 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -74px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-2 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -91px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-3 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -53px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-4 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -119px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-5 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -121px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-6 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -63px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-7 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -109px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-8 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -81px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-9 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -53px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+
+                      @keyframes move-10 {
+                        0% {transform: translate(0, 0);}
+                        99% {transform: translate(0, -115px);}
+                        100% {transform: translate(0, 0);opacity: 0;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="buttons-grid">
+            <!-- fiddleheads -->
+            <div class="button-holder">
+              <button class="fiddleheads-btn" data-hystmodal="#myModal">
+                <svg class="textcircle" viewBox="0 0 500 500">
+                  <title>fiddleheads button</title>
+                  <defs><path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"/></defs>
+                  <text><textPath xlink:href="#textcircle" aria-label="Projects & client work 2020" textLength="900">fiddleheads button</textPath></text>
+                </svg>
+
+                <svg aria-hidden="true" class="eye" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                  <path class="eye-outer" d="M10.5 35.308c5.227-7.98 14.248-13.252 24.5-13.252s19.273 5.271 24.5 13.252c-5.227 7.98-14.248 13.253-24.5 13.253s-19.273-5.272-24.5-13.253z"/>
+                    <path class="eye-lashes-up" d="M35 8.802v8.836M49.537 11.383l-3.31 8.192M20.522 11.684l3.31 8.192" />
+                    <path class="eye-lashes-down" d="M35 61.818v-8.836 8.836zM49.537 59.237l-3.31-8.193 3.31 8.193zM20.522 58.936l3.31-8.193-3.31 8.193z" />
+                    <circle class="eye-iris" cx="35" cy="35.31" r="5.221" />
+                    <circle class="eye-inner" cx="35" cy="35.31" r="10.041" />
+                </svg>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="fiddleheads-btn"&gt;
+                        &lt;svg class="textcircle" viewBox="0 0 500 500"&gt;
+                          &lt;title&gt;fiddleheads button&lt;/title&gt;
+                          &lt;defs&gt;&lt;path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"/&gt;&lt;/defs&gt;
+                          &lt;text&gt;&lt;textPath xlink:href="#textcircle" aria-label="Projects & client work 2020" textLength="900"&gt;fiddleheads button&lt;/textPath&gt;&lt;/text&gt;
+                        &lt;/svg&gt;
+
+                        &lt;svg aria-hidden="true" class="eye" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg"&gt;
+                          &lt;path class="eye-outer" d="M10.5 35.308c5.227-7.98 14.248-13.252 24.5-13.252s19.273 5.271 24.5 13.252c-5.227 7.98-14.248 13.253-24.5 13.253s-19.273-5.272-24.5-13.253z"/&gt;
+                          &lt;path class="eye-lashes-up" d="M35 8.802v8.836M49.537 11.383l-3.31 8.192M20.522 11.684l3.31 8.192" /&gt;
+                          &lt;path class="eye-lashes-down" d="M35 61.818v-8.836 8.836zM49.537 59.237l-3.31-8.193 3.31 8.193zM20.522 58.936l3.31-8.193-3.31 8.193z" /&gt;
+                          &lt;circle class="eye-iris" cx="35" cy="35.31" r="5.221" /&gt;
+                          &lt;circle class="eye-inner" cx="35" cy="35.31" r="10.041" /&gt;
+                        &lt;/svg&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .fiddleheads-btn {
+                        padding: 0;
+                        background: none;
+                        clip-path: circle(40% at 50% 50%);
+                        font-size: 28px;
+                        display: block;
+                        text-transform: uppercase;
+                      }
+
+                      .fiddleheads-btn .textcircle {
+                        position: relative;
+                        display: block;
+                        width: 200px;
+                      }
+
+                      .fiddleheads-btn .text {
+                        font-size: 32px;
+                        text-transform: uppercase;
+                        fill: #111;
+                      }
+
+                      .fiddleheads-btn textPath {
+                        letter-spacing: 17px;
+                      }
+
+                      .fiddleheads-btn .eye {
+                        position: absolute;
+                        z-index: 2;
+                        width: 60px;
+                        height: 60px;
+                        top: calc(50% - 30px);
+                        left: calc(50% - 30px);
+                      }
+
+                      .fiddleheads-btn .eye-outer,
+                      .fiddleheads-btn .eye-inner,
+                      .fiddleheads-btn .eye-lashes-up,
+                      .fiddleheads-btn .eye-lashes-down {
+                        stroke: #111;
+                        fill: none;
+                        stroke-width: 1.5px;
+                      }
+
+                      .fiddleheads-btn .eye-lashes-down {
+                        opacity: 0;
+                      }
+
+                      .fiddleheads-btn:hover .eye-lashes-up,
+                      .fiddleheads-btn:hover .eye-inner,
+                      .fiddleheads-btn:hover .eye-iris {
+                        animation: blinkHide 2s step-end infinite;
+                      }
+
+                      .fiddleheads-btn:hover .eye-lashes-down {
+                        animation: blinkShow 2s step-end infinite;
+                      }
+
+                      .fiddleheads-btn:hover .textcircle {
+                        animation: rotateIt 7s linear infinite;
+                      }
+
+                      @keyframes blinkHide {
+                        0% {opacity: 0;}
+
+                        10% {opacity: 1;}
+                      }
+
+                      @keyframes blinkShow {
+                        0% {opacity: 1;}
+
+                        10% {opacity: 0;}
+                      }
+
+                      @keyframes rotateIt {
+                        to {
+                          transform: rotate(-360deg);
+                        }
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- frisee -->
+            <div class="button-holder">
+              <button class="frisee-btn" data-hystmodal="#myModal">
+                <svg aria-hidden="true" class="progress" width="70" height="70" viewbox="0 0 70 70">
+                  <path class="progress-circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
+
+                  <path class="progress-path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1" />
+                </svg>
+
+                <span>frisee</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="frisee-btn"&gt;
+                        &lt;svg aria-hidden="true" class="progress" width="70" height="70" viewbox="0 0 70 70"&gt;
+                          &lt;path class="progress-circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" /&gt;
+
+                          &lt;path class="progress-path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1" /&gt;
+                        &lt;/svg&gt;
+
+                        &lt;span&gt;frisee&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .frisee-btn {
+                        font-size: 22px;
+                        border: none;
+                        background: none;
+                        position: relative;
+                        padding: 0;
+                        clip-path: circle(50% at 50% 50%);
+                        width: 140px;
+                        height: 140px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+
+                      .frisee-btn .progress {
+                        position: absolute;
+                        width: 120px;
+                        height: 120px;
+                        top: 10px;
+                        left: 10px;
+                        transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+                      }
+
+                      .frisee-btn .progress-circle,
+                      .frisee-btn .progress-path {
+                        fill: none;
+                        stroke: #e7e7e7;
+                        stroke-width: 1px;
+                      }
+
+                      .frisee-btn .progress-path {
+                        stroke: #111;
+                        stroke-dasharray: 1;
+                        stroke-dashoffset: 1;
+                        transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+                      }
+
+                      .frisee-btn:hover .progress {
+                        transform: scale3d(1.2, 1.2, 1);
+                      }
+
+                      .frisee-btn:hover .progress-path {
+                        stroke-dashoffset: 0;
+                      }      
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>   
+
+          <div class="content-footer">
+         
+          </div>
+        </div>
+      </main>
+
+      <div class="hystmodal" id="myModal" aria-hidden="true">
+          <div class="hystmodal__wrap">
+              <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <button data-hystclose class="hystmodal__close">
+                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6696 18.5001L1.0752 33.0944L3.9057 35.9249L18.5001 21.3306L33.0944 35.9249L35.9249 33.0944L21.3306 18.5001L35.9249 3.9057L33.0944 1.0752L18.5001 15.6696L3.9057 1.0752L1.0752 3.9057L15.6696 18.5001Z" fill="#212121"/></svg>
+                  </button>  
+                  
+                  <div class="h2">Element markup and styles</div>
+
+                  <div class="modal-body"></div>
+              </div>
+          </div> 
+      </div>
+
+      <script src="../js/jquery-3.2.1.js"></script>
+      <script src="../js/hystmodal.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/custom.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+    <title>Links with color transform/change on hover</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/color.css">
+  </head>
+
+  <body class="links-page">
+    <div id="wrapper" style="background: linear-gradient(to right, #b7fdf6, #fdd9ac, #ffacd6);">
+      <header class="main-header" id="navbar">
+        <div class="container">
+          <nav class="main-nav">
+            <a href="../index.html"><span>Index</span></a>
+
+            <a href="#" class="active"><span>Links</span></a>
+
+            <a href="../buttons/overlay.html"><span>Buttons</span></a>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="page-content">
+        <div class="container">
+          <div class="content-header">
+            <div class="page-navigation">
+              <a href="border.html">Underline/border</a>
+
+              <a href="transform.html">Text transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="elements.html">Elements</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html" class="active">Color</a>
+
+              <a href="glitch.html">Glitch/neon</a>
+            </div>
+          </div>
+    
+          <div class="links-grid">
+
+            <!-- jackfruit -->
+            <div class="link-holder">
+              <a href="#" data-hover="jackfruit" class="jackfruit-link" data-hystmodal="#myModal">jackfruit</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" data-hover="jackfruit" class="jackfruit-link"&gt;jackfruit&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jackfruit-link {
+                        position: relative;
+                        display: inline-block;
+                        font-size: 24px;
+                        padding: 10px;
+                        perspective: 900px;
+                        margin: 0 20px;
+                        transition: 0.3s;
+                      }
+
+                      .jackfruit-link:before {
+                        color: #212121;
+                        content: attr(data-hover);
+                        position: absolute;
+                        transition: 0.3s;
+                        transform-origin: 50% 0 50%;
+                        transform-style: preserve-3d;
+                      }
+
+                      .jackfruit-link:hover {
+                        color: red;
+                      }
+
+                      .jackfruit-link:hover:before {
+                        transform: translateY(22px) rotateX(-90deg);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mango fruit -->
+            <div class="link-holder">
+              <a href="#" class="mango-link" data-hover="mango fruit" data-hystmodal="#myModal">mango fruit</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mango-link" data-hover="mango link"&gt;mango fruit&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mango-link {
+                        color: red;
+                        font-size: 24px;
+                        text-shadow: none;
+                        position: relative;
+                        display: inline-block;
+                        margin: 15px 25px;
+                        color: #111;
+                      }
+
+                      .mango-link:before {
+                        content: attr(data-hover);
+                        color: red;
+                        position: absolute;
+                        opacity: 0;
+                        transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+                        transition: transform 0.3s, opacity 0.3s;
+                        pointer-events: none;
+                      }
+
+                      .mango-link:hover:before {
+                        transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+                        opacity: 1;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- magellan -->
+            <div class="link-holder">
+              <a href="#" class="magellan-link" data-hover="magellan" data-hystmodal="#myModal">magellan</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="magellan-link" data-hover="magellan link"&gt;magellan&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .magellan-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        position: relative;
+                        color: #111;
+                      }
+
+                      .magellan-link:after {
+                        position: absolute;
+                        content: attr(data-hover);
+                        color: red;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        transition: all .5s ease;
+                        transform: scale(0);
+                        opacity: 0;
+                      }
+
+                      .magellan-link:hover:after {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mamey apple -->
+            <div class="link-holder">
+              <a href="#" class="mamey-apple-link" data-hover="mamey apple" data-hystmodal="#myModal">mamey apple</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mamey-apple-link" data-hover="mamey apple"&gt;mamey apple&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mamey-apple-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                      }
+
+                      .mamey-apple-link:after {
+                        position: absolute;
+                        content: attr(data-hover);
+                        color: #111;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        transition: all .5s ease;
+                      }
+
+                      .mamey-apple-link:hover {
+                        color: red;
+                      }
+
+                      .mamey-apple-link:hover:after {
+                        opacity: 0;
+                        transform: scale(0.3);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- lychee -->
+            <div class="link-holder">
+              <a href="#" class="lychee-link" data-hover="lychee link" data-hystmodal="#myModal">lychee</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="lychee-link" data-hover="lychee"&gt;lychee&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .lychee-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        position: relative;
+                        padding: 0 5px;
+                        color: #111;
+                      }
+
+                      .lychee-link:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+                        padding: 0 5px;
+                        max-height: 0;
+                        color: red;
+                        right: 0;
+                        white-space: nowrap;
+                        transition: max-height 0.5s;
+                      }
+
+                      .lychee-link:hover:before {
+                        max-height: 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- longan fruit -->
+            <div class="link-holder">
+              <a href="#" class="longan-link" data-hystmodal="#myModal">longan fruit</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="longan-link"&gt;longan fruit&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .longan-link {
+                        font-size: 24px;
+                        text-align: center;
+                        background-image: linear-gradient(92deg, #111, #111);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        text-fill-color: transparent;
+                        color: #111;
+                      }
+
+                      .longan-link:hover {
+                        background-image: linear-gradient(92deg, #f35626, #feab3a);
+                        animation: longan-hue 3s infinite linear;
+                      }
+
+                      @keyframes longan-hue {
+                        0% {filter: hue-rotate(0deg);}
+
+                        100% {filter: hue-rotate(-360deg);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- loquat fruit -->
+            <div class="link-holder">
+              <a href="#" class="loquat-link" data-hystmodal="#myModal">loquat fruit</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="loquat-link"&gt;loquat fruit&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .loquat-link {
+                        font-size: 24px;
+                        background-image: linear-gradient(to right, #111 20%, #111 40%, #111 60%, #111 80%);
+                        background-size: 200% auto;
+                        color: #111;
+                        -webkit-text-fill-color: transparent;
+                        text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                      }
+
+                      .loquat-link:hover {
+                        background-image: linear-gradient(to right, #111 20%, tomato 40%, tomato 60%, #111 80%);
+                        animation: loquat-shine 1s linear infinite;
+                      }
+
+                      @keyframes loquat-shine {
+                        to {background-position: 200% center;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- naranjilla -->
+            <div class="link-holder">
+              <a href="#" class="naranjilla-link" data-hover="naranjilla" data-hystmodal="#myModal">naranjilla</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="naranjilla-link" data-hover="lulo link"&gt;naranjilla&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .naranjilla-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        cursor: pointer;
+                        position: relative;
+                        padding: 5px 0;
+                        color: #111;
+                      }
+
+                      .naranjilla-link:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+                        padding: 5px 0;
+                        max-width: 0;
+                        white-space: nowrap;
+                        border-bottom: 1px solid red;
+                        color: red;
+                        transition: max-width 0.5s;
+                      }
+
+                      .naranjilla-link:hover:before {
+                        max-width: 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pitaya fruit -->
+            <div class="link-holder">
+              <a href="#" class="pitaya-link" data-hover="pitaya fruit" data-hystmodal="#myModal"><span>pitaya fruit</span></a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="pitaya-link" data-hover="pitaya fruit"&gt;
+                        &lt;span&gt;pitaya link&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pitaya-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        position: relative;
+                        padding: 1px;
+                        overflow: hidden;
+                        color: #212121;
+                      }
+
+                      .pitaya-link:before {
+                        content: '';
+                        position: absolute;
+                        transition: transform 0.5s ease;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #f67d7d;
+                        transform: translateX(-120%);
+                      }
+
+                      .pitaya-link:after {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+                        margin: 11px 21px;
+                        white-space: nowrap;
+                        color: #f67d7d;
+                        max-width: 0;
+                        transition: 0.5s;
+                        text-align: center;
+                      }
+
+                      .pitaya-link span {
+                        background-color: #fff;
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px 20px;
+                      }
+
+                      .pitaya-link:hover:before {
+                        transform: translateX(0);
+                      }
+
+                      .pitaya-link:hover:after {
+                        max-width: 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- durian -->
+            <div class="link-holder">
+              <a href="#" class="durian-link" data-hover="durian link" data-hystmodal="#myModal">
+                <span>durian</span>
+              </a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="durian-link" data-hover="durian"&gt;
+                        &lt;span&gt;durian link&lt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .durian-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        position: relative;
+                        overflow: hidden;
+                        color: #212121;
+                      }
+
+                      .durian-link:before {
+                        content: '';
+                        position: absolute;
+                        transition: transform 0.5s ease;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #f67d7d;
+                        transform: translateY(-100%);
+                      }
+
+                      .durian-link:after {
+                        content: attr(data-hover);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 0;
+                        margin: 8px 20px;
+                        color: #f67d7d;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        transition: height 0.5s ease;
+                      }
+
+                      .durian-link span {
+                        display: block;
+                        margin: 1px;
+                        padding: 13px 19px;
+                        background: #fff;
+                        position: relative;
+                        color: inherit;
+                        text-decoration: none;
+                        line-height: 24px;
+                      }
+
+                      .durian-link:hover:before {
+                        transform: translateY(0);
+                      }
+
+                      .durian-link:hover:after {
+                        height: calc(100% - 17px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mamey sapote -->
+            <div class="link-holder">
+              <a href="#" class="mamey-sapote-link" data-hystmodal="#myModal">mamey sapote</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mamey-sapote-link"&gt;mamey sapote&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mamey-sapote-link {
+                        font-size: 24px;
+                        transition: all 0.4s ease-in-out;
+                        cursor: pointer;
+                        color: #212121;
+                      }
+
+                      .mamey-sapote-link:hover {
+                        color: pink;
+                        text-shadow: 0.5px 0.5px 0 tomato, 1px 1px 0 tomato, 1.5px 1.5px 0 tomato, 2px 2px 0 tomato, 2.5px 2.5px 0 tomato, 3px 3px 0 tomato, 3.5px 3.5px 0 tomato, 4px 4px 0 tomato, 4.5px 4.5px 0 tomato, 5px 5px 0 tomato;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- rose apple -->
+            <div class="link-holder">
+              <a href="#" class="rose-apple-link" data-hystmodal="#myModal"><span>rose apple</span></a> 
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="rose-apple-link"&gt;
+                        &lt;span&gt;rose apple&gt;/span&gt;
+                      &lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .rose-apple-link {
+                        font-size: 24px;
+                        position: relative;
+                        z-index: 1;
+                      }
+
+                      .rose-apple-link span {
+                        position: relative;
+                        z-index: 1;
+                      }
+
+                      .rose-apple-link:after {
+                        content: '';
+                        height: 0;
+                        display: block;
+                        z-index: -1;
+                        position: absolute;
+                        left: -3px;
+                        right: -3px;
+                        bottom: 3px;
+                        transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+                        background-size: 100% 50%;
+                        background-repeat: repeat-x;
+                        background-position: left 0% bottom 10%;
+                        background-image: linear-gradient(90deg, #d268f8 0%, #d268f8 12.5%, #f868b2 12.5%, #f868b2 25%, #f88a68 25%, #f88a68 37.5%, #f8f568 37.5%, #f8f568 50%, #8ef868 50%, #8ef868 62.5%, #68f8ae 62.5%, #68f8ae 75%, #68d6f8 75%, #68d6f8 87.5%, #686af8 87.5%, #686af8 100%);
+                      }
+
+                      .rose-apple-link:hover:after {
+                        height: 20px;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- mollissima -->
+            <div class="link-holder">
+              <a href="#" class="mollissima-link" data-hystmodal="#myModal">mollissima</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="mollissima-link"&gt;mollissima&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .mollissima-link {
+                        display: inline-block;
+                        position: relative;
+                        font-size: 24px;
+                        white-space: nowrap;
+                        padding: 2px 8px 2px;
+                        color: #111;
+                        background: radial-gradient(circle 7px, red 90%, transparent) bottom -14px left 50%/12px 14px repeat-x;
+                        transition: 0.5s;
+                      }
+
+                      .mollissima-link:hover {
+                        background-position: bottom -7px left 50%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- merrillii -->
+            <div class="link-holder">
+              <a href="#" class="merrillii-link" data-hystmodal="#myModal">merrillii</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="merrillii-link"&gt;merrillii&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .merrillii-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        z-index: 0;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .merrillii-link:before,
+                      .merrillii-link:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        opacity: 0;
+                        background: repeating-linear-gradient(135deg, transparent 0 15px, #673999 0 30px, transparent 0 45px, #883a6a 0 60px);
+                        transform: translate(-40px, 40px);
+                        transition: inherit;
+                        pointer-events: none;
+                      }
+
+                      .merrillii-link:after {
+                        background: repeating-linear-gradient(135deg, #111 0 15px, transparent 0 30px, #6d49d8 0 45px, transparent 0 60px);
+                        transform: translate(40px, -40px);
+                      }
+
+                      .merrillii-link:hover {
+                        color: #fff;
+                      }
+
+                      .merrillii-link:hover:before,
+                      .merrillii-link:hover:after {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- ovatum -->
+            <div class="link-holder">
+              <a href="#" class="ovatum-link" data-hystmodal="#myModal">ovatum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="ovatum-link"&gt;ovatum&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .ovatum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        z-index: 0;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .ovatum-link:hover {
+                        color: #fff;
+                      }
+
+                      .ovatum-link:hover:before {
+                        -webkit-mask-position: left;
+                      }
+
+                      .ovatum-link:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        -webkit-mask: linear-gradient(90deg, #111 40%, transparent 60%) right/250% 100%;
+                        background: repeating-linear-gradient(45deg, #673999 0 15px, #c22e89 0 30px, #f95268 0 45px);
+                        transition: inherit;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- perlisanum  -->
+            <div class="link-holder">
+              <a href="#" class="perlisanum-link" data-hystmodal="#myModal">perlisanum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="perlisanum-link"&gt;perlisanum&lt;a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .perlisanum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        z-index: 0;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .perlisanum-link:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        clip-path: inset(0 50%);
+                        background: repeating-linear-gradient(45deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 100% 0, repeating-linear-gradient(-45deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 0 0, repeating-linear-gradient(135deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 100% 100%, repeating-linear-gradient(-135deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 0 100%;
+                        background-size: 50.1% 50.1%;
+                        background-repeat: no-repeat;
+                        transition: inherit;
+                      }
+
+                      .perlisanum-link:hover {
+                        color: #fff;
+                      }
+
+                      .perlisanum-link:hover:before {
+                        clip-path: inset(0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pilosum -->
+            <div class="link-holder">
+              <a href="#" class="pilosum-link" data-hystmodal="#myModal">pilosum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="pilosum-link"&gt;pilosum&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pilosum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        line-height: 1.6em;
+                        z-index: 0;
+                        transition: .4s linear;
+                        position: relative;
+                      }
+
+                      .pilosum-link:before,
+                      .pilosum-link:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        clip-path: inset(0 100% 0 0);
+                        background: conic-gradient(from 30deg, #c22e89 25%, #673999 0 50%, #8b1f4f 0 75%, #570025 0) 0 0/20px 20px;
+                        -webkit-mask: repeating-conic-gradient(from 0deg, #111 0 25%, transparent 0 50%) 0 0/40px 40px;
+                        transition: inherit;
+                      }
+
+                      .pilosum-link:after {
+                        clip-path: inset(0 0 0 100%);
+                        background: conic-gradient(from -120deg, #c22e89 25%, #673999 0 50%, #8b1f4f 0 75%, #570025 0) 0 0/20px 20px;
+                        -webkit-mask: repeating-conic-gradient(from 90deg, #111 0 25%, transparent 0 50%) 0 0/40px 40px;
+                      }
+
+                      .pilosum-link:hover {
+                        color: #fff;
+                      }
+
+                      .pilosum-link:hover:before,
+                      .pilosum-link:hover:after {
+                        clip-path: inset(0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- borneensis -->
+            <div class="link-holder">
+              <a href="#" class="borneensis-link" data-hystmodal="#myModal">borneensis</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="borneensis-link"&gt;borneensis&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .borneensis-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 0 30px;
+                        line-height: 1.9em;
+                        background: conic-gradient(from 120deg at top, #673999 120deg, transparent 0), conic-gradient(from 120deg at top, #c22e89 120deg, transparent 0), conic-gradient(from 120deg at top, #f95268 120deg, transparent 0), conic-gradient(from 120deg at top, #ffa600 120deg, transparent 0);
+                        background-repeat: repeat-x;
+                        background-size: 40px 32px;
+                        background-position: 50% calc(100% + 40px);
+                        transition: .4s linear;
+                      }
+
+                      .borneensis-link:hover {
+                        color: #fff;
+                        background-position: 50% calc(100% + 1.097em/2), 50% calc(100% + 0px), 50% calc(100% - 1.097em/2), 50% calc(100% - 1.097em);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- polyphyllum -->
+            <div class="link-holder">
+              <a href="#" class="polyphyllum-link" data-hystmodal="#myModal">polyphyllum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="polyphyllum-link"&gt;polyphyllum&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .polyphyllum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+                        transition: .4s;
+                        mix-blend-mode: darken;
+                      }
+
+                      .polyphyllum-link:hover {
+                        color: #fff;
+                        text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- reniforme -->
+            <div class="link-holder">
+              <a href="#" class="reniforme-link" data-text="reniforme" data-hystmodal="#myModal">reniforme</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="reniforme-link" data-text="reniforme"&gt;reniforme&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .reniforme-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: transparent;
+                        position: relative;
+                      }
+
+                      .reniforme-link:before,
+                      .reniforme-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        transition: .4s linear;
+                      }
+
+                      .reniforme-link:before {
+                        color: #fff;
+                        text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+                        clip-path: inset(0 0 100%);
+                      }
+
+                      .reniforme-link:after {
+                        color: #111;
+                        clip-path: inset(0 0 0 0);
+                      }
+
+                      .reniforme-link:hover:before {
+                        clip-path: inset(0 0 0 0);
+                      }
+
+                      .reniforme-link:hover:after {
+                        clip-path: inset(100% 0 0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- resiniferum  -->
+            <div class="link-holder">
+              <a href="#" class="resiniferum-link" data-text="resiniferum" data-hystmodal="#myModal">resiniferum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="resiniferum-link" data-text="resiniferum"&gt;resiniferum&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .resiniferum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: transparent;
+                        position: relative;
+                      }
+
+                      .resiniferum-link:before,
+                      .resiniferum-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        transition: .4s linear;
+                      }
+
+                      .resiniferum-link:before {
+                        color: #fff;
+                        text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+                        clip-path: inset(0 100% 0 0);
+                      }
+
+                      .resiniferum-link:after {
+                        color: #111;
+                        clip-path: inset(0 0 0 0);
+                      }
+
+                      .resiniferum-link:hover:before {
+                        clip-path: inset(0 0 0 0);
+                      }
+
+                      .resiniferum-link:hover:after {
+                        clip-path: inset(0 0 0 100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- rotundifolium -->
+            <div class="link-holder">
+              <a href="#" class="rotundifolium-link" data-text="rotundifolium" data-hystmodal="#myModal">rotundifolium</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="rotundifolium-link" data-text="rotundifolium"&gt;rotundifolium&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .rotundifolium-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: #111;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .rotundifolium-link:before,
+                      .rotundifolium-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: transparent;
+                        text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+                        transition: inherit;
+                      }
+
+                      .rotundifolium-link:before {
+                        clip-path: inset(0 0 50% 0);
+                      }
+
+                      .rotundifolium-link:after {
+                        clip-path: inset(50% 0 0 0);
+                      }
+
+                      .rotundifolium-link:hover {
+                        color: #fff;
+                      }
+
+                      .rotundifolium-link:hover:before {
+                        color: #fff;
+                        text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+                      }
+
+                      .rotundifolium-link:hover:after {
+                        color: #fff;
+                        text-shadow: 1px 0 blue, 0 1px blue, 0 -1px blue, -1px 0 blue;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- sarawakanum -->
+            <div class="link-holder">
+              <a href="#" class="sarawakanum-link" data-text="sarawakanum" data-hystmodal="#myModal">sarawakanum</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="sarawakanum-link" data-text="sarawakanum"&gt;sarawakanum&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .sarawakanum-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: #111;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .sarawakanum-link:before,
+                      .sarawakanum-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: transparent;
+                        text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+                        transition: inherit;
+                        -webkit-mask: linear-gradient(90deg, transparent, #111);
+                      }
+
+                      .sarawakanum-link:after {
+                        -webkit-mask: linear-gradient(-90deg, transparent, #111);
+                      }
+
+                      .sarawakanum-link:hover {
+                        color: #fff;
+                      }
+
+                      .sarawakanum-link:hover:before {
+                        color: #fff;
+                        text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+                      }
+
+                      .sarawakanum-link:hover:after {
+                        color: #fff;
+                        text-shadow: 1px 0 blue, 0 1px blue, 0 -1px blue, -1px 0 blue;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- sikkimense -->
+            <div class="link-holder">
+              <a href="#" class="sikkimense-link" data-text="sikkimense" data-hystmodal="#myModal">sikkimense</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="sikkimense-link" data-text="sikkimense"&gt;sikkimense&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .sikkimense-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: #111;
+                        transition: .4s;
+                        position: relative;
+                      }
+
+                      .sikkimense-link:before,
+                      .sikkimense-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: transparent;
+                        text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+                        transition: inherit;
+                        -webkit-mask: repeating-linear-gradient(-45deg, transparent 0 8px, #111 0 16px);
+                      }
+
+                      .sikkimense-link:after {
+                        -webkit-mask: repeating-linear-gradient(-45deg, #111 0 8px, transparent 0 16px);
+                      }
+
+                      .sikkimense-link:hover {
+                        color: #fff;
+                      }
+
+                      .sikkimense-link:hover:before {
+                        color: #fff;
+                        text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+                      }
+
+                      .sikkimense-link:hover:after {
+                        color: hotpink;
+                        text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- solomonense -->
+            <div class="link-holder">
+              <a href="#" class="solomonense-link" data-text="solomonense" data-hystmodal="#myModal">solomonense</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="solomonense-link" data-text="solomonense"&gt;solomonense&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .solomonense-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 30px;
+                        mix-blend-mode: darken;
+                        color: #111;
+                        transition: .3s;
+                        position: relative;
+                      }
+
+                      .solomonense-link:before,
+                      .solomonense-link:after {
+                        content: attr(data-text);
+                        position: absolute;
+                        inset: 0;
+                        padding: inherit;
+                        color: transparent;
+                        text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+                        -webkit-mask-image: linear-gradient(135deg, #111 calc(50% - 20px), transparent 0 calc(50% + 20px), #111 0);
+                        -webkit-mask-size: 250% 100%;
+                        -webkit-mask-position: right;
+                        transition: .3s, -webkit-mask-position 0s;
+                      }
+
+                      .solomonense-link:after {
+                        -webkit-mask-image: linear-gradient(135deg, transparent calc(50% - 20px), #111 0 calc(50% + 20px), transparent 0);
+                      }
+
+                      .solomonense-link:hover {
+                        color: #fff;
+                      }
+
+                      .solomonense-link:hover:before,
+                      .solomonense-link:hover:after {
+                        -webkit-mask-position: left;
+                        text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+                        transition: .3s, -webkit-mask-position .4s .3s linear;
+                      }
+
+                      .solomonense-link:hover:before {
+                        color: #fff;
+                      }
+
+                      .solomonense-link:hover:after {
+                        color: #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cunninghamii -->
+            <div class="link-holder">
+              <a href="#" class="cunninghamii-link" data-hystmodal="#myModal">cunninghamii</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="cunninghamii-link"&gt;cunninghamii&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cunninghamii-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px 0;
+                        padding-bottom: 8px;
+                        background: linear-gradient(#ff0000 0 0) 0 100%, linear-gradient(#0000ff 0 0) 100% 100%;
+                        background-size: 0% 3px;
+                        background-repeat: no-repeat;
+                        background-blend-mode: difference;
+                        transition: .5s, background-position 0s .5s;
+                      }
+
+                      .cunninghamii-link:hover {
+                        background-size: 100% 3px;
+                        background-position: 100% 100%, 0 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- goroensis -->
+            <div class="link-holder">
+              <a href="#" class="goroensis-link" data-hystmodal="#myModal">goroensis</a>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;a href="#" class="goroensis-link"&gt;goroensis&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .goroensis-link {
+                        font-size: 24px;
+                        display: inline-block;
+                        padding: 10px;
+                        padding-bottom: 8px;
+                        background: linear-gradient(#ff00ff 0 0) 0 100%, linear-gradient(#00ff00 0 0) 100% 100%;
+                        background-size: 0% 3px;
+                        background-repeat: no-repeat;
+                        background-blend-mode: darken;
+                        transition: .5s, background-position 0s .5s;
+                      }
+
+                      .goroensis-link:hover {
+                        background-size: 100% 3px;
+                        background-position: 100% 100%, 0 100%;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-footer">
+            <div class="page-navigation">
+              <a href="border.html">Underline/border</a>
+
+              <a href="transform.html">Text transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="elements.html">Elements</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html" class="active">Color</a>
+
+              <a href="glitch.html">Glitch/neon</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="hystmodal" id="myModal" aria-hidden="true">
+          <div class="hystmodal__wrap">
+              <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <button data-hystclose class="hystmodal__close">
+                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6696 18.5001L1.0752 33.0944L3.9057 35.9249L18.5001 21.3306L33.0944 35.9249L35.9249 33.0944L21.3306 18.5001L35.9249 3.9057L33.0944 1.0752L18.5001 15.6696L3.9057 1.0752L1.0752 3.9057L15.6696 18.5001Z" fill="#212121"/></svg>
+                  </button>  
+                  
+                  <div class="h2">Element markup and styles</div>
+
+                  <div class="modal-body"></div>
+              </div>
+          </div> 
+      </div>
+
+      <script src="../js/jquery-3.2.1.js"></script>
+      <script src="../js/hystmodal.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/custom.js"></script>
+    </div>
+  </body>
+</html>

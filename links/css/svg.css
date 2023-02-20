@@ -1,0 +1,743 @@
+/* === wongi === */
+.wongi-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.wongi-link svg {
+  width: 86px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 7px) translateZ(0);
+  fill: none;
+  stroke: #BBC1E1;
+  stroke-linecap: round;
+  stroke-width: 1px;
+  stroke-dasharray: 69px 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke .25s ease 0s, stroke-dasharray .35s;
+}
+
+.wongi-link:hover svg {
+  transition: stroke .35s ease 0.1s, stroke-dasharray .45s;
+  stroke-dasharray: 180px 278px;
+  stroke: #111;
+}
+
+
+/* === jujube === */
+.jujube-link {
+  padding: 7px 0;
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  white-space: nowrap;
+  color: #111;
+}
+
+.jujube-link .link-graphic {
+  position: absolute;
+  pointer-events: none;
+  fill: none;
+  stroke: #111;
+  top: 70%;
+  left: -34%;
+  stroke-width: 2px;
+}
+
+.jujube-link .link-graphic path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.jujube-link:hover .link-graphic path {
+  stroke-dashoffset: 0;
+}
+
+
+/* === pineberry === */
+.pineberry-link {
+  text-decoration: none;
+  color: #2B3044;
+  position: relative;
+  text-decoration: none;
+  color: #2B3044;
+  position: relative;
+  font-size: 24px;
+}
+
+.pineberry-link span {
+  background-image: linear-gradient(0deg, #646B8C 0%, #646B8C 100%);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  transition: background-size .2s linear .15s;
+  line-height: 20px;
+  transform: translateZ(0);
+}
+
+.pineberry-link svg {
+  vertical-align: top;
+  display: inline;
+  line-height: 1;
+  width: 20px;
+  height: 30px;
+  position: relative;
+  left: -5px;
+  top: 2px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.5px;
+  stroke: #646B8C;
+  stroke-dasharray: 15.95 30;
+  stroke-dashoffset: 62;
+  transition: stroke-dashoffset .15s linear 0s;
+}
+
+.pineberry-link:hover span {
+  background-size: 0% 1px;
+  transition: background-size .2s linear 0;
+}
+
+.pineberry-link:hover svg {
+  stroke-dashoffset: 38;
+  stroke: #111;
+  transition: stroke-dashoffset 0.3s cubic-bezier(0.3, 1.5, 0.5, 1) 0.195s;
+}
+
+
+/* === loganberry === */
+.loganberry-link {
+  display: inline-block;
+  margin: 20px 0;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+  font-size: 24px;
+  transition: 0.2s ease-in-out;
+}
+
+.loganberry-link:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 25px);
+  height: 80px;
+  left: 0;
+  bottom: -45px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%23111111; stroke-width:2; stroke-linecap:square; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+}
+
+.loganberry-link:hover:before {
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 2s linear infinite; animation-delay:0s; stroke:%23111111; stroke-width:2; stroke-dashoffset:0px; stroke-dasharray:80px; stroke-linecap:round; fill:%23ffffff; %7D @keyframes wave%7B 25%25%7B stroke-dashoffset:-80px; %7D 50%25%7B stroke-dashoffset:-80px; %7D 100%25%7B stroke-dashoffset:-160px; %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath class='wave' d='M 0 40 L 50 40 L 80 40 L 54 44 L 54 36 L 80 40 ' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") calc(100% - 10px) 50%/40px 80px no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%23111111; stroke-width:2; stroke-linecap:round; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/calc(100% - 25px) 80px no-repeat;
+  animation: none;
+  transform: scaleX(1);
+}
+
+@keyframes loganberry-waving {
+  to {background-position: 80px 50%, 160px 50%;}
+}
+
+
+/* === juniper berry === */
+.juniper-berry-link {
+  overflow: hidden;
+  padding: 7px 0;
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  white-space: nowrap;
+  color: #111;
+}
+
+.juniper-berry-link .link-graphic {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: #111;
+  top: -3px;
+  stroke-width: 2px;
+  transition: transform 0.7s;
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.juniper-berry-link:hover .link-graphic {
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+
+/* === betulifolia === */
+.betulifolia-link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 130px;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.betulifolia-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300%;
+  height: 50px;
+  opacity: 0;
+  background: url(../img/betulifolia-line.svg) no-repeat top left;
+  transform: translate3d(130px, 0, 0);
+  transition: transform 0s 0.3s, opacity 0.3s;
+}
+
+.betulifolia-link span {
+  display: block;
+  pointer-events: none;
+}
+
+.betulifolia-link:hover:before {
+  opacity: 1;
+  transform: translate3d(-260px, 0, 0);
+  transition: transform 0.5s;
+}
+
+.betulifolia-link:hover span {
+  animation: betulifolia-move 0.3s forwards;
+}
+
+@keyframes betulifolia-move {
+  50% {opacity: 0; transform: translate3d(0, -100%, 0);}
+
+  51% {opacity: 0; transform: translate3d(0, 100%, 0);}
+
+  100% {opacity: 1; transform: translate3d(0, 0, 0);}
+}
+
+
+/* === passionfruit === */
+.passionfruit-link {
+  display: inline-block;
+  font-size: 24px;
+  color: #111;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.passionfruit-link .line-stroke {
+  display: block;
+  width: calc(100% - 40px);
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  stroke-dasharray: 650px;
+  stroke-dashoffset: 650px;
+  stroke: #E75480;
+  stroke-width: 5;
+  transition: stroke-dashoffset 800ms ease-out;
+}
+
+.passionfruit-link:hover .line-stroke {
+  stroke-dashoffset: 0;
+}
+
+
+/* === kaffir lime === */
+.kaffir-lime-link {
+  padding: 7px 0 0;
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  white-space: nowrap;
+  color: #111;
+}
+
+.kaffir-lime-link .link-graphic {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1px;
+}
+
+.kaffir-lime-link .link-graphic path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.kaffir-lime-link:hover .link-graphic path {
+  transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+  transition-duration: 0.3s;
+  stroke-dashoffset: 0;
+}
+
+
+/* === lemon === */
+.lemon-link {
+  display: inline-block;
+  margin: 20px 0;
+  position: relative;
+  font-size: 24px;
+  z-index: 2;
+  color: #111;
+}
+
+.lemon-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  bottom: -45px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%2311111; stroke-width:2; stroke-linecap:square; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+}
+
+.lemon-link:hover:before {
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23111111; stroke-width:1; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+  animation: lemon-wave 3s linear infinite;
+  transform: scaleX(1);
+}
+
+@keyframes lemon-wave {
+  to {background-position: 80px 50%, 160px 50%;}
+}
+
+
+/* === lime === */
+.lime-link {
+  display: inline-block;
+  margin: 20px 0;
+  position: relative;
+  font-size: 24px;
+  z-index: 2;
+  color: #111;
+}
+
+.lime-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  bottom: -45px;
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%23111111; stroke-width:2; stroke-linecap:square; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+}
+
+.lime-link:hover:before {
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 2s cubic-bezier(0.175, 0.885, 0.32, 1) infinite; animation-delay:-0.25s; stroke:%23111111; stroke-width:1; stroke-linecap:square; %7D @keyframes wave%7B 25%25%7B d:path('M 0 20 L 10 15 L 20 20 L 30 25 L 40 20 ');%0A%7D%0A50%25%7B%0Ad:path('M 0 20 L 10 25 L 20 20 L 30 15 L 40 20  ');%0A%7D%0A75%25%7B%0Ad:path('M 0 20 L 10 15 L 20 20 L 30 25 L 40 20 ');%0A%7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 20 L 10 25 L 20 20 L 30 15 L 40 20' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/40px 40px repeat-x;
+  animation: lime-waving 6s linear infinite reverse;
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+@keyframes lime-waving {
+  to {background-position: 80px 50%, 160px 50%;}
+}
+
+
+/* === kiwano === */
+.kiwano-link {
+  display: inline-block;
+  height: 60px;
+  font-size: 24px;
+  position: relative;
+}
+
+.kiwano-link rect {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #111;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.kiwano-link .link-text {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kiwano-link:hover rect {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+}
+
+
+/* === kiwifruit === */
+.kiwifruit-link {
+  display: inline-block;
+  height: 52px;
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.kiwifruit-link rect {
+  stroke-dasharray: 140 350;
+  stroke-dashoffset: -280;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: #111;
+  border-bottom: 3px solid #111;
+  transition: stroke-width 0.5s, stroke-dashoffset 0.5s, stroke-dasharray 0.5s;
+}
+
+.kiwifruit-link .link-text {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kiwifruit-link:hover rect {
+  stroke-width: 2px;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 0;
+}
+
+
+/* === kumquat === */
+.kumquat-link {
+  display: inline-block;
+  height: 60px;
+  font-size: 24px;
+  position: relative;
+}
+
+.kumquat-link rect {
+  stroke-dasharray: 40 20 40 160;
+  stroke-dashoffset: 80;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: #111;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.kumquat-link:hover rect {
+  stroke-width: 4px;
+  stroke-dashoffset: 340;
+  stroke-dasharray: 40 20 40 160;
+}
+
+.kumquat-link .link-text {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* === papaya === */
+.papaya-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 60px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.papaya-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  transition: 1s;
+  stroke-dasharray: 28 28;
+  stroke-dashoffset: 240;
+}
+
+.papaya-link .text {
+  position: relative;
+  top: -53px;
+  line-height: 1;
+}
+
+.papaya-link:hover .outline {
+  stroke-dasharray: 80 200;
+  stroke-dashoffset: -349;
+}
+
+
+/* === pawpaw === */
+.pawpaw-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 60px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.pawpaw-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  transition: 1s;
+  stroke-dasharray: 60 220;
+  stroke-dashoffset: -532;
+}
+
+.pawpaw-link .text {
+  position: relative;
+  top: -53px;
+  line-height: 1;
+}
+
+.pawpaw-link:hover .outline {
+  stroke-dashoffset: -78;
+}
+
+
+/* === peach === */
+.peach-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 52px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.peach-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  transition: 1s;
+  stroke-dasharray: 70 200;
+  stroke-dashoffset: 60;
+}
+
+.peach-link .text {
+  position: relative;
+  top: -48px;
+  line-height: 1;
+}
+
+.peach-link:hover .outline {
+  stroke-dashoffset: -346;
+}
+
+
+/* === pear === */
+.pear-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 52px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.pear-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke-dasharray: 50 600;
+  stroke-dashoffset: -492;
+  transition: 0.5s;
+}
+
+.pear-link .text {
+  position: relative;
+  top: -48px;
+  line-height: 1;
+}
+
+.pear-link:hover .outline {
+  stroke-dashoffset: -220;
+}
+
+
+/* === persimmon === */
+.persimmon-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 52px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.persimmon-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke-dasharray: 52 600;
+  stroke-dashoffset: -492;
+  transition: 1s;
+}
+
+.persimmon-link .text {
+  position: relative;
+  top: -49px;
+  line-height: 1;
+}
+
+.persimmon-link:hover .outline {
+  stroke-dasharray: 600 0;
+  stroke-dashoffset: 25;
+  animation: persimmon-move 1s linear;
+}
+
+@keyframes persimmon-move {
+  0% {stroke-dasharray: 50 600; stroke-dashoffset: -550;}
+
+  40%, 50% {stroke-dasharray: 50 600; stroke-dashoffset: -250;}
+
+  100% {stroke-dasharray: 600 0;stroke-dashoffset: 25;}
+}
+
+
+/* === plantain === */
+.plantain-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 52px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.plantain-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke-dasharray: 104 440;
+  stroke-dashoffset: 215;
+  transition: 1s;
+}
+
+.plantain-link .text {
+  position: relative;
+  top: -49px;
+  line-height: 1;
+}
+
+.plantain-link:hover .outline {
+  stroke-dasharray: 585 0;
+  stroke-dashoffset: 475;
+}
+
+
+/* === plum === */
+.plum-link {
+  display: block;
+  position: relative;
+  color: #111;
+  width: 220px;
+  height: 52px;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+}
+
+.plum-link .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #111;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke-dasharray: 50 550;
+  stroke-dashoffset: 242;
+  transition: 0.5s;
+}
+
+.plum-link .text {
+  position: relative;
+  top: -49px;
+  line-height: 1;
+}
+
+.plum-link:hover .outline {
+  stroke-dasharray: 52 220;
+  stroke-dashoffset: 460;
+}

@@ -1,0 +1,850 @@
+/* === jackfruit === */
+.jackfruit-link {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px;
+    perspective: 900px;
+    margin: 0 20px;
+    transition: 0.3s;
+}
+
+.jackfruit-link:before {
+    color: #212121;
+    content: attr(data-hover);
+    position: absolute;
+    transition: 0.3s;
+    transform-origin: 50% 0 50%;
+    transform-style: preserve-3d;
+}
+
+.jackfruit-link:hover {
+    color: red;
+}
+
+.jackfruit-link:hover:before {
+    transform: translateY(22px) rotateX(-90deg);
+}
+
+/* === mango ===*/
+.mango-link {
+    color: red;
+    font-size: 24px;
+    text-shadow: none;
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    color: #111;
+}
+
+.mango-link:before {
+    content: attr(data-hover);
+    color: red;
+    position: absolute;
+    opacity: 0;
+    transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.mango-link:hover:before {
+    transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 1;
+}
+
+
+/* === magellan === */
+.magellan-link {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    color: #111;
+}
+
+.magellan-link:after {
+    position: absolute;
+    content: attr(data-hover);
+    color: red;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: all .5s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.magellan-link:hover:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* === mamey apple === */
+.mamey-apple-link {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.mamey-apple-link:after {
+    position: absolute;
+    content: attr(data-hover);
+    color: #111;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: all .5s ease;
+}
+
+.mamey-apple-link:hover {
+    color: red;
+}
+
+.mamey-apple-link:hover:after {
+    opacity: 0;
+    transform: scale(0.3);
+}
+
+
+/* === lychee === */
+.lychee-link {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    padding: 0 5px;
+    color: #111;
+}
+
+.lychee-link:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 5px;
+    max-height: 0;
+    color: red;
+    right: 0;
+    white-space: nowrap;
+    transition: max-height 0.5s;
+}
+
+.lychee-link:hover:before {
+    max-height: 100%;
+}
+
+
+/* === longan === */
+.longan-link {
+    font-size: 24px;
+    text-align: center;
+    background-image: linear-gradient(92deg, #111, #111);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: #111;
+}
+
+.longan-link:hover {
+    background-image: linear-gradient(92deg, #f35626, #feab3a);
+    animation: longan-hue 3s infinite linear;
+}
+
+@keyframes longan-hue {
+    0% {filter: hue-rotate(0deg);}
+
+    100% {filter: hue-rotate(-360deg);}
+}
+
+
+/* === loquat === */
+.loquat-link {
+    font-size: 24px;
+    background-image: linear-gradient(to right, #111 20%, #111 40%, #111 60%, #111 80%);
+    background-size: 200% auto;
+    color: #111;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.loquat-link:hover {
+    background-image: linear-gradient(to right, #111 20%, tomato 40%, tomato 60%, #111 80%);
+    animation: loquat-shine 1s linear infinite;
+}
+
+@keyframes loquat-shine {
+    to {background-position: 200% center;}
+}
+
+
+/* === naranjilla === */
+.naranjilla-link {
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    color: #111;
+}
+
+.naranjilla-link:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 5px 0;
+    max-width: 0;
+    white-space: nowrap;
+    border-bottom: 1px solid red;
+    color: red;
+    transition: max-width 0.5s;
+}
+
+.naranjilla-link:hover:before {
+    max-width: 100%;
+}
+
+
+/* === pitaya === */
+.pitaya-link {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    padding: 1px;
+    overflow: hidden;
+    color: #212121;
+}
+
+.pitaya-link:before {
+    content: '';
+    position: absolute;
+    transition: transform 0.5s ease;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f67d7d;
+    transform: translateX(-120%);
+}
+
+.pitaya-link:after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 11px 21px;
+    white-space: nowrap;
+    color: #f67d7d;
+    max-width: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.pitaya-link span {
+    background-color: #fff;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.pitaya-link:hover:before {
+    transform: translateX(0);
+}
+
+.pitaya-link:hover:after {
+    max-width: 100%;
+}
+
+
+/* === durian === */
+.durian-link {
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #212121;
+}
+
+.durian-link:before {
+    content: '';
+    position: absolute;
+    transition: transform 0.5s ease;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f67d7d;
+    transform: translateY(-100%);
+}
+
+.durian-link:after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    margin: 8px 20px;
+    color: #f67d7d;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.durian-link span {
+    display: block;
+    margin: 1px;
+    padding: 13px 19px;
+    background: #fff;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.durian-link:hover:before {
+    transform: translateY(0);
+}
+
+.durian-link:hover:after {
+    height: calc(100% - 17px);
+}
+
+
+/* === mamey sapote === */
+.mamey-sapote-link {
+    font-size: 24px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    color: #212121;
+}
+
+.mamey-sapote-link:hover {
+    color: pink;
+    text-shadow: 0.5px 0.5px 0 tomato, 1px 1px 0 tomato, 1.5px 1.5px 0 tomato, 2px 2px 0 tomato, 2.5px 2.5px 0 tomato, 3px 3px 0 tomato, 3.5px 3.5px 0 tomato, 4px 4px 0 tomato, 4.5px 4.5px 0 tomato, 5px 5px 0 tomato;
+}
+
+
+/* === rose apple ===*/
+.rose-apple-link {
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.rose-apple-link span {
+    position: relative;
+    z-index: 1;
+}
+
+.rose-apple-link:after {
+    content: '';
+    height: 0;
+    display: block;
+    z-index: -1;
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    bottom: 3px;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    background-size: 100% 50%;
+    background-repeat: repeat-x;
+    background-position: left 0% bottom 10%;
+    background-image: linear-gradient(90deg, #d268f8 0%, #d268f8 12.5%, #f868b2 12.5%, #f868b2 25%, #f88a68 25%, #f88a68 37.5%, #f8f568 37.5%, #f8f568 50%, #8ef868 50%, #8ef868 62.5%, #68f8ae 62.5%, #68f8ae 75%, #68d6f8 75%, #68d6f8 87.5%, #686af8 87.5%, #686af8 100%);
+}
+
+.rose-apple-link:hover:after {
+    height: 20px;
+}
+
+
+/* === mollissima === */
+.mollissima-link {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    white-space: nowrap;
+    padding: 2px 8px 2px;
+    color: #111;
+    background: radial-gradient(circle 7px, red 90%, transparent) bottom -14px left 50%/12px 14px repeat-x;
+    transition: 0.5s;
+}
+
+.mollissima-link:hover {
+    background-position: bottom -7px left 50%;
+}
+
+
+/* === merrillii === */
+.merrillii-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    z-index: 0;
+    transition: .4s;
+    position: relative;
+}
+
+.merrillii-link:before,
+.merrillii-link:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0;
+    background: repeating-linear-gradient(135deg, transparent 0 15px, #673999 0 30px, transparent 0 45px, #883a6a 0 60px);
+    transform: translate(-40px, 40px);
+    transition: inherit;
+    pointer-events: none;
+}
+
+.merrillii-link:after {
+    background: repeating-linear-gradient(135deg, #111 0 15px, transparent 0 30px, #6d49d8 0 45px, transparent 0 60px);
+    transform: translate(40px, -40px);
+}
+
+.merrillii-link:hover {
+    color: #fff;
+}
+
+.merrillii-link:hover:before,
+.merrillii-link:hover:after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* === ovatum === */
+.ovatum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    z-index: 0;
+    transition: .4s;
+    position: relative;
+}
+
+.ovatum-link:hover {
+    color: #fff;
+}
+
+.ovatum-link:hover:before {
+    -webkit-mask-position: left;
+}
+
+.ovatum-link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    -webkit-mask: linear-gradient(90deg, #111 40%, transparent 60%) right/250% 100%;
+    background: repeating-linear-gradient(45deg, #673999 0 15px, #c22e89 0 30px, #f95268 0 45px);
+    transition: inherit;
+}
+
+
+/* === perlisanum === */
+.perlisanum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    z-index: 0;
+    transition: .4s;
+    position: relative;
+}
+
+.perlisanum-link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: inset(0 50%);
+    background: repeating-linear-gradient(45deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 100% 0, repeating-linear-gradient(-45deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 0 0, repeating-linear-gradient(135deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 100% 100%, repeating-linear-gradient(-135deg, #66245B 0 15px, #616382 0 30px, #69A5A4 0 45px) 0 100%;
+    background-size: 50.1% 50.1%;
+    background-repeat: no-repeat;
+    transition: inherit;
+}
+
+.perlisanum-link:hover {
+    color: #fff;
+}
+
+.perlisanum-link:hover:before {
+    clip-path: inset(0);
+}
+
+
+/* === pilosum === */
+.pilosum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    line-height: 1.6em;
+    z-index: 0;
+    transition: .4s linear;
+    position: relative;
+}
+
+.pilosum-link:before,
+.pilosum-link:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: inset(0 100% 0 0);
+    background: conic-gradient(from 30deg, #c22e89 25%, #673999 0 50%, #8b1f4f 0 75%, #570025 0) 0 0/20px 20px;
+    -webkit-mask: repeating-conic-gradient(from 0deg, #111 0 25%, transparent 0 50%) 0 0/40px 40px;
+    transition: inherit;
+}
+
+.pilosum-link:after {
+    clip-path: inset(0 0 0 100%);
+    background: conic-gradient(from -120deg, #c22e89 25%, #673999 0 50%, #8b1f4f 0 75%, #570025 0) 0 0/20px 20px;
+    -webkit-mask: repeating-conic-gradient(from 90deg, #111 0 25%, transparent 0 50%) 0 0/40px 40px;
+}
+
+.pilosum-link:hover {
+    color: #fff;
+}
+
+.pilosum-link:hover:before,
+.pilosum-link:hover:after {
+    clip-path: inset(0);
+}
+
+
+/* === borneensis === */
+.borneensis-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 1.9em;
+    background: conic-gradient(from 120deg at top, #673999 120deg, transparent 0), conic-gradient(from 120deg at top, #c22e89 120deg, transparent 0), conic-gradient(from 120deg at top, #f95268 120deg, transparent 0), conic-gradient(from 120deg at top, #ffa600 120deg, transparent 0);
+    background-repeat: repeat-x;
+    background-size: 40px 32px;
+    background-position: 50% calc(100% + 40px);
+    transition: .4s linear;
+}
+
+.borneensis-link:hover {
+    color: #fff;
+    background-position: 50% calc(100% + 1.097em/2), 50% calc(100% + 0px), 50% calc(100% - 1.097em/2), 50% calc(100% - 1.097em);
+}
+
+
+/* === polyphyllum === */
+.polyphyllum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+    transition: .4s;
+    mix-blend-mode: darken;
+}
+
+.polyphyllum-link:hover {
+    color: #fff;
+    text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+}
+
+
+/* === reniforme === */
+.reniforme-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: transparent;
+    position: relative;
+}
+
+.reniforme-link:before,
+.reniforme-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    transition: .4s linear;
+}
+
+.reniforme-link:before {
+    color: #fff;
+    text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+    clip-path: inset(0 0 100%);
+}
+
+.reniforme-link:after {
+    color: #111;
+    clip-path: inset(0 0 0 0);
+}
+
+.reniforme-link:hover:before {
+    clip-path: inset(0 0 0 0);
+}
+
+.reniforme-link:hover:after {
+    clip-path: inset(100% 0 0);
+}
+
+
+/* === resiniferum === */
+.resiniferum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: transparent;
+    position: relative;
+}
+
+.resiniferum-link:before,
+.resiniferum-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    transition: .4s linear;
+}
+
+.resiniferum-link:before {
+    color: #fff;
+    text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+    clip-path: inset(0 100% 0 0);
+}
+
+.resiniferum-link:after {
+    color: #111;
+    clip-path: inset(0 0 0 0);
+}
+
+.resiniferum-link:hover:before {
+    clip-path: inset(0 0 0 0);
+}
+
+.resiniferum-link:hover:after {
+    clip-path: inset(0 0 0 100%);
+}
+
+
+/* === rotundifolium === */
+.rotundifolium-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: #111;
+    transition: .4s;
+    position: relative;
+}
+
+.rotundifolium-link:before,
+.rotundifolium-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    color: transparent;
+    text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+    transition: inherit;
+}
+
+.rotundifolium-link:before {
+    clip-path: inset(0 0 50% 0);
+}
+
+.rotundifolium-link:after {
+    clip-path: inset(50% 0 0 0);
+}
+
+.rotundifolium-link:hover {
+    color: #fff;
+}
+
+.rotundifolium-link:hover:before {
+    color: #fff;
+    text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+}
+
+.rotundifolium-link:hover:after {
+    color: #fff;
+    text-shadow: 1px 0 blue, 0 1px blue, 0 -1px blue, -1px 0 blue;
+}
+
+
+/* === sarawakanum === */
+.sarawakanum-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: #111;
+    transition: .4s;
+    position: relative;
+}
+
+.sarawakanum-link:before,
+.sarawakanum-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    color: transparent;
+    text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+    transition: inherit;
+    -webkit-mask: linear-gradient(90deg, transparent, #111);
+}
+
+.sarawakanum-link:after {
+    -webkit-mask: linear-gradient(-90deg, transparent, #111);
+}
+
+.sarawakanum-link:hover {
+    color: #fff;
+}
+
+.sarawakanum-link:hover:before {
+    color: #fff;
+    text-shadow: 1px 0 red, 0 1px red, 0 -1px red, -1px 0 red;
+}
+
+.sarawakanum-link:hover:after {
+    color: #fff;
+    text-shadow: 1px 0 blue, 0 1px blue, 0 -1px blue, -1px 0 blue;
+}
+
+
+/* === sikkimense === */
+.sikkimense-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: #111;
+    transition: .4s;
+    position: relative;
+}
+
+.sikkimense-link:before,
+.sikkimense-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    color: transparent;
+    text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+    transition: inherit;
+    -webkit-mask: repeating-linear-gradient(-45deg, transparent 0 8px, #111 0 16px);
+}
+
+.sikkimense-link:after {
+    -webkit-mask: repeating-linear-gradient(-45deg, #111 0 8px, transparent 0 16px);
+}
+
+.sikkimense-link:hover {
+    color: #fff;
+}
+
+.sikkimense-link:hover:before {
+    color: #fff;
+    text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+}
+
+.sikkimense-link:hover:after {
+    color: hotpink;
+    text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+}
+
+
+/* === solomonense === */
+.solomonense-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 30px;
+    mix-blend-mode: darken;
+    color: #111;
+    transition: .3s;
+    position: relative;
+}
+
+.solomonense-link:before,
+.solomonense-link:after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    color: transparent;
+    text-shadow: 1px 0 transparent, 0 1px transparent, 0 -1px transparent, -1px 0 transparent;
+    -webkit-mask-image: linear-gradient(135deg, #111 calc(50% - 20px), transparent 0 calc(50% + 20px), #111 0);
+    -webkit-mask-size: 250% 100%;
+    -webkit-mask-position: right;
+    transition: .3s, -webkit-mask-position 0s;
+}
+
+.solomonense-link:after {
+    -webkit-mask-image: linear-gradient(135deg, transparent calc(50% - 20px), #111 0 calc(50% + 20px), transparent 0);
+}
+
+.solomonense-link:hover {
+    color: #fff;
+}
+
+.solomonense-link:hover:before,
+.solomonense-link:hover:after {
+    -webkit-mask-position: left;
+    text-shadow: 1px 0 #111, 0 1px #111, 0 -1px #111, -1px 0 #111;
+    transition: .3s, -webkit-mask-position .4s .3s linear;
+}
+
+.solomonense-link:hover:before {
+    color: #fff;
+}
+
+.solomonense-link:hover:after {
+    color: #111;
+}
+
+/* === cunninghamii === */
+.cunninghamii-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 0;
+    padding-bottom: 8px;
+    background: linear-gradient(#ff0000 0 0) 0 100%, linear-gradient(#0000ff 0 0) 100% 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-blend-mode: difference;
+    transition: .5s, background-position 0s .5s;
+}
+
+.cunninghamii-link:hover {
+    background-size: 100% 3px;
+    background-position: 100% 100%, 0 100%;
+}
+
+/* === goroensis  === */
+.goroensis-link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 8px;
+    background: linear-gradient(#ff00ff 0 0) 0 100%, linear-gradient(#00ff00 0 0) 100% 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    transition: .5s, background-position 0s .5s;
+}
+
+.goroensis-link:hover {
+    background-size: 100% 3px;
+    background-position: 100% 100%, 0 100%;
+}
+
+

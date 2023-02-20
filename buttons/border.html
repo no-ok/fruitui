@@ -1,0 +1,2292 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+
+    <title>Buttons with border animation on hover</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/border.css">
+  </head>
+
+  <body class="links-page">
+    <div id="wrapper" style="background: linear-gradient(to right top, #c7d2fe, #fecaca, #fef3c7);">
+      <header class="main-header" id="navbar">
+        <div class="container">
+          <nav class="main-nav">
+            <a href="../index.html"><span>Index</span></a>
+
+            <a href="../links/border.html"><span>Links</span></a>
+
+            <a href="#" class="active"><span>Buttons</span></a>
+          </nav>
+        </div>
+      </header>
+      
+      <main class="page-content">
+        <div class="container">
+          <div class="content-header">
+            <div class="page-navigation">
+              <a href="overlay.html">Overlay</a>
+
+              <a href="border.html" class="active">Border</a>
+
+              <a href="transform.html">Transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color/glitch</a>
+            </div>
+          </div>
+
+          <div class="buttons-grid">
+            <!-- centella -->
+            <div class="button-holder">
+              <button class="centella-btn" data-hystmodal="#myModal">centella</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="centella-btn"&gt;centella&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .centella-btn {
+                        display: block;
+                        width: 220px;
+                        height: 54px;
+                        background-color: #fff;
+                        border: 2px solid black;
+                        position: relative;
+                        z-index: 1;
+                        font-size: 22px;
+                      }
+
+                      .centella-btn:before,
+                      .centella-btn:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 0.175s ease-in-out;
+                      }
+
+                      .centella-btn:before {
+                        background-color: #111;
+                        border: 0 dashed black;
+                        left: -2px;
+                        top: -2px;
+                        right: -2px;
+                        bottom: -2px;
+                        z-index: -1;
+                      }
+
+                      .centella-btn:after {
+                        background-color: #fff;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        z-index: -1;
+                      }
+
+                      .centella-btn:hover:before {
+                        background-color: #fff;
+                        border-width: 2px;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- eruca -->
+            <div class="button-holder">
+              <button class="eruca-btn" data-hystmodal="#myModal">
+                <span>eruca</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="eruca-btn"&gt;
+                        &lt;span&gt;eruca&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .eruca-btn {
+                        display: block;
+                        border: 0;
+                        position: relative;
+                        z-index: 1;
+                        background-color: transparent;
+                        font-size: 22px;
+                      }
+
+                      .eruca-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        border: 2px solid #111;
+                        background: white;
+                        position: relative;
+                        z-index: 1;
+                      }
+
+                      .eruca-btn:after {
+                        content: '';
+                        border: 2px dashed black;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        z-index: -1;
+                        position: absolute;
+                        transition: all 0.125s ease-in-out;
+                      }
+
+                      .eruca-btn:hover:after {
+                        bottom: -10px;
+                        left: 10px;
+                        right: -10px;
+                        top: 10px;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- rubus -->
+            <div class="button-holder">
+              <button class="rubus-btn" data-hystmodal="#myModal">rubus</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="rubus-btn"&gt;rubus&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .rubus-btn {
+                        display: block;
+                        width: 220px;
+                        height: 54px;
+                        background: white;
+                        border: 2px solid black;
+                        cursor: pointer;
+                        position: relative;
+                        font-size: 22px;
+                      }
+
+                      .rubus-btn:after {
+                        content: '';
+                        position: absolute;
+                        transition: all 0.125s ease-in-out;
+                        border: 2px dashed black;
+                        bottom: -2px;
+                        left: -2px;
+                        right: -2px;
+                        top: -2px;
+                      }
+
+                      .rubus-btn:hover:after {
+                        bottom: 2px;
+                        left: 2px;
+                        right: 2px;
+                        top: 2px;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- caraway -->
+            <div class="button-holder">
+              <button class="caraway-btn" data-hystmodal="#myModal">caraway</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="caraway-btn"&gt;caraway&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .caraway-btn {
+                        width: 220px;
+                        height: 54px;
+                        color: #111;
+                        font-size: 22px;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 0;
+                        box-shadow: inset 0 0 0 2px #111;
+                      }
+
+                      .caraway-btn:hover {
+                        box-shadow: none;
+                        background: linear-gradient(90deg, black 50%, transparent 50%), linear-gradient(90deg, black 50%, transparent 50%), linear-gradient(0deg, black 50%, transparent 50%), linear-gradient(0deg, black 50%, transparent 50%);
+                        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+                        background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px;
+                        background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+                        animation: caraway-dash 3s linear infinite;
+                      }
+
+                      @keyframes caraway-dash {
+                        to {
+                          background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+                        }
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- radish -->
+            <div class="button-holder">
+              <button class='radish-btn' data-hystmodal="#myModal">radish</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='radish-btn'&gt;radish&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .radish-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .3s linear;
+                        color: #111;
+                        font-size: 22px;
+                        border: 2px solid #111;
+                      }
+
+                      .radish-btn:hover {
+                        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                        border: solid 7px #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- wasabi -->
+            <div class="button-holder">
+              <button class='wasabi-btn' data-hystmodal="#myModal">wasabi</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='wasabi-btn'&gt;wasabi&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .wasabi-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .3s linear;
+                        color: #111;
+                        font-size: 22px;
+                        outline: none;
+                        border: 2px solid #111;
+                      }
+
+                      .wasabi-btn:hover {
+                        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                        border: 3px dotted #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- horseradish -->
+            <div class="button-holder">
+              <button class='horseradish-btn' data-hystmodal="#myModal">horseradish</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='horseradish-btn'&gt;horseradish&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .horseradish-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .3s linear;
+                        color: #41403E;
+                        font-size: 22px;
+                        outline: none;
+                        border: 2px solid #111;
+                      }
+
+                      .horseradish-btn:hover {
+                        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                        border: dashed 5px #41403E;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- jicama -->
+            <div class="button-holder">
+              <button class='jicama-btn' data-hystmodal="#myModal">jicama</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='jicama-btn'&gt;jicama&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .jicama-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .5s ease;
+                        color: #41403E;
+                        font-size: 22px;
+                        outline: none;
+                      }
+
+                      .jicama-btn:hover {
+                        border-radius: 260px 25px 230px 25px/30px 220px 30px 260px;
+                        border: solid 2px #41403E;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- sunroot -->
+            <div class="button-holder">
+              <button class='sunroot-btn' data-hystmodal="#myModal">sunroot</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='sunroot-btn'&gt;sunroot&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .sunroot-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .3s ease;
+                        color: #111;
+                        font-size: 22px;
+                        outline: none;
+                        border: 2px solid #111;
+                      }
+
+                      .sunroot-btn:hover {
+                        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                        border: dotted 2px #41403E;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- potato -->
+            <div class="button-holder">
+              <button class='potato-btn' data-hystmodal="#myModal">potato</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class='potato-btn'&gt;potato&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .potato-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 220px;
+                        height: 54px;
+                        background: transparent;
+                        transition: all .5s ease;
+                        color: #111;
+                        font-size: 22px;
+                        outline: none;
+                        border: 2px solid #111;
+                      }
+
+                      .potato-btn:hover {
+                        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                        border: dashed 2px #41403E;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- parsnip -->
+            <div class="button-holder">
+              <button class="parsnip-btn" data-hystmodal="#myModal">
+                <span class="btn-content">
+                  <span class="content-inner">
+                    parsnip
+                  </span>
+                </span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="parsnip-btn"&gt;
+                        &lt;span class="btn-content"&gt;
+                          &lt;span class="content-inner"&gt;
+                            parsnip
+                          &lt;/span&gt;
+                        &lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .parsnip-btn {
+                        width: 220px;
+                        height: 100px;
+                        position: relative;
+                        display: block;
+                        z-index: 1;
+                        border: 0;
+                        font-size: 22px;
+                        background-color: transparent;
+                      }
+
+                      .parsnip-btn .btn-content {
+                        border-bottom: 2px solid #111;
+                        position: absolute;
+                        width: 100%;
+                        height: 58px;
+                        left: 0;
+                        top: 0;
+                      }
+
+                      .parsnip-btn .btn-content:before,
+                      .parsnip-btn .btn-content:after {
+                        border-bottom: 2px solid #111;
+                        width: 96%;
+                        left: 2%;
+                        bottom: -8px;
+                        content: "";
+                        position: absolute;
+                      }
+
+                      .parsnip-btn .btn-content:after {
+                        width: 92%;
+                        left: 4%;
+                        bottom: -14px;
+                      }
+
+                      .parsnip-btn .content-inner {
+                        width: 104.2%;
+                        height: 100%;
+                        position: absolute;
+                        top: 20px;
+                        left: -2.1%;
+                        border: 2px solid #111;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                        transform: scale(0.96, 0.96);
+                        transition: all .3s;
+                        z-index: 4;
+                      }
+
+                      .parsnip-btn:hover .content-inner {
+                        top: -4px;
+                        transform: scale(1, 1);
+                        cursor: pointer;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cucamelon -->
+            <div class="button-holder">
+              <button class="cucamelon-btn" data-hystmodal="#myModal">
+                <span>cucamelon</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cucamelon-btn"&gt;
+                        &lt;span&gt;cucamelon&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cucamelon-btn {
+                        font-size: 22px;
+                        width: 220px;
+                        height: 48px;
+                        color: #111;
+                        border: 0;
+                        border-left: 2px solid;
+                        position: relative;
+                        cursor: pointer;
+                        background: transparent;
+                        z-index: 1;
+                        margin-left: 15px;
+                      }
+
+                      .cucamelon-btn:before,
+                      .cucamelon-btn:after {
+                        content: '';
+                        position: absolute;
+                        width: inherit;
+                        border-left: inherit;
+                        z-index: -1;
+                      }
+
+                      .cucamelon-btn:before {
+                        height: 80%;
+                        top: 10%;
+                        left: calc(-0.15em - 0.08em * 2);
+                      }
+
+                      .cucamelon-btn:after {
+                        height: 60%;
+                        top: 20%;
+                        left: calc(-0.15em * 2 - 0.08em * 3);
+                      }
+
+                      .cucamelon-btn span {
+                        position: relative;
+                        height: 116%;
+                        top: -10%;
+                        border: 2px solid #111;
+                        background-color: #fff;
+                        color: #111;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+                        transition: 0.3s;
+                      }
+
+                      .cucamelon-btn:hover span {
+                        transform: translateX(0.15em);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- cucumis -->
+            <div class="button-holder">
+              <button class="cucumis-btn" data-hystmodal="#myModal">cucumis</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="cucumis-btn"&gt;cucumis&lt;/button&gt;
+                    </code> 
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .cucumis-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 22px;
+                        width: 220px;
+                        height: 54px;
+                        background: none;
+                        border: 2px solid;
+                        color: #111;
+                        transition: 0.25s;
+                      }
+
+                      .cucumis-btn:hover {
+                        box-shadow: 0 12px 12px -10px rgba(0, 0, 0, 0.5);
+                        transform: translateY(-8px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- pinto beans -->
+            <div class="button-holder">
+              <button class="pinto-beans-btn" data-hystmodal="#myModal">
+                <span>pinto beans</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="pinto-beans-btn"&gt;
+                        &lt;span&gt;pinto beans&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .pinto-beans-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        border: 2px solid #111;
+                        color: #111;
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all 0.2s;
+                        background-color: #fff;
+                      }
+
+                      .pinto-beans-btn span {
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        z-index: 1;
+                      }
+
+                      .pinto-beans-btn:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #111;
+                        transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+                      }
+
+                      .pinto-beans-btn:hover:after {
+                        transform: translate3d(8px, 8px, 0);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- bok choy -->
+            <div class="button-holder">
+              <button class="bok-choy-btn" data-hystmodal="#myModal">
+                <span>bok choy</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="bok-choy-btn"&gt;
+                        &lt;span&gt;bok choy&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .bok-choy-btn {
+                        width: 220px;
+                        height: 54px;
+                        color: #111;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 22px;
+                        position: relative;
+                        z-index: 1;
+                        padding: 0;
+                        border: 0;
+                      }
+
+                      .bok-choy-btn span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid #111;
+                        position: relative;
+                        background-color: #fff;
+                      }
+
+                      .bok-choy-btn:before {
+                        content: "";
+                        background-color: #888;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 102%;
+                        width: 102%;
+                        z-index: -1;
+                        transition: all 0.3s ease;
+                        box-shadow: none;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                      }
+
+                      .bok-choy-btn:hover:before {
+                        opacity: 1;
+                        left: 6px;
+                        top: 6px;
+                        box-shadow: 6px 6px 0 #555, 12px 12px 0 #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- beetroot -->
+            <div class="button-holder">
+              <button class="beetroot-btn" data-hystmodal="#myModal">
+                beetroot
+
+                <span class='line-1'></span>
+                <span class='line-2'></span>
+                <span class='line-3'></span>
+                <span class='line-4'></span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="beetroot-btn"&gt;
+                        beetroot
+
+                        &lt;span class='line-1'&gt;&lt;/span&gt;
+                        &lt;span class='line-2'&gt;&lt;/span&gt;
+                        &lt;span class='line-3'&gt;&lt;/span&gt;
+                        &lt;span class='line-4'&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .beetroot-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        border: 2px solid #111;
+                        color: #111;
+                        text-decoration: none;
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                      }
+
+                      .beetroot-btn .line-1 {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        background-color: #111;
+                        left: 0;
+                        bottom: 0;
+                      }
+
+                      .beetroot-btn .line-2 {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 2px;
+                        background-color: #111;
+                        left: 0;
+                        top: 0;
+                      }
+
+                      .beetroot-btn .line-3 {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        background-color: #111;
+                        right: 0;
+                        top: 0;
+                      }
+
+                      .beetroot-btn .line-4 {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 2px;
+                        background-color: #111;
+                        right: 0;
+                        bottom: 0;
+                      }
+
+                      .beetroot-btn:hover {
+                        border: none;
+                      }
+
+                      .beetroot-btn:hover .line-1 {
+                        animation: beetroot-move-one 1500ms infinite ease;
+                      }
+
+                      .beetroot-btn:hover .line-2 {
+                        animation: beetroot-move-two 1500ms infinite ease;
+                      }
+
+                      .beetroot-btn:hover .line-3 {
+                        animation: beetroot-move-three 1500ms infinite ease;
+                      }
+
+                      .beetroot-btn:hover .line-4 {
+                        animation: beetroot-move-four 1500ms infinite ease;
+                      }
+
+                      @keyframes beetroot-move-one {
+                        0% {height: 100%; bottom: 0;}
+
+                        54% {height: 0; bottom: 100%;}
+
+                        55% {height: 0; bottom: 0;}
+
+                        100% {height: 100%; bottom: 0;}
+                      }
+
+                      @keyframes beetroot-move-two {
+                        0% {width: 0; left: 0;}
+
+                        50% {width: 100%; left: 0;}
+
+                        100% {width: 0; left: 100%;}
+                      }
+
+                      @keyframes beetroot-move-three {
+                        0% {height: 100%; top: 0;}
+
+                        54% {height: 0; top: 100%;}
+
+                        55% {height: 0; top: 0;}
+
+                        100% {height: 100%; top: 0;}
+                      }
+
+                      @keyframes beetroot-move-four {
+                        0% {width: 0; right: 0;}
+
+                        55% {width: 100%; right: 0;}
+
+                        100% {width: 0; right: 100%;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- paprika -->
+            <div class="button-holder">
+              <button class="paprika-btn" data-hystmodal="#myModal">
+                <span>paprika</span>
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="paprika-btn"&gt;
+                        &lt;span&gt;paprika&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .paprika-btn {
+                        z-index: 1;
+                        font-size: 22px;
+                        border: 2px solid #111;
+                        background-color: #fff;
+                        position: relative;
+                        color: #111;
+                        transition: border-color 0.3s, color 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                      }
+
+                      .paprika-btn span {
+                        width: 220px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        background-color: #fff;
+                        transition: border-color 0.3s, color 0.3s;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                      }
+
+                      .paprika-btn:before {
+                        content: '';
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                        bottom: -20px;
+                        right: -20px;
+                        z-index: -1;
+                        opacity: 0.7;
+                        transform: scale3d(0.8, 0.5, 1);
+                        background-color: tomato;
+                      }
+
+                      .paprika-btn:hover {
+                        color: tomato;
+                        border-color: tomato;
+                      }
+
+                      .paprika-btn:hover:before {
+                        animation: paprika-move 0.3s 0.1s forwards;
+                      }
+
+                      @keyframes paprika-move {
+                        to {
+                          opacity: 0;
+                          transform: scale3d(1, 1, 1);
+                        }
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- hubbard squash -->
+            <div class="button-holder">
+              <button class="hubbard-squash-btn" data-hystmodal="#myModal">hubbard</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="hubbard-squash-btn"&gt;hubbard&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .hubbard-squash-btn {
+                        background: transparent;
+                        position: relative;
+                        vertical-align: middle;
+                        display: block;
+                        width: 220px;
+                        height: 54px;
+                        transition: 0.5s;
+                        font-size: 22px;
+                        cursor: pointer;
+                        border: 2px solid #111;
+                        transition: 0.5s;
+                        color: #111;
+                      }
+
+                      .hubbard-squash-btn:hover {
+                        border: 2px solid rgba(0, 160, 80, 0);
+                        color: tomato;
+                      }
+
+                      .hubbard-squash-btn:before,
+                      .hubbard-squash-btn:after {
+                        width: 100%;
+                        height: 100%;
+                        z-index: 3;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: scale(0);
+                        transition: 0.5s;
+                      }
+
+                      .hubbard-squash-btn:before {
+                        border-bottom: 2px solid tomato;
+                        border-left: 2px solid tomato;
+                        transform-origin: 100% 0%;
+                      }
+
+                      .hubbard-squash-btn:after {
+                        border-top: 2px solid tomato;
+                        border-right: 2px solid tomato;
+                        transform-origin: 0% 100%;
+                      }
+
+                      .hubbard-squash-btn:hover:after,
+                      .hubbard-squash-btn:hover:before {
+                        transform: scale(1);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- gem squash -->
+            <div class="button-holder">
+              <button class="gem-squash-btn" data-hystmodal="#myModal">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                gem squash
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="gem-squash-btn"&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        gem squash
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .gem-squash-btn {
+                        position: relative;
+                        display: inline-block;
+                        color: #111;
+                        text-decoration: none;
+                        font-size: 22px;
+                        overflow: hidden;
+                        margin: 25px;
+                        filter: hue-rotate(0deg);
+                        border: 2px solid #111;
+                        transition: all 0.1s linear;
+                        width: 220px;
+                        height: 54px;
+                        background-color: #fff;
+                      }
+
+                      .gem-squash-btn:hover {
+                        border: 1px solid transparent;
+                      }
+
+                      .gem-squash-btn:hover span {
+                        position: absolute;
+                        display: block;
+                      }
+
+                      .gem-squash-btn:hover span:nth-child(1) {
+                        filter: hue-rotate(0deg);
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: linear-gradient(90deg, transparent, #3a86ff);
+                        animation: gem-squash-one 1s linear infinite;
+                      }
+
+                      .gem-squash-btn:hover span:nth-child(2) {
+                        filter: hue-rotate(60deg);
+                        top: -100%;
+                        right: 0;
+                        width: 3px;
+                        height: 100%;
+                        background: linear-gradient(180deg, transparent, #3a86ff);
+                        animation: gem-squash-two 1s linear infinite;
+                        animation-delay: 0.25s;
+                      }
+
+                      .gem-squash-btn:hover span:nth-child(3) {
+                        filter: hue-rotate(120deg);
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        background: linear-gradient(270deg, transparent, #3a86ff);
+                        animation: gem-squash-three 1s linear infinite;
+                        animation-delay: 0.5s;
+                      }
+
+                      .gem-squash-btn:hover span:nth-child(4) {
+                        filter: hue-rotate(300deg);
+                        bottom: -100%;
+                        left: 0;
+                        width: 3px;
+                        height: 100%;
+                        background: linear-gradient(360deg, transparent, #3a86ff);
+                        animation: gem-squash-four 1s linear infinite;
+                        animation-delay: 0.75s;
+                      }
+
+                      @keyframes gem-squash-one {
+                        0% {left: -100%;}
+
+                        50%, 100% {left: 100%;}
+                      }
+
+                      @keyframes gem-squash-two {
+                        0% {top: -100%;}
+
+                        50%, 100% {top: 100%;}
+                      }
+
+                      @keyframes gem-squash-three {
+                        0% {right: -100%;height: 3px;}
+
+                        50%,
+                        100% {height: 2px; right: 100%;}
+                      }
+
+                      @keyframes gem-squash-four {
+                        0% {bottom: -100%;}
+
+                        50%, 100% {bottom: 100%;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- topinambur -->
+            <div class="button-holder">
+              <button class="topinambur-btn" data-hystmodal="#myModal">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+                topinambur
+              </button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="topinambur-btn"&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+
+                        topinambur
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .topinambur-btn {
+                        background: #fff;
+                        transform: translate(0%, 0%);
+                        overflow: hidden;
+                        color: #111;
+                        font-size: 22px;
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid #111;
+                        transition: 0.25s;
+                      }
+
+                      .topinambur-btn span {
+                        opacity: 0;
+                        position: absolute;
+                      }
+
+                      .topinambur-btn span:nth-child(1) {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+                        animation: 2s topinamburTop linear infinite;
+                      }
+
+                      .topinambur-btn span:nth-child(2) {
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 2px;
+                        background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+                        animation: 2s topinamburRight linear -1s infinite;
+                      }
+
+                      .topinambur-btn span:nth-child(3) {
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+                        animation: 2s topinamburBottom linear infinite;
+                      }
+
+                      .topinambur-btn span:nth-child(4) {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 2px;
+                        background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+                        animation: 2s topinamburLeft linear -1s infinite;
+                      }
+
+                      .topinambur-btn:hover {
+                        border-color: transparent;
+                      }
+
+                      .topinambur-btn:hover span {
+                        opacity: 1;
+                      }
+
+                      @keyframes topinamburTop {
+                        0% {transform: translateX(100%);}
+
+                        100% {transform: translateX(-100%);}
+                      }
+
+                      @keyframes topinamburRight {
+                        0% {transform: translateY(100%);}
+
+                        100% {transform: translateY(-100%);}
+                      }
+
+                      @keyframes topinamburBottom {
+                        0% {transform: translateX(-100%);}
+
+                        100% {transform: translateX(100%);}
+                      }
+
+                      @keyframes topinamburLeft {
+                        0% {transform: translateY(-100%);}
+
+                        100% {transform: translateY(100%);}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- delicata -->
+            <div class="button-holder">
+              <button class="delicata-btn" data-hystmodal="#myModal"><span>delicata</span></button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="delicata-btn"&gt;&lt;span&gt;delicata&lt;/span&gt;&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .delicata-btn {
+                        border: 2px solid #111;
+                        height: 54px;
+                        width: 220px;
+                        position: relative;
+                        cursor: pointer;
+                        font-size: 22px;
+                      }
+
+                      .delicata-btn span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+
+                      .delicata-btn:before {
+                        content: "";
+                        position: relative;
+                        display: block;
+                        height: 15px;
+                        width: 15px;
+                        background: tomato;
+                        box-shadow: 0px 0px 10px 3px tomato;
+                        margin-left: -8px;
+                        margin-top: -8px;
+                        opacity: 0;
+                        transition: all 0.1s linear;
+                        border-radius: 100%;
+                        animation: delicata-move 2s linear infinite;
+                      }
+
+                      .delicata-btn:hover {
+                        border-color: tomato;
+                      }
+
+                      .delicata-btn:hover:before {
+                        opacity: 1;
+                      }
+
+                      @keyframes delicata-move {
+                        0% {
+                          margin-left: -8px;
+                          margin-top: -32px;
+                        }
+
+                        25% {
+                          margin-left: 210px;
+                          margin-top: -32px;
+                        }
+
+                        50% {
+                          margin-left: 210px;
+                          margin-top: 46px;
+                        }
+
+                        75% {
+                          margin-left: -8px;
+                          margin-top: 46px;
+                        }
+
+                        100% {
+                          margin-left: -8px;
+                          margin-top: -32px;
+                        }
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- scallion -->
+            <div class="button-holder">
+              <button class="scallion-btn" data-hystmodal="#myModal">scallion</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="scallion-btn"&gt;scallion&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .scallion-btn {
+                        border: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 22px;
+                        width: 220px;
+                        height: 54px;
+                        background-color: #fff;
+                        color: #111;
+                        border: 2px solid #111;
+                        transition: all 0.5s ease;
+                        overflow: hidden;
+                        position: relative;
+                      }
+
+                      .scallion-btn:after {
+                        content: "";
+                        display: block;
+                        height: 7px;
+                        width: 100%;
+                        background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        border-top: 1px solid #666;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background-size: 7px 7px;
+                        opacity: 0;
+                      }
+
+                      .scallion-btn:hover:after {
+                        opacity: 1;
+                        border-top: 1px solid #111;
+                        animation: scallion-move 12s infinite linear forwards;
+                      }
+
+                      @keyframes scallion-move {
+                        0% {background-position: 0% 0;}
+
+                        100% {background-position: 100% 0;}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- irvingia -->
+            <div class="button-holder">
+              <button class="irvingia-btn" data-hystmodal="#myModal">irvingia</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="irvingia-btn"&gt;irvingia&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .irvingia-btn {
+                        position: relative;
+                        width: 220px;
+                        display: inline-block;
+                        background-color: #fff;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        color: #111;
+                        transition: all 0.5s ease;
+                        border: solid transparent;
+                        border-width: 2px 2px calc(20px + 2px) calc(20px + 2px);
+                        background: linear-gradient(-45deg, transparent calc(20px*0.707), rgba(255, 255, 255, 0.6) 0) left/20px 100%, linear-gradient(135deg, transparent calc(20px*0.707), rgba(255, 255, 255, 0.3) 0) bottom/100% 20px, conic-gradient(from -90deg at top 2px right 2px, #111 270deg, transparent 0), conic-gradient(from 90deg at bottom calc(20px + 2px) left calc(20px + 2px), #111 270deg, transparent 0);
+                        background-repeat: no-repeat;
+                        background-origin: border-box;
+                        transform: translate(calc(20px / -1), calc(20px / 1));
+                        clip-path: polygon(20px 0%, 20px 0%, 100% 0%, 100% calc(100% - 20px), 100% calc(100% - 20px), 20px calc(100% - 20px), 20px calc(100% - 20px));
+                        padding: 12px 5px;
+                        margin-bottom: 20px;
+                      }
+
+                      .irvingia-btn:hover {
+                        transform: translate(0, 0);
+                        clip-path: polygon(0% 20px, 20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- bush mango -->
+            <div class="button-holder">
+              <button class="bush-mango-btn" data-hystmodal="#myModal">bush mango</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="bush-mango-btn"&gt;bush mango&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .bush-mango-btn {
+                        position: relative;
+                        width: 220px;
+                        display: inline-block;
+                        background-color: #fff;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        color: #111;
+                        padding: 12px 5px;
+                        margin-bottom: 20px;
+                        transition: all 0.5s ease;
+                        border: solid transparent;
+                        border-width: 2px calc(20px + 2px) calc(20px + 2px) 2px;
+                        background: linear-gradient(45deg, transparent calc(20px * 0.707), rgba(255, 255, 255, 0.6) 0) right/20px 100%, linear-gradient(-135deg, transparent calc(20px * 0.707), rgba(255, 255, 255, 0.3) 0) bottom/100% 20px, conic-gradient(from -180deg at top 2px left 2px, #111 270deg, transparent 0), conic-gradient(from 0deg at bottom calc(20px + 2px) right calc(20px + 2px), #111 270deg, transparent 0);
+                        background-repeat: no-repeat;
+                        background-origin: border-box;
+                        transform: translate(calc(20px / 1), calc(20px / 1));
+                        clip-path: polygon(calc(100% - 20px) 0%, calc(100% - 20px) 0%, 0% 0%, 0% calc(100% - 20px), 0% calc(100% - 20px), calc(100% - 20px) calc(100% - 20px), calc(100% - 20px) calc(100% - 20px));
+                      }
+
+                      .bush-mango-btn:hover {
+                        transform: translate(0, 0);
+                        clip-path: polygon(100% 20px, calc(100% - 20px) 0%, 0% 0%, 0% calc(100% - 20px), 20px 100%, 100% 100%, 100% 100%);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- gabonensis -->
+            <div class="button-holder">
+              <button class="gabonensis-btn" data-hystmodal="#myModal">gabonensis</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="gabonensis-btn"&gt;gabonensis&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .gabonensis-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        display: inline-block;
+                        background-color: #fff;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        color: #111;
+                        border: 2px solid;
+                        outline: 2px solid;
+                        outline-offset: -2px;
+                        transition: 0s;
+                      }
+
+                      .gabonensis-btn:hover {
+                        outline-offset: 30px;
+                        outline-color: transparent;
+                        transition: all 0.5s ease;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- ogbono nut -->
+            <div class="button-holder">
+              <button class="ogbono-nut-btn" data-hystmodal="#myModal">ogbono nut</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="ogbono-nut-btn"&gt;ogbono nut&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .ogbono-nut-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 54px;
+                        display: inline-block;
+                        background-color: #fff;
+                        color: #111;
+                        font-size: 22px;
+                        z-index: 0;
+                        color: #111;
+                        border: 2px solid;
+                        outline: 2px solid transparent;
+                        outline-offset: 100px;
+                        transition: 0s;
+                      }
+
+                      .ogbono-nut-btn:hover {
+                        outline-offset: -2px;
+                        border-color: transparent;
+                        outline-color: #111;
+                        transition: 0.5s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- hirsutum -->
+            <div class="button-holder">
+              <button class="hirsutum-btn" data-hystmodal="#myModal">hirsutum</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="hirsutum-btn"&gt;hirsutum&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .hirsutum-btn {
+                        position: relative;
+                        width: 220px;
+                        height: 52px;
+                        color: #111;
+                        font-size: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1;
+                        transition: all 0.3s ease;
+                        background-color: transparent;
+                        border: 0;
+                      }
+
+                      .hirsutum-btn:before,
+                      .hirsutum-btn:after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border: 2px solid;
+                        -webkit-mask: repeating-conic-gradient(from 0deg, #111 0 25%, transparent 0 50%) 0 0/0.8em 0.8em;
+                        mask: repeating-conic-gradient(from 0deg, #111 0 25%, transparent 0 50%) 0 0/0.8em 0.8em;
+                      }
+
+                      .hirsutum-btn:after {
+                        -webkit-mask: repeating-conic-gradient(from 90deg, #111 0 25%, transparent 0 50%) 0 0/0.8em 0.8em;
+                        mask: repeating-conic-gradient(from 90deg, #111 0 25%, transparent 0 50%) 0 0/0.8em 0.8em;
+                      }
+
+                      .hirsutum-btn:hover:before {
+                        transform: translate(0.1px);
+                        transition: 0.4s cubic-bezier(0.5, 350, 0.5, -350);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- macrozamia -->
+            <div class="button-holder">
+              <button class="macrozamia-btn" data-hystmodal="#myModal">macrozamia</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="macrozamia-btn"&gt;macrozamia&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .macrozamia-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 2px solid #111;
+                        font-size: 22px;
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        box-shadow: 0 0 0px #111 inset, 0 0 0px #111;
+                        transition: all 0.5s ease;
+                        background-color: #fff;
+                      }
+
+                      .macrozamia-btn:hover {
+                        box-shadow: 0 0 10px #111 inset, 0 0 10px #111;
+                        border-radius: 10px;
+                        border: 0;
+                        color: #555;
+                        text-shadow: 0 0 5px #111;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- hardy kiwi -->
+            <div class="button-holder">
+              <button class="hardy-kiwi-btn" data-hystmodal="#myModal">hardy kiwi</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="hardy-kiwi-btn"&gt;hardy kiwi&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .hardy-kiwi-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        border: 2px solid #111;
+                        font-size: 22px;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                        background-color: #fff;
+                      }
+
+                      .hardy-kiwi-btn:hover {
+                        filter: blur(3px);
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- brachycera -->
+            <div class="button-holder">
+              <button class="brachycera-btn" data-hystmodal="#myModal">brachycera</button>
+
+              <div class="toggle-content">
+                <div class="html-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy html</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-html">
+                      &lt;button class="brachycera-btn"&gt;brachycera&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="css-box">
+                  <div class="code-copy">
+                    <div class="default-state">Copy css</div>
+                    <div class="active-state">Copied!</div>
+                  </div>
+
+                  <pre>
+                    <code class="code-content language-css">
+                      .brachycera-btn {
+                        width: 220px;
+                        height: 54px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #111;
+                        position: relative;
+                        background-color: #fff;
+                        border: 0;
+                        font-size: 22px;
+                      }
+
+                      .brachycera-btn:hover { 
+                        color: #fe6d6d; 
+                      }
+
+                      .brachycera-btn:after{
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid #111;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: width 0.2s ease 0s, height 0.2s ease 0.1s, border-top-width 0.1s ease 0.2s, margin 0.2s ease 0s;
+                      }
+
+                      .brachycera-btn:hover:after{
+                        width: 60%;
+                        height: 0;
+                        border-width: 0 2px 2px;
+                        margin: 0 20%;
+                        transition: width 0.2s ease 0.2s, height 0.2s ease 0.1s, border-top-width 0.1s ease 0s, margin 0.2s ease 0.2s;
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-footer">
+            <div class="page-navigation">
+              <a href="overlay.html">Overlay</a>
+
+              <a href="border.html" class="active">Border</a>
+
+              <a href="transform.html">Transform</a>
+
+              <a href="shape.html">Shape</a>
+
+              <a href="text.html">Text</a>
+
+              <a href="svg.html">SVG</a>
+
+              <a href="color.html">Color</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+          <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6696 18.5001L1.0752 33.0944L3.9057 35.9249L18.5001 21.3306L33.0944 35.9249L35.9249 33.0944L21.3306 18.5001L35.9249 3.9057L33.0944 1.0752L18.5001 15.6696L3.9057 1.0752L1.0752 3.9057L15.6696 18.5001Z" fill="#212121"/></svg>
+            </button>  
+            
+            <div class="h2">Element markup and styles</div>
+
+            <div class="modal-body"></div>
+          </div>
+        </div> 
+      </div>
+
+      <script src="../js/jquery-3.2.1.js"></script>
+      <script src="../js/hystmodal.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/custom.js"></script>
+    </div>
+  </body>
+</html>
