@@ -1,364 +1,45 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+		<title>Links & buttons hover collection</title>
+		<meta name="description" content="Ideas for links, buttons and images animation" />
+		<meta name="keywords" content="hover, underline, effects, animation," />
+		<meta name="author" content="ВАСУЛ" />
 
-	<title>Get target coords</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
+	<body class="index-page">
+		<div class="wrapper">
+			<header class="main-header"></header>
 
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-	<div class="app-container">
-		<div class="header-container">
-			<div class="sidebar-toggle">
-				<span></span><span></span><span></span>
-			</div>
+			<main class="page-content">
+				<nav class="main-nav">
+					<a href="links/border.html"><span>Links</span></a>
 
-			<div class="sidebar">
-				<div class="sidebar-hide">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#fff" d="M25.7075 24.2926a1.0008 1.0008 0 0 1 0 1.415 1.0008 1.0008 0 0 1-1.415 0L16 17.4138l-8.2925 8.2938a1.0007 1.0007 0 0 1-1.415-1.415l8.2938-8.2925-8.2938-8.2925a1.0006 1.0006 0 1 1 1.415-1.415L16 14.5863l8.2925-8.2937A1.0004 1.0004 0 0 1 26.0006 7c0 .2653-.1055.5198-.2931.7075L17.4138 16l8.2937 8.2925Z"/></svg>
+					<a href="buttons/overlay.html"><span>Buttons</span></a>
+				</nav>
+
+				<div class="project-descr">
+					<p>The biggest carefully selected links and buttons hover effects collection</p>
 				</div>
+			</main>
 
-				Додаткові налаштування
-			</div>
+			<footer class="index-footer">
+				<p><small>Thanks everyone from codepen, tympanus and all over the internet for the inspiration and code ❤️</small></p>
 
-			<div class="page-overlay"></div>
-
-			<div class="nav-tabs">
-			  <div class="tab-link" data-tab="tab-1">Стрільба</div>
-
-			  <div class="tab-link current" data-tab="tab-2">MK-19</div>
-
-			  <div class="tab-link" data-tab="tab-3">Метео</div>
-			</div>
+				<p><small>You can use this project for any purpose</small></p>
+			</footer>
 		</div>
-
-		<div class="tab-content">
-			<div id="tab-1" class="tab-pane">
-				<div class="flex-column">
-					<h3 class="text-center">Вкладка стрільба</h3>
-				</div>
-			</div>
-
-			<div id="tab-2" class="tab-pane current">
-				<div class="flex-column">
-					<div class="result-container">
-						<div class="result-item">
-							<time datetime="20:20-05.03.2024">20:20 - 05.03.2024</time>
-
-							<div class="d-flex">
-								<div class="result-value">
-									Азимут: 
-
-									<div style="color: #FF9F0A;"><b>650</b></div>
-								</div>
-
-								<div class="result-value">
-									Кут, mil: 
-
-									<div style="color: #FF9F0A;"><b>230</b></div>
-								</div>
-								<div class="result-value">
-									Кут, грд: 
-									
-									<div style="color: #FF9F0A;"><b>3.45</b></div>
-								</div>
-
-								<div class="remove-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#DA4C66" d="M27 6h-5V5a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v1H5a1 1 0 0 0 0 2h1v18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h1a1 1 0 1 0 0-2ZM12 5a1.0002 1.0002 0 0 1 1-1h6a1 1 0 0 1 1 1v1h-8V5Zm12 21H8V8h16v18ZM14 13v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Zm6 0v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Z"/></svg>
-								</div>
-							</div>
-						</div>
-
-						<div class="result-item">
-							<time datetime="20:20-05.03.2024">20:20 - 05.03.2024</time>
-
-							<div class="d-flex">
-								<div class="result-value">
-									Азимут: 
-
-									<div style="color: #2DD35A;"><b>660</b></div>
-								</div>
-
-								<div class="result-value">
-									Кут, mil: 
-
-									<div style="color: #FF9F0A;"><b>230</b></div>
-								</div>
-								<div class="result-value">
-									Кут, грд: 
-									
-									<div style="color: #FF9F0A;"><b>3.45</b></div>
-								</div>
-
-								<div class="remove-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#DA4C66" d="M27 6h-5V5a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v1H5a1 1 0 0 0 0 2h1v18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h1a1 1 0 1 0 0-2ZM12 5a1.0002 1.0002 0 0 1 1-1h6a1 1 0 0 1 1 1v1h-8V5Zm12 21H8V8h16v18ZM14 13v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Zm6 0v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Z"/></svg>
-								</div>
-							</div>
-						</div>
-
-						<div class="result-item">
-							<time datetime="20:20-05.03.2024">20:20 - 05.03.2024</time>
-
-							<div class="d-flex">
-								<div class="result-value">
-									Азимут: 
-
-									<div style="color: #FF9F0A;"><b>660</b></div>
-								</div>
-
-								<div class="result-value">
-									Кут, mil: 
-
-									<div style="color: #2DD35A;"><b>220</b></div>
-								</div>
-								<div class="result-value">
-									Кут, грд: 
-									
-									<div style="color: #FF9F0A;"><b>3.45</b></div>
-								</div>
-
-								<div class="remove-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#DA4C66" d="M27 6h-5V5a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v1H5a1 1 0 0 0 0 2h1v18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h1a1 1 0 1 0 0-2ZM12 5a1.0002 1.0002 0 0 1 1-1h6a1 1 0 0 1 1 1v1h-8V5Zm12 21H8V8h16v18ZM14 13v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Zm6 0v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Z"/></svg>
-								</div>
-							</div>
-						</div>
-
-						<div class="result-item">
-							<time datetime="20:20-05.03.2024">20:20 - 05.03.2024</time>
-
-							<div class="d-flex">
-								<div class="result-value">
-									Азимут: 
-
-									<div style="color: #FF9F0A;"><b>660</b></div>
-								</div>
-
-								<div class="result-value">
-									Кут, mil: 
-
-									<div style="color: #2DD35A;"><b>210</b></div>
-								</div>
-								<div class="result-value">
-									Кут, грд: 
-									
-									<div style="color: #FF9F0A;"><b>3.45</b></div>
-								</div>
-
-								<div class="remove-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#DA4C66" d="M27 6h-5V5a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v1H5a1 1 0 0 0 0 2h1v18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h1a1 1 0 1 0 0-2ZM12 5a1.0002 1.0002 0 0 1 1-1h6a1 1 0 0 1 1 1v1h-8V5Zm12 21H8V8h16v18ZM14 13v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Zm6 0v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Z"/></svg>
-								</div>
-							</div>
-						</div>
-
-						<div class="result-item">
-							<time datetime="20:20-05.03.2024">20:20 - 05.03.2024</time>
-
-							<div class="d-flex">
-								<div class="result-value">
-									Азимут: 
-
-									<div style="color: #FF9F0A;"><b>660</b></div>
-								</div>
-
-								<div class="result-value">
-									Кут, mil: 
-
-									<div style="color: #FF9F0A;"><b>230</b></div>
-								</div>
-								<div class="result-value">
-									Кут, грд: 
-									
-									<div style="color: #2DD35A;"><b>3.40</b></div>
-								</div>
-
-								<div class="remove-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"><path fill="#DA4C66" d="M27 6h-5V5a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v1H5a1 1 0 0 0 0 2h1v18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h1a1 1 0 1 0 0-2ZM12 5a1.0002 1.0002 0 0 1 1-1h6a1 1 0 0 1 1 1v1h-8V5Zm12 21H8V8h16v18ZM14 13v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Zm6 0v8a1.0001 1.0001 0 0 1-2 0v-8a1.0001 1.0001 0 0 1 2 0Z"/></svg>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="input-container">
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-01" checked>
-
-							<label for="option-01">
-								<span class="radio-label"><span>Відстань</span></span>
-
-								<span class="radio-input">1250</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-02">
-
-							<label for="option-02">
-								<span class="radio-label"><span>Азимут</span></span>
-
-								<span class="radio-input">680</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-03">
-
-							<label for="option-03">
-								<span class="radio-label"><span>Кут MK-19</span></span>
-
-								<span class="radio-input">3.45</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-04">
-
-							<label for="option-04">
-								<span class="radio-label"><span>Вгору</span></span>
-
-								<span class="radio-input">10</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-05">
-
-							<label for="option-05">
-								<span class="radio-label"><span>Вниз</span></span>
-
-								<span class="radio-input">14</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-06">
-
-							<label for="option-06">
-								<span class="radio-label"><span>δ висоти</span></span>
-
-								<span class="radio-input">0</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-07">
-
-							<label for="option-07">
-								<span class="radio-label"><span>Вліво</span></span>
-
-								<span class="radio-input">0</span>
-							</label>
-						</div>
-
-						<div class="default-radio">
-							<input type="radio" class="btn-check" name="option-base" autocomplete="off" id="option-08">
-
-							<label for="option-08">
-								<span class="radio-label"><span>Вправо</span></span>
-
-								<span class="radio-input">0</span>
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="tab-3" class="tab-pane">
-				<div class="flex-column">
-					<div class="flex-column">
-						<h3 class="text-center">Метеорологічні дані</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="numpad-container">
-			<table>
-				<tr>
-					<td> 
-						<div class="btn btn-secondary">7</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">8</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">9</div>
-					</td>
-
-					<td>
-						<div class="btn btn-secondary">
-							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" fill="none" viewBox="0 0 28 22"><path fill="#ffffff" d="M25.9999 0H7.5662a2.01 2.01 0 0 0-1.715.9712L.1424 10.485a1 1 0 0 0 0 1.03l5.7088 9.5137A2.0095 2.0095 0 0 0 7.5662 22h18.4337a2 2 0 0 0 2-2V2a2.0002 2.0002 0 0 0-2-2Zm0 20H7.5662l-5.4-9 5.4-9h18.4337v18Zm-13.7075-6.7075L14.5862 11l-2.2938-2.2925a1.0007 1.0007 0 0 1 1.415-1.415l2.2925 2.2937 2.2925-2.2937a1.0005 1.0005 0 1 1 1.415 1.415L17.4137 11l2.2937 2.2925a1.0003 1.0003 0 0 1-.3246 1.6319 1.0003 1.0003 0 0 1-1.0904-.2169l-2.2925-2.2938-2.2925 2.2938a1.0008 1.0008 0 0 1-1.415 0 1.0003 1.0003 0 0 1 0-1.415Z"/></svg>
-						</div>
-					</td>
-				</tr>
-
-				<tr>
-					<td> 
-						<div class="btn btn-secondary">4</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">5</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">6</div>
-					</td>
-
-					<td>
-						<div class="btn btn-outline-danger">C</div>
-					</td>
-				</tr>
-
-				<tr>
-					<td> 
-						<div class="btn btn-secondary">1</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">2</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">3</div>
-					</td>
-
-					<td rowspan="2">
-						<div class="btn btn-success">
-							<b>=</b>
-						</div>
-					</td>
-				</tr>
-
-				<tr>
-					<td> 
-						<div class="btn btn-secondary">+/-</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">0</div>
-					</td>
-
-					<td> 
-						<div class="btn btn-secondary">,</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-
-	<script src="js/main.js"></script>
-</body>
+	</body>
 </html>
